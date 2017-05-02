@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="home_tab_title">
+        <item>推荐</item>
+        <item>导购</item>
+        <item>评测</item>
+        <item>口碑</item>
+        <item>文化</item>
+        <item>自媒体</item>
+    </string-array>
+    <array name="avatar_choose_item">
+        <item>拍照</item>
+        <item>从手机相册选择</item>
+    </array>
+    <array name="indicator_colors">
+        <item>@color/font_color_yellow</item>
+        <item>@color/font_color_yellow</item>
+        <item>@color/font_color_yellow</item>
+        <item>@color/font_color_yellow</item>
+    </array>
+    <array name="gender_items">
+        <item>男</item>
+        <item>女</item>
+    </array>
+  <string-array name="community_tab_title">
+    <item>吐槽</item>
+    <item>问答</item>
+  </string-array>
+    <string-array name="question_tab_title">
+        <item>全部</item>
+        <item>未解答</item>
+        <item>我的</item>
+    </string-array>
+    <array name="waveSideBarLetters">
+        <item>\u0023</item>
+        <item>\u2606</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </array>
+    <array name="age_items">
+        <item>90后</item>
+        <item>80后</item>
+        <item>70后</item>
+        <item>60后</item>
+    </array>
+    <string-array name="self_media_tab_title">
+        <item>全部</item>
+        <item>我关注的</item>
+    </string-array>
+
+    <string-array name="message_tab_items">
+        <item>系统</item>
+        <item>动态</item>
+        <item>回复</item>
+    </string-array>
+</resources>

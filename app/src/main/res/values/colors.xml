@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="bg_title_bar">#ffffff</color>
+    <!-- 白色 -->
+    <color name="font_color_white">#ffffff</color>
+    <!-- 黑色 -->
+    <color name="font_color_black">#000000</color>
+    <!-- title -->
+    <color name="tab_layout_indicator_color">#202d59</color>
+    <!-- TabIndicator -->
+    <color name="tab_layout_color">#96a0aa</color>
+    <color name="bg_color">#EDEDED</color>
+    <!--默认layout 按下状态的颜色-->
+    <color name="default_layout_press_color">#20000000</color>
+    <!-- 正文 -->
+    <color name="font_color_primary">#414141</color>
+    <!--分割线颜色-->
+    <color name="item_divider">#ffd7d7d7</color>
+    <color name="font_color_yellow">#f4e70e</color>
+    <!--红色文本-->
+    <color name="font_color_red">#f42525</color>
+    <color name="font_color_red_tab_bar">#eb4f38</color>
+    <color name="font_color_7d">#7d7d7d</color>
+    <color name="bg_color_f8">#f8f8f8</color>
+    <color name="bg_color_e4">#e4e4e4</color>
+    <color name="font_color_bd">#bdbdbd</color>
+    <color name="font_color_5f">#5f5f5f</color>
+    <color name="btn_bg_color">#37465d</color>
+    <color name="bg_fd">#fdfdfd</color>
+    <color name="color_a0">#a0a0a0</color>
+    <color name="color_cc">#cccccc</color>
+    <color name="color_d9">#d9d9d9</color>
+    <color name="color_e4">#e4e4e4</color>
+    <color name="color_6b">#6b6b6b</color>
+    <color name="color_f5">#f5f5f5</color>
+
+    <color name="color_xxl">#313131</color>
+    <color name="color_xl">#959595</color>
+    <color name="color_l">#707070</color>
+    <color name="color_home">#454545</color>
+    <color name="color_xl_line">#f5f5f5</color>
+    <color name="color_line">#eeeeee</color>
+
+    <color name="color_bar1">#e5193b</color>
+    <color name="color_bar">#ce0325</color>
+    <!--口碑-->
+    <color name="color_kb">#41bfa8</color>
+    <!--施工案例-->
+    <color name="color_sgal">#f5625a</color>
+    <!--二手-->
+    <color name="color_es">#f97edd</color>
+    <!--多功能属具-->
+    <color name="color_dgnsj">#64b0f2</color>
+    <!--供求-->
+    <color name="color_gq">#ffa42e</color>
+
+
+
+
+
+
+    <color name="test_spacing1">#9674FC</color>
+    <color name="test_spacing2">#179641</color>
+    <color name="test_spacing3">#B2DB4D</color>
+    <color name="test_spacing4">#50E746</color>
+    <color name="colorPrimaryDarkTrans">#CCf57257</color>
+</resources>

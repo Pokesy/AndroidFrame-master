@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sdl_background_dark">>
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/si_default_text_color">
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="@dimen/grid_2"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/profile"
+            android:drawableTop="@mipmap/home_message"
+            android:text="@string/message"
+            android:layout_marginEnd="@dimen/grid_2"
+            android:textSize="@dimen/font_size_smallest" />
+
+        <EditText
+            android:id="@+id/locationMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toEndOf="@+id/profile"
+            android:layout_toStartOf="@+id/message"
+            android:background="@drawable/shape_reply"
+            android:cursorVisible="true"
+            android:drawableEnd="@mipmap/home_searcjh"
+            android:focusable="false"
+            android:gravity="start"
+            android:hint="@string/edit_search"
+            android:paddingEnd="@dimen/margin_15"
+            android:paddingStart="@dimen/margin_20"
+            android:textColorHint="@color/font_color_white"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/font_size_small" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="bottom"
+            android:background="@color/font_color_white"
+            android:fillViewport="false"
+            app:layout_scrollFlags="scroll"
+            app:tabIndicatorColor="@color/color_bar1"
+            app:tabIndicatorHeight="2.0dp"
+            app:tabSelectedTextColor="@color/color_bar1"
+            app:tabTextColor="@color/color_l">
+
+            <android.support.design.widget.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:icon="@drawable/tab_selector" />
+
+            <android.support.design.widget.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="新闻" />
+
+            <android.support.design.widget.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="视频" />
+
+            <android.support.design.widget.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="促销" />
+
+            <android.support.design.widget.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="活动" />
+
+            <android.support.design.widget.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="人物" />
+
+        </android.support.design.widget.TabLayout>
+    </RelativeLayout>
+
+    <com.loonggg.androidframedemo.adapter.MyViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/action"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/white">
+
+    </com.loonggg.androidframedemo.adapter.MyViewPager>
+</RelativeLayout>

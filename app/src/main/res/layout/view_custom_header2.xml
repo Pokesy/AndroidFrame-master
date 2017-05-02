@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <cn.bingoogolapple.bgabanner.BGABanner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:banner_indicatorGravity="bottom|right"
+            app:banner_placeholderDrawable="@mipmap/home_ad"
+            app:banner_tipTextSize="12sp"
+            app:banner_transitionEffect="accordion" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/margin_small"
+            android:paddingStart="@dimen/margin_small">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:src="@mipmap/home_gqxx" />
+
+            <com.loonggg.androidframedemo.view.RGridView
+
+                android:id="@+id/today_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:tag="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/color_xl_line" />
+
+        <LinearLayout
+            android:id="@+id/main_radio"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingEnd="@dimen/margin_small"
+            android:paddingStart="@dimen/margin_small"
+
+            android:paddingTop="12dp">
+
+            <TextView
+                android:id="@+id/tv_more_tool"
+                style="@style/main_wd"
+                android:checked="false"
+                android:drawableTop="@mipmap/home_dgnsj"
+                android:text="@string/more_tool" />
+
+            <TextView
+                android:id="@+id/tv_market"
+                style="@style/main_wd"
+                android:drawableTop="@mipmap/home_gqsc"
+                android:text="@string/market" />
+
+            <TextView
+                android:id="@+id/tv_second_hand"
+                style="@style/main_wd"
+                android:drawableTop="@mipmap/home_second_hand"
+                android:text="@string/second_hand" />
+
+            <TextView
+                android:id="@+id/tv_mouth"
+                style="@style/main_wd"
+                android:checked="false"
+                android:drawableTop="@mipmap/home_kb"
+                android:text="@string/mouth" />
+
+            <TextView
+                android:id="@+id/tv_build"
+                style="@style/main_wd"
+                android:checked="false"
+                android:drawableTop="@mipmap/home_sgal"
+                android:text="@string/build" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/color_xl_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/margin_small"
+            android:paddingStart="@dimen/margin_small">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/margin_15"
+                android:drawableStart="@mipmap/home_news"
+                android:text="@string/today_news"
+                android:textColor="@color/color_xxl"
+                android:textSize="@dimen/font_size_xlarge"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_today_news"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home8" />
+
+            <TextView
+                android:id="@+id/tv_today_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text="@string/app_item_content"
+                android:textColor="@color/color_xxl" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:id="@+id/news_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/app_read"
+
+                    android:textColor="@color/color_xl" />
+
+                <TextView
+                    android:id="@+id/iv_today_news_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:textColor="@color/color_xl"
+                    android:layout_marginStart="@dimen/margin_smallest"
+                    android:text="@string/app_time" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/color_xl_line" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/home3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/margin_small"
+            android:paddingStart="@dimen/margin_small">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/margin_15"
+                android:drawableStart="@mipmap/home_mrtj"
+                android:text="@string/today_recommend"
+                android:textColor="@color/color_xxl"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

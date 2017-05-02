@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">属具之家</string>
+    <string name="today_news">今日头条</string>
+    <string name="today_recommend">今日推荐</string>
+    <string name="more_tool">多功能属具</string>
+    <string name="market">供求市场</string>
+    <string name="setting">设置</string>
+    <string name="second_hand">二手市场</string>
+    <string name="mouth">口碑</string>
+    <string name="build">施工案例</string>
+    <string name="search">搜索</string>
+    <string name="edit_search">输入关键词搜索</string>
+    <string name="shop">品牌店</string>
+    <string name="collection">收藏夹</string>
+    <string name="message">消息</string>
+    <string name="footprint">足迹</string>
+    <string name="order">我的订单</string>
+    <string name="supply_manage">供求管理</string>
+    <string name="second_manage">二手管理</string>
+    <string name="mouth_manage">口碑管理</string>
+    <string name="offer">我的出价</string>
+    <string name="group">我的团购</string>
+    <string name="inquiry">我的询价</string>
+    <string name="attestation">认证管理</string>
+    <string name="help">帮助与反馈</string>
+    <string name="update">检测更新</string>
+    <string name="brand">品牌</string>
+    <string name="kit">配套件</string>
+    <string name="host">主机</string>
+    <string name="host_brand">热门品牌</string>
+    <string name="address_tips_location_fail">定位失败,请检查是否已打开网络或GPS功能</string>
+    <string name="app_loading_more">上拉加载更多</string>
+
+    <string name="app_item_content">马鞍山云林白城—专业、专心、专注生产研发液压锤精品活塞精品活塞精品活塞</string>
+
+
+    <string name="app_read">阅读</string>
+    <string name="app_time">2017.1.7</string>
+    <string name="test_custom_header_title">我是标题标我是标题标我是标题标我是标题标我是标题标我是标题标</string>
+    <string name="test_custom_header_desc">我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述</string>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/margin_tag">
+
+    <ImageView
+        android:id="@+id/head_iv"
+        android:layout_width="@dimen/margin_40"
+        android:layout_height="@dimen/margin_40"
+        android:layout_centerVertical="true"
+        android:background="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_smallest"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/item_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="2016年3月20日"
+                android:textColor="@color/sdl_background_light"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/item_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="我是涩郎"
+                android:textColor="@color/bg_color_e4"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RatingBar
+            android:id="@+id/comment_rating_bar"
+            style="@style/roomRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_smallest" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_smallest"
+            android:text="教练人不错，很有经验，喜欢调戏女学员，不愧是老司机"
+            android:textColor="@color/bg_color_e4"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3.0dp"
+        android:layout_marginBottom="@dimen/margin_tag"
+        android:layout_marginTop="@dimen/margin_smallest"
+        android:background="@drawable/dotted_line_shape"
+        android:layerType="software" />
+</LinearLayout>
