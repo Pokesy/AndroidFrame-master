@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">属具之家</string>
     <string name="today_news">今日头条</string>
-    <string name="today_recommend">今日推荐</string>
+    <string name="today_recommend">每日推荐</string>
     <string name="more_tool">多功能属具</string>
     <string name="market">供求市场</string>
     <string name="setting">设置</string>
@@ -9,7 +9,7 @@
     <string name="mouth">口碑</string>
     <string name="build">施工案例</string>
     <string name="search">搜索</string>
-    <string name="edit_search">输入关键词搜索</string>
+    <string name="edit_search">       输入关键词搜索</string>
     <string name="shop">品牌店</string>
     <string name="collection">收藏夹</string>
     <string name="message">消息</string>
@@ -30,7 +30,8 @@
     <string name="host_brand">热门品牌</string>
     <string name="address_tips_location_fail">定位失败,请检查是否已打开网络或GPS功能</string>
     <string name="app_loading_more">上拉加载更多</string>
-
+    <string name="app_home_gy">供应</string>
+    <string name="app_home_qg">求购</string>
     <string name="app_item_content">马鞍山云林白城—专业、专心、专注生产研发液压锤精品活塞精品活塞精品活塞</string>
 
 

@@ -6,9 +6,6 @@
 
 
 
-    <padding
-        android:bottom="10dp"
-        android:top="10dp" />
 
     <corners android:radius="20dp" />
 <!--圆角背景-->

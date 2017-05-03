@@ -97,5 +97,5 @@ dependencies {
     compile 'cn.bingoogolapple:bga-adapter:1.1.5@aar'
     compile 'cn.bingoogolapple:bga-swipeitemlayout:1.0.4@aar'
     compile 'cn.bingoogolapple:bga-indicator:1.0.1@aar'
-
+    compile 'com.githang:status-bar-compat:0.3'
 }

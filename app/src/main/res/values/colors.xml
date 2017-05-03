@@ -43,6 +43,7 @@
     <color name="color_home">#454545</color>
     <color name="color_xl_line">#f5f5f5</color>
     <color name="color_line">#eeeeee</color>
+    <color name="color_tab_line">#e5e5e5</color>
 
     <color name="color_bar1">#e5193b</color>
     <color name="color_bar">#ce0325</color>
@@ -58,8 +59,8 @@
     <color name="color_gq">#ffa42e</color>
 
 
-
-
+    <color name="color_gy">#fc728f</color>
+    <color name="color_qg">#21bbae</color>
 
 
     <color name="test_spacing1">#9674FC</color>

@@ -84,11 +84,11 @@ public class NewsFragment extends BasicFragment implements OnItemClickListener, 
         for (int i = 0; i < 20; i++) {
             list.add(i + "");
         }
-        try {
-            Thread.sleep(1300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+////            Thread.sleep(1300);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         //设置数据
         testAdapter.setDatas(list, loadMore);
         //标记为请求完成

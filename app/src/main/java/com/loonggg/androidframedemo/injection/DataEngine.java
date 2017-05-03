@@ -25,6 +25,7 @@ public class DataEngine {
     public static View getCustomHeaderView(final Context context) {
         View headerView = View.inflate(context, R.layout.view_custom_header, null);
         final BGABanner banner = (BGABanner) headerView.findViewById(R.id.banner);
+        banner.getTips().clear();
         banner.setAdapter(new BGABanner.Adapter<ImageView, String>() {
             @Override
             public void fillBannerItem(BGABanner banner, ImageView itemView, String model, int position) {

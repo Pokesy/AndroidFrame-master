@@ -108,8 +108,9 @@ public class MainFragment extends BasicFragment implements View.OnClickListener 
     public void init() {
         adapter = new ViewPagerAdapter(getChildFragmentManager(), getActivity());
         pager.setAdapter(adapter);
-        tab.getTabAt(0).setIcon(R.drawable.tab_selector);
 
+        tab.setTabMode(TabLayout.MODE_SCROLLABLE);
+        tab.getTabAt(0).setIcon(R.drawable.tab_selector);
         pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener
                 (tab));
         tab.setOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener

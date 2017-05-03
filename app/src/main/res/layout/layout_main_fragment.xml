@@ -11,15 +11,17 @@
         android:layout_height="48dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@color/si_default_text_color">
+        android:background="@color/si_default_text_color"
+        android:gravity="center">
 
         <ImageView
             android:id="@+id/profile"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="@dimen/grid_2"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_tag"
+            android:layout_marginStart="@dimen/grid_2"
             android:src="@mipmap/ic_launcher" />
 
         <TextView
@@ -28,23 +30,27 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignTop="@+id/profile"
+            android:layout_marginStart="@dimen/margin_tag"
+            android:layout_marginEnd="@dimen/margin_tag"
             android:drawableTop="@mipmap/home_message"
+            android:gravity="center"
             android:text="@string/message"
-            android:layout_marginEnd="@dimen/grid_2"
+            android:textColor="@color/font_color_white"
             android:textSize="@dimen/font_size_smallest" />
 
         <EditText
             android:id="@+id/locationMessage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_width="246dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/margin_small"
             android:layout_toEndOf="@+id/profile"
             android:layout_toStartOf="@+id/message"
             android:background="@drawable/shape_reply"
             android:cursorVisible="true"
             android:drawableEnd="@mipmap/home_searcjh"
+            android:drawablePadding="@dimen/margin_small"
             android:focusable="false"
-            android:gravity="start"
+
             android:hint="@string/edit_search"
             android:paddingEnd="@dimen/margin_15"
             android:paddingStart="@dimen/margin_20"
@@ -62,7 +68,7 @@
         <android.support.design.widget.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="40dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_gravity="bottom"
@@ -70,8 +76,9 @@
             android:fillViewport="false"
             app:layout_scrollFlags="scroll"
             app:tabIndicatorColor="@color/color_bar1"
-            app:tabIndicatorHeight="2.0dp"
+            app:tabIndicatorHeight="1.0dp"
             app:tabSelectedTextColor="@color/color_bar1"
+            app:tabTextAppearance="@style/Widget.App.TextView.Large"
             app:tabTextColor="@color/color_l">
 
             <android.support.design.widget.TabItem
@@ -82,6 +89,7 @@
             <android.support.design.widget.TabItem
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+
                 android:text="新闻" />
 
             <android.support.design.widget.TabItem
@@ -105,6 +113,12 @@
                 android:text="人物" />
 
         </android.support.design.widget.TabLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tabLayout"
+            android:background="@color/color_tab_line" />
     </RelativeLayout>
 
     <com.loonggg.androidframedemo.adapter.MyViewPager
@@ -113,7 +127,5 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/action"
         android:layout_marginTop="1dp"
-        android:background="@android:color/white">
-
-    </com.loonggg.androidframedemo.adapter.MyViewPager>
+        android:background="@android:color/white"></com.loonggg.androidframedemo.adapter.MyViewPager>
 </RelativeLayout>

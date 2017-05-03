@@ -2,14 +2,13 @@ package com.loonggg.androidframedemo.fragment;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -17,15 +16,15 @@ import com.loonggg.androidframedemo.MainActivity;
 import com.loonggg.androidframedemo.R;
 import com.loonggg.androidframedemo.adapter.NormalRecyclerViewAdapter;
 import com.loonggg.androidframedemo.app.CustomApp;
-import com.loonggg.androidframedemo.injection.DataEngine;
 import com.loonggg.androidframedemo.model.BannerModel;
 import com.loonggg.androidframedemo.model.RefreshModel;
 import com.loonggg.androidframedemo.utils.ThreadUtil;
 import com.loonggg.androidframedemo.utils.ToastUtil;
-import com.loonggg.androidframedemo.view.Divider;
+import com.loonggg.androidframedemo.view.TimeTaskScroll;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
+import java.util.Timer;
 
 import cn.bingoogolapple.androidcommon.adapter.BGAOnItemChildClickListener;
 import cn.bingoogolapple.androidcommon.adapter.BGAOnItemChildLongClickListener;
@@ -51,6 +50,8 @@ public class RefreshRecyclerViewFragment extends BaseFragment implements BGARefr
     private RecyclerView mDataRv;
     private int mNewPageNumber = 0;
     private int mMorePageNumber = 0;
+    private ListView listView, listView1;
+    private List<String> list;
 
     @Override
     protected void initView(Bundle savedInstanceState) {
@@ -87,6 +88,16 @@ public class RefreshRecyclerViewFragment extends BaseFragment implements BGARefr
     protected void processLogic(Bundle savedInstanceState) {
         View headerView = View.inflate(mApp, R.layout.view_custom_header2, null);
         final BGABanner banner = (BGABanner) headerView.findViewById(R.id.banner);
+        listView = (ListView) headerView.findViewById(R.id.listView1);
+
+        list = getList();
+        new Timer().schedule(new TimeTaskScroll(getActivity(), listView, list), 20, 200);
+
+
+        listView1 = (ListView) headerView.findViewById(R.id.listView2);
+
+
+        new Timer().schedule(new TimeTaskScroll(getActivity(), listView1, list), 20, 200);
         banner.setAdapter(new BGABanner.Adapter<ImageView, String>() {
             @Override
             public void fillBannerItem(BGABanner banner, ImageView itemView, String model, int position) {
@@ -110,7 +121,7 @@ public class RefreshRecyclerViewFragment extends BaseFragment implements BGARefr
             @Override
             public void onResponse(Call<BannerModel> call, Response<BannerModel> response) {
                 BannerModel bannerModel = response.body();
-                banner.setData(R.layout.view_image, bannerModel.imgs, bannerModel.tips);
+                banner.setData(R.layout.view_image, bannerModel.imgs, null);
             }
 
             @Override
@@ -242,6 +253,19 @@ public class RefreshRecyclerViewFragment extends BaseFragment implements BGARefr
             return true;
         }
         return false;
+    }
+
+    /**
+     * 获取数据
+     *
+     * @return
+     */
+    public List<String> getList() {
+        List<String> list = new ArrayList<String>();
+        for (int i = 0; i < 10; i++) {
+            list.add(String.valueOf(i) + "博运重工有限公司供应液压破碎锤一百件。。。");
+        }
+        return list;
     }
 
     @Override

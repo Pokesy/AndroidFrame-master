@@ -4,72 +4,87 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/margin_15"
-    android:layout_marginTop="@dimen/margin_15"
-    android:orientation="horizontal">
 
+    android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:lines="2"
-            android:text="@string/app_item_content"
-            android:textColor="@color/color_xxl"
-            android:textSize="@dimen/font_size_large" />
+        android:layout_marginBottom="@dimen/margin_15"
+        android:layout_marginTop="@dimen/margin_15"
+        android:orientation="horizontal">
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_smallest">
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="2"
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/search"
-                    android:textColor="@color/color_xl"
-                    android:textSize="@dimen/font_size_smallest" />
-
-                <TextView
-                    android:id="@+id/news_count"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_15"
-                    android:textColor="@color/color_xl"
-                    android:text="100"
-                    android:textSize="@dimen/font_size_smallest" />
-
-            </LinearLayout>
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tv_content"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:text="@string/app_time"
-                android:textColor="@color/color_xl"
-                android:textSize="@dimen/font_size_smallest" />
+                android:lines="2"
+                android:text="@string/app_item_content"
+                android:textColor="@color/color_xxl"
+                android:textSize="@dimen/font_size_large" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_read"
+                        android:textColor="@color/color_xl"
+                        android:textSize="@dimen/font_size_small" />
+
+                    <TextView
+                        android:id="@+id/news_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_15"
+                        android:text="100"
+                        android:textColor="@color/color_xl"
+                        android:textSize="@dimen/font_size_small" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/app_time"
+                    android:textColor="@color/color_xl"
+                    android:textSize="@dimen/font_size_small" />
+            </RelativeLayout>
+
+
         </RelativeLayout>
 
-
+        <ImageView
+            android:id="@+id/tv_item_normal_delete"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/home4" />
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/tv_item_normal_delete"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:src="@mipmap/home4" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_line" />
 </LinearLayout>

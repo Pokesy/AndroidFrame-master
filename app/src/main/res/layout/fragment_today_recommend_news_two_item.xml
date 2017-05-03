@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.loonggg.androidframedemo.MainActivity">
+>
 
     <RelativeLayout
         android:id="@+id/root_layout"
@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                tools:text="aaaaaaaaaaaaaaabbbbbbbbbbbbb"
+                android:text="@string/search"
                 style="@style/Widget.App.TextView.Large.Primary"
                 />
 
@@ -66,6 +66,7 @@
                         android:layout_weight="1"
                         android:scaleType="centerCrop"
                         android:visibility="visible"
+                        android:src="@mipmap/home_ad"
                         />
 
                     <ImageView
@@ -74,6 +75,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:scaleType="centerCrop"
+                        android:src="@mipmap/home_ad"
                         android:visibility="visible"
                         />
 
@@ -83,6 +85,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
+                        android:src="@mipmap/home_ad"
                         android:scaleType="centerCrop"
                         android:visibility="visible"
                         />

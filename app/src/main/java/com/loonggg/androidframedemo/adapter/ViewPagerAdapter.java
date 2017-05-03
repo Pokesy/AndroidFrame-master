@@ -18,6 +18,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     private String tabTitles[] = new String[]{"", "新闻", "视频", "促销", "活动","人物"};
     private Context context;
 
+
     public ViewPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
         this.context = context;

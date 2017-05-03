@@ -17,31 +17,75 @@
             android:id="@+id/banner"
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            app:banner_indicatorGravity="bottom|right"
+            app:banner_indicatorGravity="bottom|center_horizontal"
             app:banner_placeholderDrawable="@mipmap/home_ad"
-            app:banner_tipTextSize="12sp"
             app:banner_transitionEffect="accordion" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingEnd="@dimen/margin_small"
-            android:paddingStart="@dimen/margin_small">
+            android:padding="@dimen/margin_small">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginEnd="5dp"
                 android:src="@mipmap/home_gqxx" />
 
-            <com.loonggg.androidframedemo.view.RGridView
-
-                android:id="@+id/today_message"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:tag="1" />
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_gy"
+                        android:text="@string/app_home_gy"
+                        android:textColor="@color/font_color_white"
+                        android:textSize="@dimen/font_size_smallest" />
+
+                    <ListView
+                        android:id="@+id/listView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/margin_tag" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_qg"
+                        android:text="@string/app_home_qg"
+                        android:textColor="@color/font_color_white"
+                        android:textSize="@dimen/font_size_smallest" />
+
+                    <ListView
+                        android:id="@+id/listView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/margin_tag" />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -52,7 +96,7 @@
         <LinearLayout
             android:id="@+id/main_radio"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="103dp"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:paddingBottom="10dp"
@@ -104,15 +148,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingEnd="@dimen/margin_small"
-            android:paddingStart="@dimen/margin_small">
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+   >
 
             <TextView
 
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawablePadding="@dimen/margin_15"
+                android:layout_height="45dp"
+                android:drawablePadding="@dimen/margin_smallest"
                 android:drawableStart="@mipmap/home_news"
+                android:gravity="center"
                 android:text="@string/today_news"
                 android:textColor="@color/color_xxl"
                 android:textSize="@dimen/font_size_xlarge"
@@ -129,13 +175,17 @@
                 android:id="@+id/tv_today_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_15"
                 android:lines="1"
                 android:text="@string/app_item_content"
-                android:textColor="@color/color_xxl" />
+                android:textColor="@color/color_xxl"
+                android:textSize="@dimen/font_size_large" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_20">
 
                 <TextView
 
@@ -145,8 +195,8 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:text="@string/app_read"
-
-                    android:textColor="@color/color_xl" />
+                    android:textColor="@color/color_xl"
+                    android:textSize="@dimen/margin_small" />
 
                 <TextView
                     android:id="@+id/iv_today_news_time"
@@ -154,9 +204,9 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentTop="true"
-                    android:textColor="@color/color_xl"
                     android:layout_marginStart="@dimen/margin_smallest"
-                    android:text="@string/app_time" />
+                    android:text="@string/app_time"
+                    android:textColor="@color/color_xl" />
             </RelativeLayout>
         </LinearLayout>
 
@@ -173,20 +223,26 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="45dp"
             android:orientation="vertical"
             android:paddingEnd="@dimen/margin_small"
             android:paddingStart="@dimen/margin_small">
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawablePadding="@dimen/margin_15"
+                android:layout_height="45dp"
+                android:drawablePadding="@dimen/margin_smallest"
                 android:drawableStart="@mipmap/home_mrtj"
+                android:gravity="center_vertical"
                 android:text="@string/today_recommend"
                 android:textColor="@color/color_xxl"
+                android:textSize="@dimen/font_size_xlarge"
                 android:textStyle="bold" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_line" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -1,6 +1,7 @@
 package com.loonggg.androidframedemo;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.githang.statusbar.StatusBarCompat;
 import com.loonggg.androidframedemo.adapter.FragmentViewPagerAdapter;
 import com.loonggg.androidframedemo.app.CustomApp;
 import com.loonggg.androidframedemo.fragment.BrandFragment;
@@ -65,6 +67,7 @@ public class MainActivity extends BasicTitleBarActivity {
     public void initViews() {
         tabLayout = (TabLayout) findViewById(R.id.tableLayout);
         pager = (ViewPager) findViewById(R.id.viewPager);
+        StatusBarCompat.setStatusBarColor(this, R.color.color_bar1, false);
     }
 
     /**
