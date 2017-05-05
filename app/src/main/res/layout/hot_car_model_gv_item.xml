@@ -8,12 +8,13 @@
     <ImageView
         android:id="@+id/gv_logo_iv"
         android:layout_width="@dimen/car_model_logo_width"
-        android:layout_height="@dimen/car_model_logo_width" />
+        android:layout_height="@dimen/car_model_logo_width"
+        android:layout_marginTop="@dimen/margin_20" />
 
     <TextView
         android:id="@+id/gv_name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/font_color_black"
-        android:textSize="14sp" />
+        android:textColor="@color/color_xxl"
+        android:textSize="@dimen/font_size_small" />
 </LinearLayout>

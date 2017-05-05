@@ -1,7 +1,7 @@
 package com.loonggg.androidframedemo;
 
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -9,6 +9,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,6 +19,8 @@ import com.loonggg.androidframedemo.adapter.FragmentViewPagerAdapter;
 import com.loonggg.androidframedemo.app.CustomApp;
 import com.loonggg.androidframedemo.fragment.BrandFragment;
 import com.loonggg.androidframedemo.fragment.MainFragment;
+import com.loonggg.androidframedemo.fragment.NearFragment;
+import com.loonggg.androidframedemo.fragment.NearSellFragment;
 import com.loonggg.androidframedemo.fragment.ProfileFragment;
 import com.loonggg.androidframedemo.injection.GlobalModule;
 import com.loonggg.androidframedemo.net.rpc.UiRpcSubscriber;
@@ -45,6 +49,7 @@ public class MainActivity extends BasicTitleBarActivity {
     //ViewPager的适配器
     private FragmentPagerAdapter adapter;
     public static final int LOADING_DURATION = 2000;
+
     @Override
     public int getLayoutId() {
         return R.layout.activity_main;
@@ -68,6 +73,18 @@ public class MainActivity extends BasicTitleBarActivity {
         tabLayout = (TabLayout) findViewById(R.id.tableLayout);
         pager = (ViewPager) findViewById(R.id.viewPager);
         StatusBarCompat.setStatusBarColor(this, R.color.color_bar1, false);
+        //透明状态栏
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Window window = getWindow();
+            // Translucent status bar
+            window.setFlags(
+                    WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
+                    WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        }
+        //透明状态栏
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+//透明导航栏
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
     }
 
     /**
@@ -79,7 +96,7 @@ public class MainActivity extends BasicTitleBarActivity {
 
         list = new ArrayList<>();
         list.add(new MainFragment());//首页fragment
-        list.add(new MainFragment());//周边fragment
+        list.add(new NearFragment());//周边fragment
         list.add(new BrandFragment());//品牌fragment
         list.add(new ProfileFragment());//我的fragment
         Log.e("zhd", "initData: " + "MyselfFragment");
@@ -150,6 +167,7 @@ public class MainActivity extends BasicTitleBarActivity {
             }
         });
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

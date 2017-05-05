@@ -32,6 +32,24 @@
     <string name="app_loading_more">上拉加载更多</string>
     <string name="app_home_gy">供应</string>
     <string name="app_home_qg">求购</string>
+    <string name="app_near_location">查看位置</string>
+    <string name="app_near_phone">拨打电话</string>
+    <string name="app_near_enter">进店</string>
+    <string name="app_near_water">一键服务</string>
+    <string name="app_near_city">烟台</string>
+    <string name="app_near_sell">经销商</string>
+    <string name="app_water">服务站</string>
+    <string name="app_near_people">人气</string>
+    <string name="app_near_distance">距离</string>
+    <string name="app_near_province">本省</string>
+    <string name="app_near_nice">服务最优</string>
+    <string name="app_brand_zdcp">主打产品</string>
+    <string name="app_brand_dczq">大锤专区</string>
+    <string name="app_brand_xczq">小锤专区</string>
+    <string name="app_brand_more">更多 ></string>
+
+    <string name="app_near_title">烟台艾迪精密机械股份有限公司</string>
+    <string name="app_near_content">主营：液压破碎锤、快速连接器、拔桩机、大锤、小锤</string>
     <string name="app_item_content">马鞍山云林白城—专业、专心、专注生产研发液压锤精品活塞精品活塞精品活塞</string>
 
 

@@ -37,12 +37,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-
-/**
- * 作者:王浩 邮件:bingoogolapple@gmail.com
- * 创建时间:15/5/22 10:06
- * 描述:
- */
 public class RefreshRecyclerViewFragment extends BaseFragment implements BGARefreshLayout.BGARefreshLayoutDelegate, BGAOnRVItemClickListener, BGAOnRVItemLongClickListener, BGAOnItemChildClickListener, BGAOnItemChildLongClickListener {
     private static final String TAG = RefreshRecyclerViewFragment.class.getSimpleName();
     private NormalRecyclerViewAdapter mAdapter;
@@ -91,13 +85,13 @@ public class RefreshRecyclerViewFragment extends BaseFragment implements BGARefr
         listView = (ListView) headerView.findViewById(R.id.listView1);
 
         list = getList();
-        new Timer().schedule(new TimeTaskScroll(getActivity(), listView, list), 20, 200);
+        new Timer().schedule(new TimeTaskScroll(getActivity(), listView, list), 2000, 20);
 
 
         listView1 = (ListView) headerView.findViewById(R.id.listView2);
 
 
-        new Timer().schedule(new TimeTaskScroll(getActivity(), listView1, list), 20, 200);
+        new Timer().schedule(new TimeTaskScroll(getActivity(), listView1, list), 2000, 20);
         banner.setAdapter(new BGABanner.Adapter<ImageView, String>() {
             @Override
             public void fillBannerItem(BGABanner banner, ImageView itemView, String model, int position) {
@@ -232,7 +226,7 @@ public class RefreshRecyclerViewFragment extends BaseFragment implements BGARefr
             @Override
             public void onFailure(Call<List<RefreshModel>> call, Throwable t) {
                 mRefreshLayout.endLoadingMore();
-                dismissLoadingDialog();
+//                dismissLoadingDialog();
             }
         });
 

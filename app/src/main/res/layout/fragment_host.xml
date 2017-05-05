@@ -7,28 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:text="@string/host_brand"
-        android:textColor="@color/tab_layout_indicator_color"
-        android:textSize="16sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.loonggg.androidframedemo.view.RGridView
-            android:id="@+id/rm_listView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingBottom="6dp"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            android:paddingTop="6dp"
-            android:tag="2" />
-    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -39,17 +18,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <com.gjiazhe.wavesidebar.WaveSideBar
+        <com.loonggg.androidframedemo.view.WaveSideBarView
             android:id="@+id/side_bar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingRight="8dp"
-            app:sidebar_lazy_respond="false"
-            app:sidebar_max_offset="80dp"
-            app:sidebar_position="right"
-            app:sidebar_text_alignment="center"
-            app:sidebar_text_color="#8D6E63"
-            app:sidebar_text_size="14sp" />
+            android:visibility="gone"
+         />
 
     </RelativeLayout>
 </LinearLayout>

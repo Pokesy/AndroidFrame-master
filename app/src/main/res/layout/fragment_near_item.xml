@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/margin_15"
+    android:paddingStart="@dimen/margin_small"
+    android:paddingEnd="@dimen/margin_small"
+    >
+
+
+    <!--&lt;!&ndash;开头分割线&ndash;&gt;-->
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:background="#d9d9d9" />-->
+
+    <LinearLayout
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/default_layout_bg_selector"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            >
+
+            <ImageView
+
+                android:id="@+id/iv_head"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
+                android:layout_alignParentStart="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home_ad" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_toEndOf="@+id/iv_head"
+                android:layout_toStartOf="@+id/tv_inter"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+
+                    android:text="@string/app_near_title"
+                    android:textColor="@color/color_xxl"
+                    android:textSize="@dimen/font_size_large"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="@string/app_near_content"
+                    android:textColor="@color/color_xl"
+                    android:textSize="@dimen/font_size_smallest" />
+
+                <TextView
+                    android:id="@+id/tv_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2km"
+                    android:textColor="@color/color_xl"
+                    android:textSize="@dimen/font_size_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tv_inter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_gravity="top"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:background="@drawable/shape_enter"
+                    android:gravity="center"
+                    android:src="@mipmap/ad_point_normal"
+                    android:text="@string/app_near_enter"
+                    android:textColor="@color/color_enter"
+                    android:textSize="@dimen/font_size_small" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <!--状态部分-->
+        <RelativeLayout
+            android:id="@+id/img_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="8dp">
+            <!--图片部分-->
+            <LinearLayout
+                android:id="@+id/images"
+                android:layout_width="match_parent"
+                android:layout_height="74dp">
+
+                <ImageView
+                    android:id="@+id/iv_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/home7"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_tag"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/home4"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginStart="@dimen/margin_tag"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/home5"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <!--评论部分-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="3dp"
+                        android:drawableStart="@mipmap/wz"
+                        android:singleLine="true"
+                        android:text="@string/app_near_location"
+                        android:textColor="@color/color_location"
+                        android:textSize="@dimen/font_size_medium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="3dp"
+                        android:drawableStart="@mipmap/dh"
+                        android:gravity="center_horizontal"
+                        android:singleLine="true"
+                        android:text="@string/app_near_phone"
+                        android:textColor="@color/color_phone"
+                        android:textSize="@dimen/font_size_medium" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <!--结尾分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#d9d9d9" />
+
+
+</LinearLayout>

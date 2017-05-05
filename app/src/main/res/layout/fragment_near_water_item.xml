@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+>
+
+
+    <!--&lt;!&ndash;开头分割线&ndash;&gt;-->
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:background="#d9d9d9" />-->
+
+    <LinearLayout
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/default_layout_bg_selector"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/margin_small"
+        android:paddingEnd="@dimen/margin_small">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_head"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/home_dgnsj" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_toEndOf="@+id/iv_head"
+                android:layout_toStartOf="@+id/tv_inter"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size_large"
+                    android:textColor="@color/color_xxl"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/margin_tag"
+                    android:lines="1"
+                    android:text="@string/app_near_title" />
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size_large"
+                    android:textColor="@color/color_xl"
+                    android:layout_marginTop="@dimen/margin_tag"
+                    android:lines="1"
+                    android:text="@string/app_near_content" />
+
+                <TextView
+                    android:id="@+id/tv_distance"
+                    android:textSize="@dimen/font_size_large"
+                    android:textColor="@color/color_xl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_tag"
+                    android:text="2km" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_inter"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/margin_small"
+                android:background="@drawable/shape_enter"
+                android:textSize="@dimen/font_size_small"
+                android:src="@mipmap/ad_point_normal"
+                android:textColor="@color/color_enter"
+                android:text="@string/app_near_enter" />
+        </RelativeLayout>
+
+
+        <!--状态部分-->
+        <RelativeLayout
+            android:id="@+id/img_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="8dp">
+            <!--图片部分-->
+            <LinearLayout
+                android:id="@+id/images"
+                android:layout_width="match_parent"
+                android:layout_height="74dp">
+
+                <ImageView
+                    android:id="@+id/iv_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/home7"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_tag"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/home4"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginStart="@dimen/margin_tag"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/home5"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <!--评论部分-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="3dp"
+                        android:drawableStart="@mipmap/wz"
+                        android:singleLine="true"
+                        android:text="@string/app_near_location"
+                        android:textColor="@color/color_location"
+                        android:textSize="@dimen/font_size_medium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="3dp"
+                        android:drawableStart="@mipmap/dh"
+                        android:gravity="center_horizontal"
+                        android:singleLine="true"
+                        android:text="@string/app_near_phone"
+                        android:textColor="@color/color_phone"
+                        android:textSize="@dimen/font_size_medium" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="3dp"
+                        android:drawableStart="@mipmap/fw"
+                        android:singleLine="true"
+                        android:text="@string/app_near_water"
+                        android:textColor="@color/color_water"
+                        android:textSize="@dimen/font_size_medium" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <!--结尾分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_tab_line" />
+
+
+</LinearLayout>

@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/bg_color_f8"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/font_color_white"
     android:orientation="vertical"
     android:paddingBottom="10dp"
     android:paddingTop="10dp">
@@ -10,38 +11,181 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="5dp"
-        android:paddingLeft="15dp"
-        android:paddingTop="5dp">
-
-        <ImageView
-            android:id="@+id/hot_brand_iv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/hot_brand" />
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+       >
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/hot_brand_iv"
-            android:layout_marginLeft="5dp"
-            android:layout_toRightOf="@id/hot_brand_iv"
-            android:text="热门品牌"
-            android:textColor="@color/tab_layout_indicator_color"
-            android:textSize="14sp" />
+            android:layout_height="30dp"
+            android:paddingTop="@dimen/margin_small"
+            android:gravity="center"
+            android:text="@string/host_brand"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large" />
     </RelativeLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="15dp"
-        android:background="#eeeeee" />
 
     <com.loonggg.androidframedemo.view.ScrollGridView
         android:id="@+id/sgv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:numColumns="5"></com.loonggg.androidframedemo.view.ScrollGridView>
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:numColumns="5"/>
+    <!--结尾分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+android:layout_marginTop="@dimen/margin_20"
+        android:background="@color/color_tab_line" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingTop="@dimen/margin_small"
+            android:gravity="center"
+            android:text="@string/app_brand_zdcp"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large" />
+    </RelativeLayout>
+
+
+    <com.loonggg.androidframedemo.view.ScrollGridView
+        android:id="@+id/zhd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:numColumns="3"/>
+    <!--结尾分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@color/color_tab_line" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_brand_dczq"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:text="@string/app_brand_more"
+            android:textColor="@color/color_enter"
+            android:textSize="@dimen/font_size_small" />
+    </RelativeLayout>
+    <cn.bingoogolapple.bgabanner.BGABanner
+        android:id="@+id/banner1"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        app:banner_indicatorGravity="bottom|right"
+        app:banner_pointContainerBackground="@color/font_color_black_half"
+        app:banner_placeholderDrawable="@mipmap/home_ad"
+        app:banner_transitionEffect="accordion" />
+    <!--结尾分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="@dimen/margin_15"
+        android:background="@color/color_tab_line" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_brand_xczq"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:text="@string/app_brand_more"
+            android:textColor="@color/color_enter"
+            android:textSize="@dimen/font_size_small" />
+
+    </RelativeLayout>
+    <cn.bingoogolapple.bgabanner.BGABanner
+        android:id="@+id/banner2"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        app:banner_indicatorGravity="bottom|right"
+        app:banner_pointContainerBackground="@color/font_color_black_half"
+        app:banner_placeholderDrawable="@mipmap/home_ad"
+        app:banner_transitionEffect="accordion" />
+    <!--结尾分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="@dimen/margin_15"
+        android:background="@color/color_tab_line" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/more_tool"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:text="@string/app_brand_more"
+            android:textColor="@color/color_enter"
+            android:textSize="@dimen/font_size_small" />
+    </RelativeLayout>
+    <cn.bingoogolapple.bgabanner.BGABanner
+        android:id="@+id/banner3"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        app:banner_pointContainerBackground="@color/font_color_black_half"
+        app:banner_indicatorGravity="bottom|right"
+        app:banner_placeholderDrawable="@mipmap/home_ad"
+        app:banner_transitionEffect="accordion" />
+    <!--结尾分割线-->
+
 </LinearLayout>

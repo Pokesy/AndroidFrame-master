@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <LinearLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        android:background="@color/font_color_white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@drawable/near_text_color_selector"
+            android:gravity="center"
+            android:textIsSelectable="true"
+            android:focusable="true"
+            android:text="@string/app_near_people" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:clickable="true"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@drawable/near_text_color_selector"
+
+            android:gravity="center"
+            android:text="@string/app_near_distance" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:textColor="@drawable/near_text_color_selector"
+            android:gravity="center"
+            android:text="@string/app_near_province" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_tab_line" />
+    <com.jtech.view.JRecyclerView
+        android:layout_below="@+id/tabLayout"
+        android:id="@+id/jrecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

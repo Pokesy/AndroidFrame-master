@@ -8,10 +8,13 @@
     <color name="font_color_white">#ffffff</color>
     <!-- 黑色 -->
     <color name="font_color_black">#000000</color>
+    <color name="font_black">#0000</color>
+    <!-- 黑色半透明 -->
+    <color name="font_color_black_half">#50000000</color>
     <!-- title -->
     <color name="tab_layout_indicator_color">#202d59</color>
     <!-- TabIndicator -->
-    <color name="tab_layout_color">#96a0aa</color>
+    <color name="tab_layout_color">#aaaaaa</color>
     <color name="bg_color">#EDEDED</color>
     <!--默认layout 按下状态的颜色-->
     <color name="default_layout_press_color">#20000000</color>
@@ -44,7 +47,7 @@
     <color name="color_xl_line">#f5f5f5</color>
     <color name="color_line">#eeeeee</color>
     <color name="color_tab_line">#e5e5e5</color>
-
+    <color name="color_tab_bg">#f7f7f7</color>
     <color name="color_bar1">#e5193b</color>
     <color name="color_bar">#ce0325</color>
     <!--口碑-->
@@ -57,6 +60,16 @@
     <color name="color_dgnsj">#64b0f2</color>
     <!--供求-->
     <color name="color_gq">#ffa42e</color>
+<!--进店-->
+    <color name="color_enter">#f9800a</color>
+<!--拨打电话-->
+    <color name="color_phone">#fc728f</color>
+    <!--查看位置-->
+    <color name="color_location">#21bbae</color>
+    <!--一键服务-->
+    <color name="color_water">#f9800a</color>
+    <!--周边经销商-->
+    <color name="color_near">#e5193b</color>
 
 
     <color name="color_gy">#fc728f</color>

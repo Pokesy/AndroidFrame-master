@@ -2,28 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/bg_color_f8"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="@color/bg_color_e4" />
 
     <TextView
         android:id="@+id/city_tip"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:background="@color/bg_color_f8"
-        android:paddingBottom="6dp"
+        android:layout_height="40dp"
+        android:background="@color/color_tab_line"
         android:paddingLeft="15dp"
-        android:paddingTop="6dp"
-        android:textColor="@color/font_color_7d" />
+        android:gravity="center_vertical"
+        android:textColor="@color/color_xxl"
+        tools:text="A"/>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1.0dp"
-        android:layout_marginLeft="15dp"
-        android:background="#eaeaea" />
 </LinearLayout>

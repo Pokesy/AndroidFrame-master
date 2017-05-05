@@ -17,6 +17,7 @@
             android:id="@+id/banner"
             android:layout_width="match_parent"
             android:layout_height="180dp"
+            app:banner_pointContainerBackground="@color/font_black"
             app:banner_indicatorGravity="bottom|center_horizontal"
             app:banner_placeholderDrawable="@mipmap/home_ad"
             app:banner_transitionEffect="accordion" />
@@ -175,7 +176,7 @@
                 android:id="@+id/tv_today_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_tag"
                 android:lines="1"
                 android:text="@string/app_item_content"
                 android:textColor="@color/color_xxl"
@@ -205,6 +206,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="@dimen/margin_smallest"
+                    android:textSize="@dimen/margin_small"
                     android:text="@string/app_time"
                     android:textColor="@color/color_xl" />
             </RelativeLayout>
