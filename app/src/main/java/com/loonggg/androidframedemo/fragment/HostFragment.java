@@ -6,20 +6,16 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.loonggg.androidframedemo.R;
 import com.loonggg.androidframedemo.adapter.CityAdapter;
-import com.loonggg.androidframedemo.adapter.GridViewAdapter;
 import com.loonggg.androidframedemo.model.City;
 import com.loonggg.androidframedemo.ui.basic.BasicFragment;
 import com.loonggg.androidframedemo.view.LetterComparator;
 import com.loonggg.androidframedemo.view.PinnedHeaderDecoration;
-import com.loonggg.androidframedemo.view.RGridView;
-import com.loonggg.androidframedemo.view.ScrollGridView;
 import com.loonggg.androidframedemo.view.WaveSideBarView;
 
 import java.lang.reflect.Type;
@@ -29,8 +25,6 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-
-import static android.R.attr.scrollY;
 
 /**
  * Created by Pokesy_dajiao on 2017/4/20.

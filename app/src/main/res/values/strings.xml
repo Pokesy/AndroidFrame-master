@@ -12,6 +12,7 @@
     <string name="edit_search">       输入关键词搜索</string>
     <string name="shop">品牌店</string>
     <string name="collection">收藏夹</string>
+    <string name="collect">收藏</string>
     <string name="message">消息</string>
     <string name="footprint">足迹</string>
     <string name="order">我的订单</string>
@@ -34,6 +35,7 @@
     <string name="app_home_qg">求购</string>
     <string name="app_near_location">查看位置</string>
     <string name="app_near_phone">拨打电话</string>
+    <string name="app_near_wechat">微信联系</string>
     <string name="app_near_enter">进店</string>
     <string name="app_near_water">一键服务</string>
     <string name="app_near_city">烟台</string>

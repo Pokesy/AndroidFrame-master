@@ -118,7 +118,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_below="@+id/tabLayout"
-            android:background="@color/color_tab_line" />
+            android:background="@color/color_line" />
     </RelativeLayout>
 
     <com.loonggg.androidframedemo.adapter.MyViewPager
@@ -127,5 +127,5 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/action"
         android:layout_marginTop="1dp"
-        android:background="@android:color/white"></com.loonggg.androidframedemo.adapter.MyViewPager>
+        android:background="@android:color/white"/>
 </RelativeLayout>

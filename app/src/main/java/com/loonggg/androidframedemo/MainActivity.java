@@ -29,6 +29,7 @@ import com.loonggg.androidframedemo.net.rpc.service.AppService;
 import com.loonggg.androidframedemo.ui.basic.BasicTitleBarActivity;
 import com.loonggg.androidframedemo.ui.serviceinjection.DaggerServiceComponent;
 import com.loonggg.androidframedemo.ui.serviceinjection.ServiceModule;
+import com.loonggg.androidframedemo.utils.StatusBarUtils;
 import com.umeng.socialize.UMShareAPI;
 
 import java.util.ArrayList;
@@ -36,6 +37,31 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+/*
+ *
+ *          ┌─┐       ┌─┐
+ *       ┌──┘ ┴───────┘ ┴──┐
+ *       │                 │
+ *       │       ───       │
+ *       │  ─┬┘       └┬─  │
+ *       │                 │
+ *       │       ─┴─       │
+ *       │                 │
+ *       └───┐         ┌───┘
+ *           │         │
+ *           │         │
+ *           │         │
+ *           │         └──────────────┐
+ *           │                        │
+ *           │                        ├─┐
+ *           │                        ┌─┘
+ *           │                        │
+ *           └─┐  ┐  ┌───────┬──┐  ┌──┘
+ *             │ ─┤ ─┤       │ ─┤ ─┤
+ *             └──┴──┘       └──┴──┘
+ *                 神兽保佑
+ *                 代码无BUG!
+ */
 
 public class MainActivity extends BasicTitleBarActivity {
     @Inject
@@ -72,19 +98,8 @@ public class MainActivity extends BasicTitleBarActivity {
     public void initViews() {
         tabLayout = (TabLayout) findViewById(R.id.tableLayout);
         pager = (ViewPager) findViewById(R.id.viewPager);
-        StatusBarCompat.setStatusBarColor(this, R.color.color_bar1, false);
-        //透明状态栏
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            Window window = getWindow();
-            // Translucent status bar
-            window.setFlags(
-                    WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
-                    WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        }
-        //透明状态栏
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-//透明导航栏
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        StatusBarUtils.setWindowStatusBarColor(this,R.color.color_bar
+        );
     }
 
     /**

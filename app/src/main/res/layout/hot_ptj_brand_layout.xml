@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/font_color_white"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_brand_dczq"
+            android:textStyle="bold"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:text="@string/app_brand_more"
+            android:drawableEnd="@mipmap/yjt"
+            android:textColor="@color/color_enter"
+            android:textSize="@dimen/font_size_small" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingTop="@dimen/margin_small"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/host_brand"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+
+    <com.loonggg.androidframedemo.view.ScrollGridView
+        android:id="@+id/sgv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:numColumns="5"/>
+    <!--结尾分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@color/color_xl_line" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingTop="@dimen/margin_small"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="@string/app_brand_zdcp"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large" />
+    </RelativeLayout>
+
+
+    <com.loonggg.androidframedemo.view.ScrollGridView
+        android:id="@+id/zhd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:numColumns="3"/>
+    <!--结尾分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@color/color_xl_line" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_brand_dczq"
+            android:textStyle="bold"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:text="@string/app_brand_more"
+            android:textColor="@color/color_enter"
+            android:textSize="@dimen/font_size_small" />
+    </RelativeLayout>
+    <!--状态部分-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:layout_marginTop="8dp">
+        <!--图片部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home7"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_tag"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home4"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="@dimen/margin_tag"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home5"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!--结尾分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="@dimen/margin_15"
+        android:background="@color/color_xl_line" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_brand_xczq"
+            android:textStyle="bold"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:text="@string/app_brand_more"
+            android:textColor="@color/color_enter"
+            android:textSize="@dimen/font_size_small" />
+
+    </RelativeLayout>
+    <!--状态部分-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:layout_marginTop="8dp">
+        <!--图片部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home7"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_tag"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home4"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="@dimen/margin_tag"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home5"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!--结尾分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="@dimen/margin_15"
+        android:background="@color/color_xl_line" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/more_tool"
+            android:textStyle="bold"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:text="@string/app_brand_more"
+            android:textColor="@color/color_enter"
+            android:textSize="@dimen/font_size_small" />
+    </RelativeLayout>
+    <!--状态部分-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:layout_marginTop="8dp">
+        <!--图片部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home7"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_tag"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home4"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="@dimen/margin_tag"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home5"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!--结尾分割线-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/more_tool"
+            android:textStyle="bold"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:text="@string/app_brand_more"
+            android:textColor="@color/color_enter"
+            android:textSize="@dimen/font_size_small" />
+    </RelativeLayout>
+    <!--状态部分-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:layout_marginTop="8dp">
+        <!--图片部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home7"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_tag"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home4"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="@dimen/margin_tag"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home5"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!--结尾分割线-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/more_tool"
+            android:textStyle="bold"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:text="@string/app_brand_more"
+            android:textColor="@color/color_enter"
+            android:textSize="@dimen/font_size_small" />
+    </RelativeLayout>
+    <!--状态部分-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:layout_marginTop="8dp">
+        <!--图片部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home7"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_tag"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home4"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="@dimen/margin_tag"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home5"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!--结尾分割线-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/more_tool"
+            android:textStyle="bold"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:text="@string/app_brand_more"
+            android:textColor="@color/color_enter"
+            android:textSize="@dimen/font_size_small" />
+    </RelativeLayout>
+    <!--状态部分-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:layout_marginTop="8dp">
+        <!--图片部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home7"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_tag"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home4"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="@dimen/margin_tag"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home5"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!--结尾分割线-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/more_tool"
+            android:textStyle="bold"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:text="@string/app_brand_more"
+            android:textColor="@color/color_enter"
+            android:textSize="@dimen/font_size_small" />
+    </RelativeLayout>
+    <!--状态部分-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:layout_marginTop="8dp">
+        <!--图片部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home7"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_tag"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home4"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="@dimen/margin_tag"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home5"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!--结尾分割线-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/more_tool"
+            android:textStyle="bold"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:text="@string/app_brand_more"
+            android:textColor="@color/color_enter"
+            android:textSize="@dimen/font_size_small" />
+    </RelativeLayout>
+    <!--状态部分-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:layout_marginTop="8dp">
+        <!--图片部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home7"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_tag"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home4"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="@dimen/margin_tag"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home5"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!--结尾分割线-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/more_tool"
+            android:textStyle="bold"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:text="@string/app_brand_more"
+            android:textColor="@color/color_enter"
+            android:textSize="@dimen/font_size_small" />
+    </RelativeLayout>
+    <!--状态部分-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:layout_marginTop="8dp">
+        <!--图片部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home7"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_tag"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home4"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="@dimen/margin_tag"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home5"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!--结尾分割线-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/more_tool"
+            android:textStyle="bold"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:text="@string/app_brand_more"
+            android:textColor="@color/color_enter"
+            android:textSize="@dimen/font_size_small" />
+    </RelativeLayout>
+    <!--状态部分-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_35"
+        android:layout_marginTop="8dp">
+        <!--图片部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home7"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_tag"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home4"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="@dimen/margin_tag"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/home5"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!--结尾分割线-->
+</LinearLayout>

@@ -80,7 +80,7 @@ public class CityAdapter extends BaseTurboAdapter<City, BaseViewHolder> {
             ((PinnedHolder) holder).city_tip.setText(letter);
         }else if (holder instanceof GridViewHolder) {
             ((GridViewHolder) holder).gv.setAdapter(new GridViewAdapter(context, name,img));
-            ((GridViewHolder) holder).zhd.setAdapter(new GridViewAdapter(context, name1,img1));
+            ((GridViewHolder) holder).zhd.setAdapter(new ProductsViewAdapter(context, name1,img1));
             ((GridViewHolder) holder).banner1.setAdapter(new BGABanner.Adapter<ImageView, String>() {
                 @Override
                 public void fillBannerItem(BGABanner banner, ImageView itemView, String model, int position) {

@@ -81,6 +81,9 @@
         </activity>
         <activity android:name=".ui.activity.SearchLocationActivity" />
         <activity android:name=".ui.activity.SearchLocationDemoActivity" />
+        <activity android:name=".ui.activity.SellDetailActivity" />
+        <activity android:name=".ui.activity.BrandDetailActivity" />
+        <activity android:name=".ui.activity.WaterDetailActivity"/>
     </application>
 
 </manifest>

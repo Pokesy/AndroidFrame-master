@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/font_color_white"
     android:orientation="vertical"
     android:paddingBottom="10dp"
@@ -11,18 +11,20 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_small"
         android:layout_marginEnd="@dimen/margin_35"
-       >
+        android:layout_marginStart="@dimen/margin_small">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:paddingTop="@dimen/margin_small"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:gravity="center"
+            android:paddingTop="@dimen/margin_small"
             android:text="@string/host_brand"
             android:textColor="@color/color_xxl"
-            android:textSize="@dimen/font_size_large" />
+            android:textSize="@dimen/font_size_large"
+            android:textStyle="bold" />
     </RelativeLayout>
 
 
@@ -30,30 +32,31 @@
         android:id="@+id/sgv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_small"
         android:layout_marginEnd="@dimen/margin_35"
-        android:numColumns="5"/>
+        android:layout_marginStart="@dimen/margin_small"
+        android:numColumns="5" />
     <!--结尾分割线-->
     <View
         android:layout_width="match_parent"
         android:layout_height="10dp"
-android:layout_marginTop="@dimen/margin_20"
-        android:background="@color/color_tab_line" />
+        android:layout_marginTop="@dimen/margin_20"
+        android:background="@color/color_xl_line" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_small"
         android:layout_marginEnd="@dimen/margin_35"
-        >
+        android:layout_marginStart="@dimen/margin_small">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:paddingTop="@dimen/margin_small"
             android:gravity="center"
+            android:paddingTop="@dimen/margin_small"
             android:text="@string/app_brand_zdcp"
             android:textColor="@color/color_xxl"
-            android:textSize="@dimen/font_size_large" />
+            android:textSize="@dimen/font_size_large"
+            android:textStyle="bold" />
     </RelativeLayout>
 
 
@@ -61,22 +64,22 @@ android:layout_marginTop="@dimen/margin_20"
         android:id="@+id/zhd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_small"
         android:layout_marginEnd="@dimen/margin_35"
-        android:numColumns="3"/>
+        android:layout_marginStart="@dimen/margin_small"
+        android:numColumns="3" />
     <!--结尾分割线-->
     <View
         android:layout_width="match_parent"
         android:layout_height="10dp"
         android:layout_marginTop="@dimen/margin_20"
-        android:background="@color/color_tab_line" />
+        android:background="@color/color_xl_line" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:gravity="center"
-        android:layout_marginStart="@dimen/margin_small"
         android:layout_marginEnd="@dimen/margin_35"
-        >
+        android:layout_marginStart="@dimen/margin_small"
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
@@ -84,40 +87,42 @@ android:layout_marginTop="@dimen/margin_20"
             android:gravity="center"
             android:text="@string/app_brand_dczq"
             android:textColor="@color/color_xxl"
-            android:textSize="@dimen/font_size_large" />
+            android:textSize="@dimen/font_size_large"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_alignParentEnd="true"
+            android:gravity="center"
             android:text="@string/app_brand_more"
             android:textColor="@color/color_enter"
             android:textSize="@dimen/font_size_small" />
     </RelativeLayout>
+
     <cn.bingoogolapple.bgabanner.BGABanner
         android:id="@+id/banner1"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:layout_marginStart="@dimen/margin_small"
         android:layout_marginEnd="@dimen/margin_35"
+        android:layout_marginStart="@dimen/margin_small"
         app:banner_indicatorGravity="bottom|right"
-        app:banner_pointContainerBackground="@color/font_color_black_half"
         app:banner_placeholderDrawable="@mipmap/home_ad"
+        app:banner_pointContainerBackground="@color/font_color_black_half"
         app:banner_transitionEffect="accordion" />
     <!--结尾分割线-->
     <View
         android:layout_width="match_parent"
         android:layout_height="10dp"
         android:layout_marginTop="@dimen/margin_15"
-        android:background="@color/color_tab_line" />
+        android:background="@color/color_xl_line" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginStart="@dimen/margin_small"
         android:layout_marginEnd="@dimen/margin_35"
-        android:gravity="center"
-        >
+        android:layout_marginStart="@dimen/margin_small"
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
@@ -125,40 +130,43 @@ android:layout_marginTop="@dimen/margin_20"
             android:gravity="center"
             android:text="@string/app_brand_xczq"
             android:textColor="@color/color_xxl"
-            android:textSize="@dimen/font_size_large" />
+            android:textSize="@dimen/font_size_large"
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_alignParentEnd="true"
+            android:gravity="center"
             android:text="@string/app_brand_more"
             android:textColor="@color/color_enter"
             android:textSize="@dimen/font_size_small" />
 
     </RelativeLayout>
+
     <cn.bingoogolapple.bgabanner.BGABanner
         android:id="@+id/banner2"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:layout_marginStart="@dimen/margin_small"
         android:layout_marginEnd="@dimen/margin_35"
+        android:layout_marginStart="@dimen/margin_small"
         app:banner_indicatorGravity="bottom|right"
-        app:banner_pointContainerBackground="@color/font_color_black_half"
         app:banner_placeholderDrawable="@mipmap/home_ad"
+        app:banner_pointContainerBackground="@color/font_color_black_half"
         app:banner_transitionEffect="accordion" />
     <!--结尾分割线-->
     <View
         android:layout_width="match_parent"
         android:layout_height="10dp"
         android:layout_marginTop="@dimen/margin_15"
-        android:background="@color/color_tab_line" />
+        android:background="@color/color_xl_line" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginStart="@dimen/margin_small"
         android:layout_marginEnd="@dimen/margin_35"
-        android:gravity="center"
-        >
+        android:layout_marginStart="@dimen/margin_small"
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
@@ -166,25 +174,28 @@ android:layout_marginTop="@dimen/margin_20"
             android:gravity="center"
             android:text="@string/more_tool"
             android:textColor="@color/color_xxl"
-            android:textSize="@dimen/font_size_large" />
+            android:textSize="@dimen/font_size_large"
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_alignParentEnd="true"
+            android:gravity="center"
             android:text="@string/app_brand_more"
             android:textColor="@color/color_enter"
             android:textSize="@dimen/font_size_small" />
     </RelativeLayout>
+
     <cn.bingoogolapple.bgabanner.BGABanner
         android:id="@+id/banner3"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:layout_marginStart="@dimen/margin_small"
         android:layout_marginEnd="@dimen/margin_35"
-        app:banner_pointContainerBackground="@color/font_color_black_half"
+        android:layout_marginStart="@dimen/margin_small"
         app:banner_indicatorGravity="bottom|right"
         app:banner_placeholderDrawable="@mipmap/home_ad"
+        app:banner_pointContainerBackground="@color/font_color_black_half"
         app:banner_transitionEffect="accordion" />
     <!--结尾分割线-->
 

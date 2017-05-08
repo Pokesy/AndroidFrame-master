@@ -90,7 +90,7 @@ public class BrandFragment extends BasicFragment implements View.OnClickListener
     public void init() {
         list = new ArrayList<>();
         list.add(new HostFragment());//新闻Fragment
-        list.add(new NewsFragment());//新闻Fragment
+        list.add(new PtjFragment());//新闻Fragment
         adapter = new BrandViewPagerAdapter(getChildFragmentManager(),list, getActivity());
         pager.setAdapter(adapter);
         pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener

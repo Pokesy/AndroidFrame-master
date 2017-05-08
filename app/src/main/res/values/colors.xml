@@ -72,6 +72,12 @@
     <color name="color_near">#e5193b</color>
 
 
+
+    <color name="color_sell_1">#ffbc48</color>
+    <color name="color_sell_2">#ff8737</color>
+    <color name="color_sell_3">#f65450</color>
+
+
     <color name="color_gy">#fc728f</color>
     <color name="color_qg">#21bbae</color>
 

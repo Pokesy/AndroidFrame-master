@@ -4,8 +4,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    >
+    android:background="@color/font_color_white">
 
     <LinearLayout
         android:id="@+id/tabLayout"
@@ -48,7 +47,8 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/color_tab_line" />
+        android:layout_below="@+id/tabLayout"
+        android:background="@color/color_xl_line" />
 
     <com.jtech.view.JRecyclerView
         android:id="@+id/jrecyclerview"

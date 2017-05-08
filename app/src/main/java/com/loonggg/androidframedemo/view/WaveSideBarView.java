@@ -8,10 +8,10 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
-import android.os.Build;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+
 
 import com.loonggg.androidframedemo.R;
 
@@ -98,12 +98,12 @@ public class WaveSideBarView extends View {
     private void init(Context context, AttributeSet attrs) {
         mLetters = Arrays.asList(context.getResources().getStringArray(R.array.waveSideBarLetters));
 
-        mTextColor = Color.parseColor("#707070");
-        mWaveColor = Color.parseColor("#ffe7e7");
+        mTextColor = Color.parseColor("#969696");
+        mWaveColor = Color.parseColor("#be69be91");
         mTextColorChoose = context.getResources().getColor(android.R.color.white);
         mTextSize = context.getResources().getDimensionPixelSize(R.dimen.textSize_sidebar);
         mLargeTextSize = context.getResources().getDimensionPixelSize(R.dimen.large_textSize_sidebar);
-        mPadding = context.getResources().getDimensionPixelSize(R.dimen.margin_20);
+        mPadding = context.getResources().getDimensionPixelSize(R.dimen.textSize_sidebar_padding);
         if (attrs != null) {
             TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.WaveSideBarView);
             mTextColor = a.getColor(R.styleable.WaveSideBarView_sidebarTextColor, mTextColor);
@@ -111,8 +111,8 @@ public class WaveSideBarView extends View {
             mTextSize = a.getFloat(R.styleable.WaveSideBarView_sidebarTextSize, mTextSize);
             mLargeTextSize = a.getFloat(R.styleable.WaveSideBarView_sidebarLargeTextSize, mLargeTextSize);
             mWaveColor = a.getColor(R.styleable.WaveSideBarView_sidebarBackgroundColor, mWaveColor);
-            mRadius = a.getInt(R.styleable.WaveSideBarView_sidebarRadius, context.getResources().getDimensionPixelSize(R.dimen.radius_sidebar));
-            mBallRadius = a.getInt(R.styleable.WaveSideBarView_sidebarBallRadius, context.getResources().getDimensionPixelSize(R.dimen.ball_radius_sidebar));
+            mRadius = a.getColor(R.styleable.WaveSideBarView_sidebarRadius, context.getResources().getDimensionPixelSize(R.dimen.radius_sidebar));
+            mBallRadius = a.getColor(R.styleable.WaveSideBarView_sidebarBallRadius, context.getResources().getDimensionPixelSize(R.dimen.ball_radius_sidebar));
             a.recycle();
         }
 
@@ -173,7 +173,7 @@ public class WaveSideBarView extends View {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         mHeight = MeasureSpec.getSize(heightMeasureSpec);
-        mWidth = getMeasuredWidth();
+        mWidth = getWidth();
         mItemHeight = (mHeight - mPadding) / mLetters.size();
         mPosX = mWidth - 1.6f * mTextSize;
     }
@@ -295,10 +295,9 @@ public class WaveSideBarView extends View {
 
         mBallPath.reset();
         mBallPath.addCircle(mBallCentreX, mCenterY, mBallRadius, Path.Direction.CW);
-        if(Build.VERSION.SDK_INT>= Build.VERSION_CODES.KITKAT) {
+        if (android.os.Build.VERSION.SDK_INT >= 19) {
             mBallPath.op(mWavePath, Path.Op.DIFFERENCE);
         }
-
         mBallPath.close();
         canvas.drawPath(mBallPath, mWavePaint);
 

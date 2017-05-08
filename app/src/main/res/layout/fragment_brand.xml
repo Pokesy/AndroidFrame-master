@@ -63,17 +63,20 @@
             app:layout_scrollFlags="scroll"
             app:tabIndicatorColor="@color/color_near"
             app:tabIndicatorHeight="2.0dp"
+            android:textStyle="bold"
             app:tabSelectedTextColor="@color/color_near"
             app:tabTextColor="@color/color_xxl">
 
             <android.support.design.widget.TabItem
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textStyle="bold"
                 android:text="@string/host" />
 
             <android.support.design.widget.TabItem
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textStyle="bold"
                 android:text="@string/kit"/>
 
 
