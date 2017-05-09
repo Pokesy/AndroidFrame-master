@@ -60,9 +60,9 @@
     <color name="color_dgnsj">#64b0f2</color>
     <!--供求-->
     <color name="color_gq">#ffa42e</color>
-<!--进店-->
+    <!--进店-->
     <color name="color_enter">#f9800a</color>
-<!--拨打电话-->
+    <!--拨打电话-->
     <color name="color_phone">#fc728f</color>
     <!--查看位置-->
     <color name="color_location">#21bbae</color>
@@ -70,8 +70,10 @@
     <color name="color_water">#f9800a</color>
     <!--周边经销商-->
     <color name="color_near">#e5193b</color>
+    <!--精选口碑-->
+    <color name="color_hot_brand">#e5193b</color>
 
-
+    <color name="color_water_tip">#feb851</color>
 
     <color name="color_sell_1">#ffbc48</color>
     <color name="color_sell_2">#ff8737</color>
@@ -81,6 +83,8 @@
     <color name="color_gy">#fc728f</color>
     <color name="color_qg">#21bbae</color>
 
+    <color name="color_water_tool">#49aee7</color>
+    <color name="color_water_service">#75a92b</color>
 
     <color name="test_spacing1">#9674FC</color>
     <color name="test_spacing2">#179641</color>

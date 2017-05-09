@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_small"
+    android:background="@drawable/shape_hot_brand"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/default_layout_bg_selector"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_head"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/home_dgnsj" />
+
+            <TextView
+                android:id="@+id/tv_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_inter"
+                android:layout_toEndOf="@+id/iv_head"
+                android:text="愤怒的小鸟"
+                android:textColor="@color/color_xxl"
+                android:textSize="@dimen/font_size_small" />
+
+
+            <TextView
+                android:id="@+id/tv_inter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="有用123232"
+                android:textColor="@color/color_a0"
+                android:textSize="@dimen/font_size_small" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="2"
+            android:text="挺好挺不错的，我觉得挺好的挺好挺不错的，挺好挺不错的，我觉得挺好的挺好挺不错的，我觉得挺好的我觉得挺好的挺好挺不错的，我觉得挺好的挺好挺不错的，我觉得挺好的"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_small" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_enter"
+                android:gravity="center"
+                android:paddingBottom="@dimen/margin_tag"
+                android:paddingTop="@dimen/margin_tag"
+                android:src="@mipmap/ad_point_normal"
+                android:text="@string/app_near_enter"
+                android:textColor="@color/color_water_tip"
+                android:textSize="@dimen/font_size_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:background="@drawable/shape_enter"
+                android:gravity="center"
+                android:paddingBottom="@dimen/margin_tag"
+                android:paddingTop="@dimen/margin_tag"
+                android:src="@mipmap/ad_point_normal"
+                android:text="@string/app_near_enter"
+                android:textColor="@color/color_water_tip"
+                android:textSize="@dimen/font_size_small" />
+        </LinearLayout>
+        <!--状态部分-->
+        <RelativeLayout
+            android:id="@+id/img_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="8dp">
+            <!--图片部分-->
+            <LinearLayout
+                android:id="@+id/images"
+                android:layout_width="match_parent"
+                android:layout_height="74dp">
+
+                <ImageView
+                    android:id="@+id/iv_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/home7"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_tag"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/home4"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginStart="@dimen/margin_tag"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/home5"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_tag"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/home4"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

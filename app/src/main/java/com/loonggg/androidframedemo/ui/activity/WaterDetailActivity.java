@@ -7,7 +7,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.loonggg.androidframedemo.R;
-import com.loonggg.androidframedemo.adapter.MainProductsViewAdapter;
+import com.loonggg.androidframedemo.adapter.HotBrandViewAdapter;
 import com.loonggg.androidframedemo.ui.basic.BasicTitleBarActivity;
 import com.loonggg.androidframedemo.view.ScrollGridView;
 
@@ -22,8 +22,6 @@ import butterknife.ButterKnife;
 public class WaterDetailActivity extends BasicTitleBarActivity {
     String[] name = {"艾迪精密", "贝力特", "顺天", "信人", "博运重工", "铭德", "世工", "佰泰", "百财", "铭润"};
     int[] img = {R.mipmap.ad, R.mipmap.blt, R.mipmap.st, R.mipmap.xr, R.mipmap.byzg, R.mipmap.md, R.mipmap.sg, R.mipmap.bt, R.mipmap.bc, R.mipmap.mr};
-    @Bind(R.id.zhd)
-    ScrollGridView zhd;
     @Bind(R.id.seatch)
     ImageView seatch;
     @Bind(R.id.message)
@@ -42,24 +40,33 @@ public class WaterDetailActivity extends BasicTitleBarActivity {
     LinearLayout llContent;
     @Bind(R.id.ll_tv)
     LinearLayout llTv;
-    @Bind(R.id.tv_more_tool)
-    TextView tvMoreTool;
-    @Bind(R.id.tv_market)
-    TextView tvMarket;
-    @Bind(R.id.tv_second_hand)
-    TextView tvSecondHand;
-    @Bind(R.id.tv_mouth)
-    TextView tvMouth;
-    @Bind(R.id.tv_build)
-    TextView tvBuild;
     @Bind(R.id.main_radio)
     LinearLayout mainRadio;
+    @Bind(R.id.head1)
+    ImageView head1;
+    @Bind(R.id.title1)
+    TextView title1;
+    @Bind(R.id.content11)
+    TextView content11;
+    @Bind(R.id.content2)
+    LinearLayout content2;
+    @Bind(R.id.head)
+    ImageView head;
+    @Bind(R.id.title)
+    TextView title;
+    @Bind(R.id.content1)
+    TextView content1;
+    @Bind(R.id.content)
+    LinearLayout content;
+    @Bind(R.id.zhd)
+    ScrollGridView zhd;
     @Bind(R.id.activity_main)
     LinearLayout activityMain;
 
+
     @Override
     public int getLayoutId() {
-        return R.layout.activity_sell_detail;
+        return R.layout.activity_water_detail;
     }
 
     @Override
@@ -73,6 +80,6 @@ public class WaterDetailActivity extends BasicTitleBarActivity {
     private void init() {
         tvTitle.setFocusableInTouchMode(true);
         tvTitle.requestFocus();
-        zhd.setAdapter(new MainProductsViewAdapter(this, name, img));
+        zhd.setAdapter(new HotBrandViewAdapter(this, name, img));
     }
 }

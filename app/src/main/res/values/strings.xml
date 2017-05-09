@@ -54,6 +54,15 @@
     <string name="app_near_content">主营：液压破碎锤、快速连接器、拔桩机、大锤、小锤</string>
     <string name="app_item_content">马鞍山云林白城—专业、专心、专注生产研发液压锤精品活塞精品活塞精品活塞</string>
 
+    <!--服务站详情-->
+    <string name="app_water_people">服务车辆</string>
+    <string name="app_water_car">服务人员</string>
+    <string name="app_water_time">从业年限</string>
+    <string name="app_tool_make">属具安装</string>
+    <string name="app_tool_text">安装服务，一步到位</string>
+    <string name="app_tool_service">属具维修</string>
+    <string name="app_tool_service_text">品质维修，后顾无忧</string>
+    <string name="app_hot_brand">精选口碑</string>
 
     <string name="app_read">阅读</string>
     <string name="app_time">2017.1.7</string>

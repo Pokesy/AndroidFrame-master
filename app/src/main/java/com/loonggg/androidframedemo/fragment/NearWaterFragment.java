@@ -24,6 +24,7 @@ import com.loonggg.androidframedemo.adapter.MyNearAdapter;
 import com.loonggg.androidframedemo.adapter.MyNearWaterAdapter;
 import com.loonggg.androidframedemo.ui.activity.BrandDetailActivity;
 import com.loonggg.androidframedemo.ui.activity.SellDetailActivity;
+import com.loonggg.androidframedemo.ui.activity.WaterDetailActivity;
 import com.loonggg.androidframedemo.ui.basic.BasicFragment;
 
 import java.util.ArrayList;
@@ -115,7 +116,7 @@ public class NearWaterFragment extends BasicFragment implements OnItemClickListe
     @Override
     public void onItemClick(RecyclerHolder holder, View view, int position) {
 //        Toast.makeText(getActivity(), "第" + position + "行点击事件", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(getActivity(), BrandDetailActivity.class));
+        startActivity(new Intent(getActivity(), WaterDetailActivity.class));
     }
 
     /**
