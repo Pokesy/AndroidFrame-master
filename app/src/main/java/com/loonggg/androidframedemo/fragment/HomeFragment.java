@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,11 +21,13 @@ import com.jtech.listener.OnItemLongClickListener;
 import com.jtech.listener.OnItemViewMoveListener;
 import com.jtech.listener.OnItemViewSwipeListener;
 import com.jtech.listener.OnLoadListener;
+import com.jtech.view.JRecyclerView;
 import com.jtech.view.RecyclerHolder;
 import com.jtech.view.RefreshLayout;
 import com.loonggg.androidframedemo.R;
 import com.loonggg.androidframedemo.ViewHolder.RecyclerViewHolder;
 import com.loonggg.androidframedemo.adapter.BaseRecyclerAdapter;
+import com.loonggg.androidframedemo.adapter.HomeAdapter;
 import com.loonggg.androidframedemo.adapter.MyAdapter;
 import com.loonggg.androidframedemo.adapter.MyTestAdapter;
 import com.loonggg.androidframedemo.ui.activity.SearchLocationActivity;
@@ -51,63 +54,47 @@ import butterknife.OnClick;
 
 public class HomeFragment extends BasicFragment implements OnItemClickListener, OnItemLongClickListener, RefreshLayout.OnRefreshListener, OnLoadListener, OnItemViewSwipeListener, OnItemViewMoveListener {
     public static final String ARG_PAGE = "ARG_PAGE";
-
-    @Bind(R.id.today_message)
-    RGridView todayMessage;
-    @Bind(R.id.tv_more_tool)
-    TextView tvMoreTool;
-    @Bind(R.id.tv_market)
-    TextView tvMarket;
-    @Bind(R.id.tv_second_hand)
-    TextView tvSecondHand;
-    @Bind(R.id.tv_mouth)
-    TextView tvMouth;
-    @Bind(R.id.tv_build)
-    TextView tvBuild;
-    @Bind(R.id.main_radio)
-    LinearLayout mainRadio;
-    @Bind(R.id.iv_today_news)
-    ImageView ivTodayNews;
-    @Bind(R.id.tv_today_title)
-    TextView tvTodayTitle;
-    @Bind(R.id.news_count)
-    TextView newsCount;
-    @Bind(R.id.iv_today_news_time)
-    TextView ivTodayNewsTime;
-
-    @Bind(R.id.scrollView)
-    MyScrollview scrollView;
-    @Bind(R.id.carousel_view)
-    CarouselView carouselView;
-    @Bind(R.id.trainee_evaluation_rv)
-    RecyclerView traineeEvaluationRv;
-    private BaseRecyclerAdapter mEvaluationAdapter;
-    private int mPage;
-    private RecyclerView lv;
-    private MyTestAdapter testAdapter;
+    @Bind(R.id.jrecyclerview)
+    JRecyclerView jRecyclerView;
+    //    @Bind(R.id.refreshlayout)
+//    RefreshLayout refreshlayout;
+    @Bind(R.id.activity_main)
+    RelativeLayout activityMain;
+    private HomeAdapter testAdapter;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, null);
+
+        View view = inflater.inflate(R.layout.fragment_news, null);
         ButterKnife.bind(this, view);
-        initBanner();
-        initMessage();
-        init();
-
+        initData();
         return view;
-
     }
 
-    private void initMessage() {
+    private void initData() {
         List<String> list = new ArrayList<String>();
         for (int i = 0; i < 20; i++) {
-            list.add(i + "");
+            list.add(i + "行");
         }
-        // 创建一个线性布局管理器
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
-        // 设置布局管理器
-        todayMessage.setLayoutManager(layoutManager);
-        todayMessage.setAdapter(new MyAdapter(list));
+        //设置layoutmanager
+        jRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        //设置适配器
+        testAdapter = new HomeAdapter(getActivity(),list);
+        jRecyclerView.setAdapter(testAdapter);
+        //开启滑动到底部加载更多功能
+        jRecyclerView.setLoadMore(true);
+//        //开启滑动删除(默认状态，可以手动设置)
+//        jRecyclerView.setSwipeFree(true, this);
+//        //开启长点击拖动换位(默认状态，可以手动设置)
+//        jRecyclerView.setMoveFree(true, this);
+        //设置事件
+        jRecyclerView.setOnLoadListener(this);
+//        refreshlayout.setOnRefreshListener(this);
+        jRecyclerView.setOnItemClickListener(this);
+//        jRecyclerView.setOnItemLongClickListener(this);
+        //主动发起下拉刷新
+//        refreshlayout.startRefreshing();
+        loadData(true);
     }
 
     /**
@@ -116,98 +103,20 @@ public class HomeFragment extends BasicFragment implements OnItemClickListener, 
      * @param loadMore 是否为加载更多的标记
      */
     private void loadData(final boolean loadMore) {
-
-    }
-
-    private void initBanner() {
-        final List<String> list = new ArrayList<>();
-        list.add("http://f.hiphotos.baidu.com/image/pic/item/00e93901213fb80e0ee553d034d12f2eb9389484.jpg");
-        list.add("http://d.hiphotos.baidu.com/image/pic/item/0823dd54564e92584a00b4e99e82d158ccbf4e84.jpg");
-        list.add("http://f.hiphotos.baidu.com/image/h%3D200/sign=15c6eac033adcbef1e3479069cae2e0e/6d81800a19d8bc3e7451d5ce808ba61ea8d3455d.jpg");
-
-        //设置加载显示的banner广告轮播图
-        carouselView.setImageCarouselLoaderListener(new CarouselView.ImageCarouselLoaderListener() {
-            @Override
-            public void setImageForPosition(int position, ImageView imageView) {
-                Glide.with(getActivity())
-                        .load(list.get(position))
-                        .centerCrop()
-                        .placeholder(R.mipmap.ic_launcher)
-                        .crossFade()
-                        .into(imageView);
-            }
-        });
-        //也可以在这里设置轮播banner数
-        carouselView.setPageCount(3);
-        //设置点击事件
-        carouselView.setOnCarouselViewItemClickListener(new CarouselView.OnCarouselViewItemClickListener() {
-            @Override
-            public void OnCarouselViewItemClickListener(int position) {
-                Toast.makeText(getActivity(), "" + position, Toast.LENGTH_SHORT).show();
-            }
-        });
-        //获取当前展示的item索引
-        //carouselView.getCurrentIndex();
-    }
-
-    private void init() {
-        List<String> list = new ArrayList<>();
-        list.add("11");
-        list.add("11");
-        list.add("11");
-        mEvaluationAdapter = new BaseRecyclerAdapter<String>(getActivity(), list) {
-
-            @Override
-            public int getItemLayoutId(int viewType) {
-                return R.layout.item_rv_trainee_evaluation;
-            }
-
-            @Override
-            public void bindData(RecyclerView.ViewHolder holder, int position, String item) {
-                if (holder instanceof RecyclerViewHolder) {
-
-                }
-            }
-
-            @Override
-            public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-                return super.onCreateViewHolder(parent, viewType);
-            }
-        };
-
-        final LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
-        traineeEvaluationRv.setLayoutManager(mLayoutManager);
-        traineeEvaluationRv.setAdapter(mEvaluationAdapter);
-
-        mEvaluationAdapter.setIsShowLoadMore(true);
-        mEvaluationAdapter.setLoadMoreString("查看更多");
-        traineeEvaluationRv.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            private int lastVisibleItem;
-
-            @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-                super.onScrollStateChanged(recyclerView, newState);
-                if (newState == RecyclerView.SCROLL_STATE_IDLE && lastVisibleItem + 1 == mEvaluationAdapter
-                        .getItemCount()) {
-                    mEvaluationAdapter.setMoreStatus(BaseRecyclerAdapter.LOADING_MORE);
-                }
-            }
-
-            @Override
-            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-                super.onScrolled(recyclerView, dx, dy);
-                lastVisibleItem = mLayoutManager.findLastVisibleItemPosition();
-            }
-        });
-
-    }
-
-    public static HomeFragment newInstance(int page) {
-        Bundle args = new Bundle();
-        args.putInt(ARG_PAGE, page);
-        HomeFragment pageFragment = new HomeFragment();
-        pageFragment.setArguments(args);
-        return pageFragment;
+        List<String> list = new ArrayList<String>();
+        for (int i = 0; i < 20; i++) {
+            list.add(i + "");
+        }
+//        try {
+////            Thread.sleep(1300);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+        //设置数据
+        testAdapter.setDatas(list, loadMore);
+        //标记为请求完成
+//        refreshlayout.refreshingComplete();
+        jRecyclerView.setLoadCompleteState();
     }
 
     @Override
@@ -216,96 +125,73 @@ public class HomeFragment extends BasicFragment implements OnItemClickListener, 
         ButterKnife.unbind(this);
     }
 
-    @OnClick({R.id.today_message, R.id.tv_more_tool, R.id.tv_market, R.id.tv_second_hand, R.id.tv_mouth, R.id.tv_build, R.id.iv_today_news})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.today_message:
-                break;
-            case R.id.tv_more_tool:
-                Intent intent = new Intent(getActivity(), SearchLocationActivity.class);
-                getActivity().startActivity(intent);
-                break;
-            case R.id.tv_market:
-                shareDate();
-                break;
-            case R.id.tv_second_hand:
-                Intent intent1 = new Intent(getActivity(), SearchLocationDemoActivity.class);
-                getActivity().startActivity(intent1);
-                break;
-            case R.id.tv_mouth:
-                break;
-            case R.id.tv_build:
-                break;
-            case R.id.iv_today_news:
-                break;
-
-        }
-    }
-
-    private void shareDate() {
-
-       new ShareAction(getActivity()).withText("hello")
-                .setDisplayList(SHARE_MEDIA.SINA,SHARE_MEDIA.QQ,SHARE_MEDIA.WEIXIN)
-                .setCallback(shareListener).open();
-    }
-    private UMShareListener shareListener = new UMShareListener() {
-        @Override
-        public void onStart(SHARE_MEDIA platform) {
-            SocializeUtils.safeShowDialog(new Dialog(getActivity()));
-        }
-
-        @Override
-        public void onResult(SHARE_MEDIA platform) {
-            Toast.makeText(getActivity(),"成功了",Toast.LENGTH_LONG).show();
-            SocializeUtils.safeCloseDialog(new Dialog(getActivity()));
-        }
-
-        @Override
-        public void onError(SHARE_MEDIA platform, Throwable t) {
-            SocializeUtils.safeCloseDialog(new Dialog(getActivity()));
-            Toast.makeText(getActivity(),"失败"+t.getMessage(),Toast.LENGTH_LONG).show();
-        }
-
-        @Override
-        public void onCancel(SHARE_MEDIA platform) {
-            SocializeUtils.safeCloseDialog(new Dialog(getActivity()));
-            Toast.makeText(getActivity(),"取消了",Toast.LENGTH_LONG).show();
-
-        }
-    };
-
+    /**
+     * item点击事件
+     *
+     * @param holder
+     * @param view
+     * @param position
+     */
     @Override
-    public void onItemClick(RecyclerHolder recyclerHolder, View view, int i) {
-        Toast.makeText(getActivity(), "第" + i + "行点击事件", Toast.LENGTH_SHORT).show();
+    public void onItemClick(RecyclerHolder holder, View view, int position) {
+        Toast.makeText(getActivity(), "第" + position + "行点击事件", Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * item长点击事件
+     *
+     * @param holder
+     * @param view
+     * @param position
+     * @return
+     */
     @Override
-    public boolean onItemLongClick(RecyclerHolder recyclerHolder, View view, int i) {
-        Toast.makeText(getActivity(), "第" + i + "行长点击事件", Toast.LENGTH_SHORT).show();
+    public boolean onItemLongClick(RecyclerHolder holder, View view, int position) {
+        Toast.makeText(getActivity(), "第" + position + "行长点击事件", Toast.LENGTH_SHORT).show();
         return false;//因为这里return false 所以长点击拖动才有效，演示功能用，所以会触发两次震动
     }
 
+    /**
+     * item长点击拖动换位事件
+     *
+     * @param recyclerView
+     * @param viewHolder
+     * @param target
+     * @return
+     */
     @Override
-    public boolean onItemViewMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder viewHolder1) {
-        testAdapter.moveData(viewHolder.getAdapterPosition(), viewHolder1.getAdapterPosition());
+    public boolean onItemViewMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+        testAdapter.moveData(viewHolder.getAdapterPosition(), target.getAdapterPosition());
         return false;
     }
 
+    /**
+     * item滑动删除事件
+     *
+     * @param viewHolder
+     * @param direction
+     */
     @Override
-    public void onItemViewSwipe(RecyclerView.ViewHolder viewHolder, int i) {
+    public void onItemViewSwipe(RecyclerView.ViewHolder viewHolder, int direction) {
         testAdapter.removeData(viewHolder.getAdapterPosition());
-        if (i == ItemTouchHelper.START) {
+        if (direction == ItemTouchHelper.START) {
             Toast.makeText(getActivity(), "Delete!", Toast.LENGTH_SHORT).show();
-        } else if (i == ItemTouchHelper.END) {
+        } else if (direction == ItemTouchHelper.END) {
             Toast.makeText(getActivity(), "Android!", Toast.LENGTH_SHORT).show();
         }
     }
 
+    /**
+     * 加载更多的回调
+     */
     @Override
     public void loadMore() {
         loadData(true);
     }
 
+    /**
+     * 下拉刷新的回调
+     */
     @Override
     public void onRefresh() {
         loadData(false);

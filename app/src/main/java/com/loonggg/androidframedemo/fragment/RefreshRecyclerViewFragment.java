@@ -85,13 +85,13 @@ public class RefreshRecyclerViewFragment extends BaseFragment implements BGARefr
         listView = (ListView) headerView.findViewById(R.id.listView1);
 
         list = getList();
-        new Timer().schedule(new TimeTaskScroll(getActivity(), listView, list), 2000, 20);
+        new Timer().schedule(new TimeTaskScroll(getActivity(), listView, list), 2000, 200);
 
 
         listView1 = (ListView) headerView.findViewById(R.id.listView2);
 
 
-        new Timer().schedule(new TimeTaskScroll(getActivity(), listView1, list), 2000, 20);
+        new Timer().schedule(new TimeTaskScroll(getActivity(), listView1, list), 2000, 200);
         banner.setAdapter(new BGABanner.Adapter<ImageView, String>() {
             @Override
             public void fillBannerItem(BGABanner banner, ImageView itemView, String model, int position) {

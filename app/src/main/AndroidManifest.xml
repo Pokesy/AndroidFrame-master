@@ -84,6 +84,7 @@
         <activity android:name=".ui.activity.SellDetailActivity" />
         <activity android:name=".ui.activity.BrandDetailActivity" />
         <activity android:name=".ui.activity.WaterDetailActivity"/>
+        <activity android:name=".ui.activity.DgnsjActivity"/>
     </application>
 
 </manifest>

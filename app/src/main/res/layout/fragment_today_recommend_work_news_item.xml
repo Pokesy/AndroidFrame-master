@@ -24,8 +24,9 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher" />
+            android:layout_height="190dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/home6" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -37,10 +38,7 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/ic_launcher" />
+
 
                 <TextView
                     android:id="@+id/news_count"

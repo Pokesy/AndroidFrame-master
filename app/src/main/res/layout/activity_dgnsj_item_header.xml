@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_line"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/si_default_text_color"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:src="@mipmap/fh" />
+
+        <ImageView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/profile"
+            android:layout_marginRight="8dp"
+            android:src="@mipmap/home_searcjh" />
+
+        <TextView
+            android:id="@+id/locationMessage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@+id/message"
+            android:layout_toRightOf="@+id/profile"
+            android:textColor="@color/font_color_white"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/textSize_16"
+            android:text="@string/more_tool"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:text="@string/app_dgnsj_item"
+        android:textColor="@color/color_xl"
+        android:textSize="@dimen/font_size_medium" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/jrecyclerview"
+        android:paddingLeft="@dimen/margin_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:scrollbars="none" />
+
+</LinearLayout>

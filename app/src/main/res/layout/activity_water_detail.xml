@@ -2,12 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="@color/font_color_white"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/font_color_white">
 
     <com.loonggg.androidframedemo.view.MyScrollview
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tab"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:scrollbars="none">
@@ -34,14 +35,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
-                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
                         android:gravity="center"
                         android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="8dp"
                             android:src="@mipmap/fh" />
 
 
@@ -270,8 +271,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
-                android:gravity="center"
                 android:background="@color/font_color_white"
+                android:gravity="center"
                 android:orientation="horizontal"
                 android:paddingEnd="@dimen/margin_small"
                 android:paddingStart="@dimen/margin_small">
@@ -352,6 +353,7 @@
                         android:layout_toEndOf="@+id/head"
                         android:gravity="center_vertical"
                         android:orientation="vertical">
+
                         <TextView
                             android:id="@+id/title"
                             android:layout_width="wrap_content"
@@ -362,6 +364,7 @@
                             android:text="@string/app_tool_service"
                             android:textColor="@color/color_water_service"
                             android:textSize="@dimen/font_size_medium" />
+
                         <TextView
                             android:id="@+id/content1"
                             android:layout_width="wrap_content"
@@ -380,34 +383,55 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:gravity="center_vertical"
-                android:layout_height="50dp">
+                android:layout_height="50dp"
+                android:gravity="center_vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_tools_water"
+                    android:paddingBottom="@dimen/margin_tag"
                     android:paddingEnd="@dimen/margin_15"
                     android:paddingTop="@dimen/margin_tag"
-                    android:paddingBottom="@dimen/margin_tag"
+                    android:text="@string/app_hot_brand"
                     android:textColor="@color/font_color_white"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/font_size_small"
-                    android:background="@drawable/shape_tools_water"
-                    android:text="@string/app_hot_brand" />
+                    android:textSize="@dimen/font_size_small" />
             </LinearLayout>
 
             <com.loonggg.androidframedemo.view.ScrollGridView
                 android:id="@+id/zhd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/color_xl_line"
-                android:horizontalSpacing="@dimen/margin_tag"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:background="@color/font_color_white"
                 android:numColumns="1"
-                android:verticalSpacing="@dimen/margin_tag" />
+                android:verticalSpacing="@dimen/margin_small" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:gravity="end">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:text="@string/app_water_more_brand"
+                    android:textColor="@color/color_xxl"
+                    android:textSize="@dimen/font_size_medium" />
+            </RelativeLayout>
         </LinearLayout>
 
     </com.loonggg.androidframedemo.view.MyScrollview>
 
     <LinearLayout
+        android:id="@+id/tab"
         android:layout_width="match_parent"
         android:layout_height="44dp"
         android:layout_alignParentBottom="true"

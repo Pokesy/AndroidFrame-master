@@ -4,7 +4,6 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/margin_small"
     android:background="@drawable/shape_hot_brand"
     android:orientation="vertical">
 
@@ -13,7 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/default_layout_bg_selector"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/margin_small"
+        android:paddingStart="@dimen/margin_small">
 
         <RelativeLayout
             android:layout_width="match_parent"

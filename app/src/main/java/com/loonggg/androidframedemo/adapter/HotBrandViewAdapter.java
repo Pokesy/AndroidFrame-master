@@ -48,17 +48,7 @@ public class HotBrandViewAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         view = LayoutInflater.from(context).inflate(R.layout.activity_water_brand_item, null);
-//        ImageView iv = (ImageView) view.findViewById(R.id.gv_logo_iv);
-//
-//        TextView tv = (TextView) view.findViewById(R.id.gv_name_tv);
-//        iv.setImageResource(R.mipmap.ad);
-//        tv.setText(hotlist.get(i).getName());
-//        ImageLoader.loadOptimizedHttpImage(context, hotlist.get(i).getLogoUrl())
-//                .placeholder(R.mipmap.ic_launcher)
-//                .error(R.mipmap.ic_launcher)
-//                .into(iv);
-//        iv.setImageResource(img[i]);
-//        tv.setText(name[i]);
+
         return view;
     }
 }

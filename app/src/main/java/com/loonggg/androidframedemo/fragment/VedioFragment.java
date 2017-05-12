@@ -1,6 +1,5 @@
 package com.loonggg.androidframedemo.fragment;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -21,6 +20,8 @@ import com.jtech.view.RecyclerHolder;
 import com.jtech.view.RefreshLayout;
 import com.loonggg.androidframedemo.R;
 import com.loonggg.androidframedemo.adapter.MyTestAdapter;
+import com.loonggg.androidframedemo.adapter.VideoAdapter;
+import com.loonggg.androidframedemo.adapter.ViewPagerAdapter;
 import com.loonggg.androidframedemo.ui.basic.BasicFragment;
 
 import java.util.ArrayList;
@@ -34,14 +35,14 @@ import butterknife.ButterKnife;
  * Created by Pokesy_dajiao on 2017/4/20.
  */
 
-public class NewsFragment extends BasicFragment implements OnItemClickListener, OnItemLongClickListener, RefreshLayout.OnRefreshListener, OnLoadListener, OnItemViewSwipeListener, OnItemViewMoveListener {
+public class VedioFragment extends BasicFragment implements OnItemClickListener, OnItemLongClickListener, RefreshLayout.OnRefreshListener, OnLoadListener, OnItemViewSwipeListener, OnItemViewMoveListener {
     @Bind(R.id.jrecyclerview)
     JRecyclerView jRecyclerView;
 //    @Bind(R.id.refreshlayout)
 //    RefreshLayout refreshlayout;
     @Bind(R.id.activity_main)
     RelativeLayout activityMain;
-    private MyTestAdapter testAdapter;
+    private VideoAdapter testAdapter;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -60,7 +61,7 @@ public class NewsFragment extends BasicFragment implements OnItemClickListener, 
         //设置layoutmanager
         jRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         //设置适配器
-        testAdapter = new MyTestAdapter(getActivity(),list);
+        testAdapter = new VideoAdapter(getActivity(),list);
         jRecyclerView.setAdapter(testAdapter);
         //开启滑动到底部加载更多功能
         jRecyclerView.setLoadMore(true);

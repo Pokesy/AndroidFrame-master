@@ -49,7 +49,7 @@
     <string name="app_brand_dczq">大锤专区</string>
     <string name="app_brand_xczq">小锤专区</string>
     <string name="app_brand_more">更多 ></string>
-
+    <string name="app_water_more_brand">更多口碑 ></string>
     <string name="app_near_title">烟台艾迪精密机械股份有限公司</string>
     <string name="app_near_content">主营：液压破碎锤、快速连接器、拔桩机、大锤、小锤</string>
     <string name="app_item_content">马鞍山云林白城—专业、专心、专注生产研发液压锤精品活塞精品活塞精品活塞</string>
@@ -63,9 +63,11 @@
     <string name="app_tool_service">属具维修</string>
     <string name="app_tool_service_text">品质维修，后顾无忧</string>
     <string name="app_hot_brand">精选口碑</string>
-
+    <string name="app_hot_people">特刊人物</string>
     <string name="app_read">阅读</string>
     <string name="app_time">2017.1.7</string>
     <string name="test_custom_header_title">我是标题标我是标题标我是标题标我是标题标我是标题标我是标题标</string>
     <string name="test_custom_header_desc">我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述</string>
+
+    <string name="app_dgnsj_item">您可能感兴趣的店铺</string>
 </resources>

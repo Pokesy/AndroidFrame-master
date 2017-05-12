@@ -8,7 +8,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 import com.loonggg.androidframedemo.fragment.HomeFragment;
 import com.loonggg.androidframedemo.fragment.MainFragment;
 import com.loonggg.androidframedemo.fragment.NewsFragment;
+import com.loonggg.androidframedemo.fragment.PeopleFragment;
 import com.loonggg.androidframedemo.fragment.RefreshRecyclerViewFragment;
+import com.loonggg.androidframedemo.fragment.VedioFragment;
 
 import java.util.List;
 
@@ -28,11 +30,11 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position == 0)
-            return new RefreshRecyclerViewFragment();
+            return new HomeFragment();
         else if (position == 1)
             return new NewsFragment();
         else if (position == 2)
-            return new NewsFragment();
+            return new VedioFragment();
         else if(position==3) {
             return new NewsFragment();
         }
@@ -40,9 +42,9 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
             return new NewsFragment();
         }
         else if(position==5) {
-            return new NewsFragment();
+            return new PeopleFragment();
         }else {
-            return new NewsFragment();
+            return new PeopleFragment();
         }
     }
 
