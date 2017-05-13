@@ -90,6 +90,7 @@
         <activity android:name=".ui.activity.GqActivity" />
         <activity android:name=".ui.activity.KbActivity" />
         <activity android:name=".ui.activity.SgalActivity" />
+        <activity android:name=".ui.activity.NewsDetailActivity" />
     </application>
 
 </manifest>

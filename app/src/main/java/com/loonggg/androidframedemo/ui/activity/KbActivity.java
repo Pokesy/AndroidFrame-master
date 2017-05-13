@@ -88,18 +88,12 @@ public class KbActivity extends BasicTitleBarActivity implements OnItemClickList
         for (int i = 0; i < 20; i++) {
             list.add(i + "");
         }
-//        try {
-////            Thread.sleep(1300);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
         //设置数据
         testAdapter.setDatas(list, loadMore);
         //标记为请求完成
 //        refreshlayout.refreshingComplete();
         jrecyclerview.setLoadCompleteState();
     }
-
 
     @Override
     public void onItemClick(RecyclerHolder recyclerHolder, View view, int i) {

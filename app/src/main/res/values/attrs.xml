@@ -22,4 +22,11 @@
         <attr name="sidebarRadius" format="dimension" />
         <attr name="sidebarBallRadius" format="dimension" />
     </declare-styleable>
+    <declare-styleable name="MoreTextStyle">
+        <attr name="mytextSize" format="dimension" />
+        <attr name="mytextColor" format="color" />
+        <attr name="maxLine" format="integer" />
+        <attr name="text" format="string|reference" />
+        <attr name="expand" format="boolean" />
+    </declare-styleable>
 </resources>

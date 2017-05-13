@@ -241,7 +241,6 @@
                 android:id="@+id/zhd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/font_color_white"
                 android:horizontalSpacing="@dimen/margin_tag"
                 android:numColumns="2"
                 android:verticalSpacing="@dimen/margin_tag" />

@@ -1,5 +1,6 @@
 package com.loonggg.androidframedemo.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -20,6 +21,7 @@ import com.jtech.view.RecyclerHolder;
 import com.jtech.view.RefreshLayout;
 import com.loonggg.androidframedemo.R;
 import com.loonggg.androidframedemo.adapter.HomeAdapter;
+import com.loonggg.androidframedemo.ui.activity.NewsDetailActivity;
 import com.loonggg.androidframedemo.ui.basic.BasicFragment;
 
 import java.util.ArrayList;
@@ -59,7 +61,7 @@ public class HomeFragment extends BasicFragment implements OnItemClickListener, 
         //设置layoutmanager
         jRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         //设置适配器
-        testAdapter = new HomeAdapter(getActivity(),list);
+        testAdapter = new HomeAdapter(getActivity(), list);
         jRecyclerView.setAdapter(testAdapter);
         //开启滑动到底部加载更多功能
         jRecyclerView.setLoadMore(true);
@@ -114,7 +116,11 @@ public class HomeFragment extends BasicFragment implements OnItemClickListener, 
      */
     @Override
     public void onItemClick(RecyclerHolder holder, View view, int position) {
-        Toast.makeText(getActivity(), "第" + position + "行点击事件", Toast.LENGTH_SHORT).show();
+        if (position == 0) {
+
+        }else{
+            startActivity(new Intent(getActivity(), NewsDetailActivity.class));
+        }
     }
 
     /**

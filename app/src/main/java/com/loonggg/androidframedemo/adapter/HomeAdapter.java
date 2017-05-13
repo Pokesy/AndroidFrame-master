@@ -21,6 +21,7 @@ import com.loonggg.androidframedemo.ui.activity.DgnsjActivity;
 import com.loonggg.androidframedemo.ui.activity.EsActivity;
 import com.loonggg.androidframedemo.ui.activity.GqActivity;
 import com.loonggg.androidframedemo.ui.activity.KbActivity;
+import com.loonggg.androidframedemo.ui.activity.NewsDetailActivity;
 import com.loonggg.androidframedemo.ui.activity.SgalActivity;
 import com.loonggg.androidframedemo.view.TimeTaskScroll;
 
@@ -154,7 +155,7 @@ public class HomeAdapter extends BaseJAdapter<RecyclerHolder,String> {
             });
 //            recyclerHolder.setImageResource(R.id.iv_today_news,R.mipmap.home3);
         } else if (recyclerHolder instanceof NewsHolder){
-//            recyclerHolder.setText(R.id.news_count, mDataset.get(position));
+
         }
     }
 
