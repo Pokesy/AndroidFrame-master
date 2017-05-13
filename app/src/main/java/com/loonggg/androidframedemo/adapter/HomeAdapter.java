@@ -18,6 +18,10 @@ import com.loonggg.androidframedemo.app.CustomApp;
 import com.loonggg.androidframedemo.model.BannerModel;
 import com.loonggg.androidframedemo.ui.activity.BrandDetailActivity;
 import com.loonggg.androidframedemo.ui.activity.DgnsjActivity;
+import com.loonggg.androidframedemo.ui.activity.EsActivity;
+import com.loonggg.androidframedemo.ui.activity.GqActivity;
+import com.loonggg.androidframedemo.ui.activity.KbActivity;
+import com.loonggg.androidframedemo.ui.activity.SgalActivity;
 import com.loonggg.androidframedemo.view.TimeTaskScroll;
 
 import java.util.ArrayList;
@@ -122,6 +126,30 @@ public class HomeAdapter extends BaseJAdapter<RecyclerHolder,String> {
                 @Override
                 public void onClick(View v) {
                     context.startActivity(new Intent(context, DgnsjActivity.class));
+                }
+            });
+            recyclerHolder.getView(R.id.tv_second_hand).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    context.startActivity(new Intent(context, EsActivity.class));
+                }
+            });
+            recyclerHolder.getView(R.id.tv_market).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    context.startActivity(new Intent(context, GqActivity.class));
+                }
+            });
+            recyclerHolder.getView(R.id.tv_mouth).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    context.startActivity(new Intent(context, KbActivity.class));
+                }
+            });
+            recyclerHolder.getView(R.id.tv_build).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    context.startActivity(new Intent(context, SgalActivity.class));
                 }
             });
 //            recyclerHolder.setImageResource(R.id.iv_today_news,R.mipmap.home3);

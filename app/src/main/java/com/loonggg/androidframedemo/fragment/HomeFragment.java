@@ -1,7 +1,5 @@
 package com.loonggg.androidframedemo.fragment;
 
-import android.app.Dialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -9,13 +7,9 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.jtech.listener.OnItemClickListener;
 import com.jtech.listener.OnItemLongClickListener;
 import com.jtech.listener.OnItemViewMoveListener;
@@ -25,28 +19,14 @@ import com.jtech.view.JRecyclerView;
 import com.jtech.view.RecyclerHolder;
 import com.jtech.view.RefreshLayout;
 import com.loonggg.androidframedemo.R;
-import com.loonggg.androidframedemo.ViewHolder.RecyclerViewHolder;
-import com.loonggg.androidframedemo.adapter.BaseRecyclerAdapter;
 import com.loonggg.androidframedemo.adapter.HomeAdapter;
-import com.loonggg.androidframedemo.adapter.MyAdapter;
-import com.loonggg.androidframedemo.adapter.MyTestAdapter;
-import com.loonggg.androidframedemo.ui.activity.SearchLocationActivity;
-import com.loonggg.androidframedemo.ui.activity.SearchLocationDemoActivity;
 import com.loonggg.androidframedemo.ui.basic.BasicFragment;
-import com.loonggg.androidframedemo.view.MyScrollview;
-import com.loonggg.androidframedemo.view.RGridView;
-import com.loonggg.carouselview.CarouselView;
-import com.umeng.socialize.ShareAction;
-import com.umeng.socialize.UMShareListener;
-import com.umeng.socialize.bean.SHARE_MEDIA;
-import com.umeng.socialize.utils.SocializeUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * Created by Pokesy_dajiao on 2017/4/20.

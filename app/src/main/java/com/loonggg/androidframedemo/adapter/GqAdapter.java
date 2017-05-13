@@ -1,7 +1,6 @@
 package com.loonggg.androidframedemo.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,12 +9,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.jtech.adapter.BaseJAdapter;
-import com.jtech.view.JRecyclerView;
 import com.jtech.view.RecyclerHolder;
 import com.loonggg.androidframedemo.R;
-import com.loonggg.androidframedemo.ui.activity.SgalActivity;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -23,7 +19,7 @@ import java.util.List;
  * 测试适配器
  * Created by dajiao on 16/5/9.
  */
-public class DgnsjAdapter extends BaseJAdapter<RecyclerHolder, String> {
+public class GqAdapter extends BaseJAdapter<RecyclerHolder, String> {
     String[] name = {"艾迪精密", "贝力特", "顺天", "信人", "博运重工", "铭德", "世工", "佰泰", "百财", "铭润"};
     int[] img = {R.mipmap.ad, R.mipmap.blt, R.mipmap.st, R.mipmap.xr, R.mipmap.byzg, R.mipmap.md, R.mipmap.sg, R.mipmap.bt, R.mipmap.bc, R.mipmap.mr};
 
@@ -33,7 +29,7 @@ public class DgnsjAdapter extends BaseJAdapter<RecyclerHolder, String> {
     protected LayoutInflater mLayoutInflater;
     DgnsjItemAdapter mAdapter;
 
-    public DgnsjAdapter(Context context, List<String> s) {
+    public GqAdapter(Context context, List<String> s) {
         super(context);
         this.context = context;
         this.mDataset = s;
@@ -43,8 +39,11 @@ public class DgnsjAdapter extends BaseJAdapter<RecyclerHolder, String> {
 
     @Override
     public int getItemViewType(int position) {
-        if (position == 0) {
+        if (position == 4) {
             return 1;
+        }
+        if (position == 0) {
+            return 2;
         } else {
             return super.getItemViewType(position);
         }
@@ -56,10 +55,13 @@ public class DgnsjAdapter extends BaseJAdapter<RecyclerHolder, String> {
         if (viewType == 1) {
 //
             return new CityHolder(layoutInflater.inflate(R.layout.activity_dgnsj_item_header, viewGroup, false));
+        } else if (viewType == 2) {
+            return new NewsHolder(layoutInflater.inflate(R.layout.view_image, viewGroup, false));
         } else {
-            return new NewsHolder(layoutInflater.inflate(R.layout.activity_dgnsj_item, viewGroup, false));
+            return new NewsHolder(layoutInflater.inflate(R.layout.activity_gq_item, viewGroup, false));
         }
     }
+
 
     @Override
     public void convert(RecyclerHolder recyclerHolder, int viewType, int position) {
@@ -73,12 +75,7 @@ public class DgnsjAdapter extends BaseJAdapter<RecyclerHolder, String> {
             mAdapter = new DgnsjItemAdapter(context, name, img);
             jRecyclerView.setAdapter(mAdapter);
         } else if (recyclerHolder instanceof NewsHolder) {
-            recyclerHolder.getView(R.id.ll_item).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    context.startActivity(new Intent(context, SgalActivity.class));
-                }
-            });
+
         }
     }
 
@@ -96,6 +93,7 @@ public class DgnsjAdapter extends BaseJAdapter<RecyclerHolder, String> {
 
         public NewsHolder(View view) {
             super(view);
+//            city_name = (TextView) view.findViewById(R.id.city_name);
         }
     }
 }
