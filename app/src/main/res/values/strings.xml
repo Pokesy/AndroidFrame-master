@@ -53,7 +53,6 @@
     <string name="app_near_title">烟台艾迪精密机械股份有限公司</string>
     <string name="app_near_content">主营：液压破碎锤、快速连接器、拔桩机、大锤、小锤</string>
     <string name="app_item_content">马鞍山云林白城—专业、专心、专注生产研发液压锤精品活塞精品活塞精品活塞</string>
-
     <!--服务站详情-->
     <string name="app_water_people">服务车辆</string>
     <string name="app_water_car">服务人员</string>
@@ -68,6 +67,24 @@
     <string name="app_time">2017.1.7</string>
     <string name="test_custom_header_title">我是标题标我是标题标我是标题标我是标题标我是标题标我是标题标</string>
     <string name="test_custom_header_desc">我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述</string>
-
     <string name="app_dgnsj_item">您可能感兴趣的店铺</string>
+    <!--品牌店详情-->
+    <string name="app_brand_show">产品展示</string>
+    <string name="app_brand_second">二手交易</string>
+    <string name="app_brand_gq">供求圈</string>
+    <string name="app_brand_qyjj">企业简介</string>
+    <string name="app_brand_qydt">企业动态</string>
+    <string name="app_brand_xswl">销售网络</string>
+    <string name="app_brand_sqtg">申请团购</string>
+    <string name="app_brand_xdj">询底价</string>
+    <string name="app_brand_sbzs">设备展示</string>
+    <string name="app_brand_jggy">加工工艺</string>
+    <string name="app_brand_schj">生产环境</string>
+    <string name="app_brand_dpkb">店铺口碑</string>
+    <string name="app_brand_cpkb">产品口碑</string>
+    <string name="app_brand_all">全部</string>
+    <string name="app_brand_lxdz">联系地址：</string>
+    <string name="app_brand_scl">生产量：</string>
+    <string name="app_brand_scsb">生产设备：</string>
+    <string name="app_brand_zjgy">质检工艺：</string>
 </resources>

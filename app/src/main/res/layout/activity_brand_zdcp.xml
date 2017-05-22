@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_small"
+            android:background="@color/color_tab_bg"
+            android:src="@mipmap/fh1" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="bottom"
+            android:layout_toEndOf="@+id/ic_back"
+            android:background="@color/color_tab_bg"
+            android:fillViewport="false"
+            app:layout_scrollFlags="scroll"
+            app:tabIndicatorColor="@color/color_near"
+            app:tabIndicatorHeight="2.0dp"
+            app:tabSelectedTextColor="@color/color_near"
+            app:tabTextColor="@color/color_xxl">
+
+
+            <android.support.design.widget.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/app_brand_zdcp" />
+
+            <android.support.design.widget.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/app_brand_schj" />
+
+
+        </android.support.design.widget.TabLayout>
+
+    </RelativeLayout>
+
+    <com.loonggg.androidframedemo.adapter.MyViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/action"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/white">
+
+    </com.loonggg.androidframedemo.adapter.MyViewPager>
+</RelativeLayout>

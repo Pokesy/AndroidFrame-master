@@ -69,6 +69,7 @@
         <item name="android:drawablePadding">12dp</item>
         <item name="android:layout_centerVertical">true</item>
     </style>
+
     <!--<style name="FullScreenDialog" parent="android:Theme.Dialog">-->
 
         <!--&lt;!&ndash; 窗口设为无标题 &ndash;&gt;-->

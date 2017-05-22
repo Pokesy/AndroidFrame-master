@@ -38,6 +38,7 @@
                         android:orientation="horizontal">
 
                         <ImageView
+                            android:id="@+id/iv_back"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="8dp"
@@ -181,34 +182,34 @@
                     android:id="@+id/tv_more_tool"
                     style="@style/main_wd"
                     android:checked="false"
-                    android:drawableTop="@mipmap/dtq"
-                    android:text="@string/more_tool" />
-
-                <TextView
-                    android:id="@+id/tv_market"
-                    style="@style/main_wd"
-                    android:drawableTop="@mipmap/es"
-                    android:text="@string/market" />
+                    android:drawableTop="@mipmap/cp"
+                    android:text="@string/app_brand_show" />
 
                 <TextView
                     android:id="@+id/tv_second_hand"
                     style="@style/main_wd"
-                    android:drawableTop="@mipmap/gq"
-                    android:text="@string/second_hand" />
+                    android:drawableTop="@mipmap/es"
+                    android:text="@string/app_brand_second" />
 
                 <TextView
-                    android:id="@+id/tv_mouth"
+                    android:id="@+id/tv_market"
                     style="@style/main_wd"
-                    android:checked="false"
-                    android:drawableTop="@mipmap/sgal"
-                    android:text="@string/mouth" />
+                    android:drawableTop="@mipmap/gq"
+                    android:text="@string/app_brand_gq" />
 
                 <TextView
                     android:id="@+id/tv_build"
                     style="@style/main_wd"
                     android:checked="false"
-                    android:drawableTop="@mipmap/kb"
+                    android:drawableTop="@mipmap/sgal"
                     android:text="@string/build" />
+
+                <TextView
+                    android:id="@+id/tv_mouth"
+                    style="@style/main_wd"
+                    android:checked="false"
+                    android:drawableTop="@mipmap/kb"
+                    android:text="@string/mouth" />
             </LinearLayout>
 
             <LinearLayout
@@ -223,32 +224,37 @@
                 android:paddingStart="@dimen/margin_small">
 
                 <TextView
+                    android:id="@+id/tv_qyjj"
                     style="@style/main_wd"
                     android:checked="false"
-                    android:drawableTop="@mipmap/dtq"
-                    android:text="@string/more_tool" />
+                    android:drawableTop="@mipmap/qyjj"
+                    android:text="@string/app_brand_qyjj" />
 
                 <TextView
+                    android:id="@+id/tv_qydt"
                     style="@style/main_wd"
-                    android:drawableTop="@mipmap/es"
-                    android:text="@string/market" />
+                    android:drawableTop="@mipmap/dt"
+                    android:text="@string/app_brand_qydt" />
 
                 <TextView
+                    android:id="@+id/tv_xswl"
                     style="@style/main_wd"
-                    android:drawableTop="@mipmap/gq"
-                    android:text="@string/second_hand" />
+                    android:drawableTop="@mipmap/wl"
+                    android:text="@string/app_brand_xswl" />
 
                 <TextView
-                    style="@style/main_wd"
-                    android:checked="false"
-                    android:drawableTop="@mipmap/sgal"
-                    android:text="@string/mouth" />
-
-                <TextView
+                    android:id="@+id/tv_sqtg"
                     style="@style/main_wd"
                     android:checked="false"
-                    android:drawableTop="@mipmap/kb"
-                    android:text="@string/build" />
+                    android:drawableTop="@mipmap/tg"
+                    android:text="@string/app_brand_sqtg" />
+
+                <TextView
+                    android:id="@+id/tv_xdj"
+                    style="@style/main_wd"
+                    android:checked="false"
+                    android:drawableTop="@mipmap/xdj"
+                    android:text="@string/app_brand_xdj" />
             </LinearLayout>
 
             <include layout="@layout/xl_line" />
@@ -270,6 +276,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/tv_more"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -357,7 +364,5 @@
                 android:gravity="center"
                 android:text="@string/app_near_location" />
         </LinearLayout>
-
-
     </LinearLayout>
 </RelativeLayout>

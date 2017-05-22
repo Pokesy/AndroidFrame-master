@@ -12,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.loonggg.androidframedemo.R;
-import com.loonggg.androidframedemo.adapter.BrandViewPagerAdapter;
 import com.loonggg.androidframedemo.adapter.MyViewPager;
 import com.loonggg.androidframedemo.adapter.NearViewPagerAdapter;
 import com.loonggg.androidframedemo.ui.basic.BasicFragment;
@@ -25,7 +24,7 @@ import java.util.List;
  */
 
 
-public class NearFragment extends BasicFragment implements View.OnClickListener {
+public class BrandSchjFragment extends BasicFragment implements View.OnClickListener {
     //上下文
     private Context ctx;
     //顶部选项卡
@@ -36,8 +35,7 @@ public class NearFragment extends BasicFragment implements View.OnClickListener 
     private NearViewPagerAdapter adapter;
     //Fragment的集合
     private List<Fragment> list;
-    //个人，更多按钮
-    private ImageView message, profile;
+
 
     private TextView companyName;
 
@@ -57,7 +55,7 @@ public class NearFragment extends BasicFragment implements View.OnClickListener 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_near, null);
+        View view = inflater.inflate(R.layout.fragment_schj, null);
         //对应控件
         initView(view);
         //填充选项卡
@@ -73,12 +71,8 @@ public class NearFragment extends BasicFragment implements View.OnClickListener 
     public void initView(View view) {
         tab = (TabLayout) view.findViewById(R.id.tabLayout);
         pager = (MyViewPager) view.findViewById(R.id.viewPager);
-        message = (ImageView) view.findViewById(R.id.message);
-        companyName = (TextView) view.findViewById(R.id.locationMessage);
 //        profile = (ImageView) view.findViewById(R.id.profile);
 
-        message.setOnClickListener(this);
-//        profile.setOnClickListener(this);
 
 
     }
@@ -88,14 +82,7 @@ public class NearFragment extends BasicFragment implements View.OnClickListener 
      * 开发时请在对应Fragment内进行操作
      */
     public void init() {
-        list = new ArrayList<>();
-        list.add(new NearSellFragment());//新闻Fragment
-        list.add(new NearWaterFragment());//新闻Fragment
-        adapter = new NearViewPagerAdapter(getChildFragmentManager(),list, getActivity());
-        pager.setAdapter(adapter);
-        pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener
-                (tab));
-        tab.setupWithViewPager(pager);
+
     }
 
 
@@ -106,6 +93,5 @@ public class NearFragment extends BasicFragment implements View.OnClickListener 
 
     @Override
     public void onClick(View view) {
-
     }
 }

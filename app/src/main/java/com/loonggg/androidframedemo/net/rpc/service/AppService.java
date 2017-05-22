@@ -3,6 +3,7 @@ package com.loonggg.androidframedemo.net.rpc.service;
 
 
 import com.loonggg.androidframedemo.model.BannerModel;
+import com.loonggg.androidframedemo.model.HomeNewsModel;
 import com.loonggg.androidframedemo.model.RefreshModel;
 import com.loonggg.androidframedemo.model.StaggeredModel;
 import com.loonggg.androidframedemo.net.rpc.model.ResponseModel;
@@ -14,6 +15,7 @@ import java.util.List;
 import okhttp3.MultipartBody;
 import retrofit2.Call;
 import retrofit2.Response;
+import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.Multipart;
@@ -28,7 +30,7 @@ public interface AppService {
   @Multipart
   @POST("file/upload")
   Observable<Response<ResponseModel<String>>> upload(@Part MultipartBody.Part file);
-  @GET("sms/verify/{mobileNo}/{code}")
+  @GET("sms/verify/{mobileNo}/{code}/{code}")
   Observable<Response<ResponseModel<String>>> verifyCode(@Path("mobileNo") String mobileNo, @Path("code") String code);
   @DELETE("member/mycar/{userId}/{token}")
   Observable<Response<ResponseModel<String>>> deleteMyLoveCar(@Path("userId") String userId, @Path("token") String token, @Query("serialIds") String serialIds);
@@ -36,9 +38,21 @@ public interface AppService {
   Observable<Response<ResponseModel<TestInfoModel>>> getTestInfo(@Query("key") String key, @Query("pno")
           int page, @Query("ps") int pagesize, @Query("dtype") String type);
 
+    @GET("comm/procWS.action")
+    Observable<Response<ResponseModel<HomeNewsModel>>> getNewsList(@Query("businessNo") String businessNo,@Query("resultNum") int resultNum, @Query("procName")
+            String procName, @Query("params") int news_type_id,@Query("params") int userid , @Query("params") int page);
 
-
-
+//    @POST("question/{token}")
+//    Observable<Response<ResponseModel<UserInfo>>> sendQuestion(
+//            @Path("token") String token, @Body QuestionParams params);
+//
+//    @POST("complaint/{token}")
+//    Observable<Response<ResponseModel<UserInfo>>> sendTucao(
+//            @Path("token") String token, @Body TucaoParams params);
+//
+//    @POST("member/mycar/{userId}/{token}")
+//    Observable<Response<ResponseModel<String>>> addMyLoveCar(
+//            @Path("userId") String userId, @Path("token") String token, @Body MyLoveCarParams params);
   @GET("refreshlayout/api/defaultdata6.json")
   Call<List<RefreshModel>> loadInitDatas();
 

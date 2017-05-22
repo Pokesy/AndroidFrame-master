@@ -3,6 +3,7 @@ package com.loonggg.androidframedemo.ui.serviceinjection;
 
 
 import com.loonggg.androidframedemo.MainActivity;
+import com.loonggg.androidframedemo.fragment.NewsFragment;
 import com.loonggg.androidframedemo.manager.LoginSession;
 import com.loonggg.androidframedemo.net.rpc.RpcCallManager;
 import com.loonggg.androidframedemo.net.rpc.service.AppService;
@@ -32,4 +33,5 @@ public interface ServiceComponent {
 
 
     void inject(MainActivity activity);
+    void inject(NewsFragment fragment);
 }

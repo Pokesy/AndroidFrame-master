@@ -8,30 +8,32 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.jtech.adapter.BaseJAdapter;
+import com.jtech.adapter.RecyclerAdapter;
 import com.jtech.adapter.RecyclerSwipeAdapter;
 import com.jtech.view.RecyclerHolder;
 import com.loonggg.androidframedemo.R;
+import com.loonggg.androidframedemo.model.HomeNewsModel;
 
 import java.util.List;
+
+import butterknife.Bind;
 
 
 /**
  * 测试适配器
  * Created by dajiao on 16/5/9.
  */
-public class MyTestAdapter extends BaseJAdapter<RecyclerHolder,String> {
+public class MyTestAdapter extends MyBaseAdapter<HomeNewsModel.DataBean.Data1Bean> {
     // 数据集
-    private List<String> mDataset;
+    private List<HomeNewsModel.DataBean.Data1Bean> mDataset;
     Context context;
     protected LayoutInflater mLayoutInflater;
 
-    public MyTestAdapter(Context context, List<String> s) {
+    public MyTestAdapter(Context context) {
         super(context);
         this.context = context;
-        this.mDataset = s;
         this.mLayoutInflater = LayoutInflater.from(context);
     }
-
 
 
     @Override
@@ -55,13 +57,16 @@ public class MyTestAdapter extends BaseJAdapter<RecyclerHolder,String> {
     }
 
     @Override
-    public void convert(RecyclerHolder recyclerHolder, int viewType, int position) {
-        if (recyclerHolder instanceof  CityHolder) {
+    protected void convert(RecyclerHolder recyclerHolder, HomeNewsModel.DataBean.Data1Bean data1Bean, int position) {
+        if (recyclerHolder instanceof CityHolder) {
 
-        } else if (recyclerHolder instanceof NewsHolder){
-            recyclerHolder.setText(R.id.news_count, mDataset.get(position));
+        } else if (recyclerHolder instanceof NewsHolder) {
+            recyclerHolder.setText(R.id.tv_content,   data1Bean.getNEWS_TITLE());
+            recyclerHolder.setText(R.id.news_count,   data1Bean.getBROWSE_QTY()+"");
+
         }
     }
+
 
     class CityHolder extends RecyclerHolder {
 
@@ -70,6 +75,7 @@ public class MyTestAdapter extends BaseJAdapter<RecyclerHolder,String> {
             super(view);
         }
     }
+
     class NewsHolder extends RecyclerHolder {
 
         TextView city_name;

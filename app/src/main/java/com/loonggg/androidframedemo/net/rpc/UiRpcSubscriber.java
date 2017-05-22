@@ -65,12 +65,12 @@ public abstract class UiRpcSubscriber<T> extends Subscriber<Response<ResponseMod
                 ((CustomApp) mContext.getApplicationContext()).getGlobalComponent().appPreferences().put
                         (CustomAppPreferences.KEY_COOKIE_SESSION_ID,
                                 mUserInfo.getToken());
-            } else if (responseModelResponse.body().getResult() instanceof String && responseModelResponse.body().getResult().toString() != null && responseModelResponse.body().getResult().toString().length() > 0) {
+            } else if (responseModelResponse.body().getData() instanceof String && responseModelResponse.body().getData().toString() != null && responseModelResponse.body().getData().toString().length() > 0) {
                 ((CustomApp) mContext.getApplicationContext()).getGlobalComponent().appPreferences().put
                         (CustomAppPreferences.KEY_COOKIE_SESSION_ID,
-                                (String) responseModelResponse.body().getResult());
+                                (String) responseModelResponse.body().getData());
             }
-            onSuccess(responseModelResponse.body().getResult());
+            onSuccess(responseModelResponse.body().getData());
             return;
         }
         if (responseModelResponse.code() == NetConstant.HttpCodeConstant.HTTP_ERROR_NOT_FOUND) {

@@ -98,7 +98,7 @@ public class MainActivity extends BasicTitleBarActivity {
     public void initViews() {
         tabLayout = (TabLayout) findViewById(R.id.tableLayout);
         pager = (ViewPager) findViewById(R.id.viewPager);
-        StatusBarUtils.setWindowStatusBarColor(this,R.color.color_bar
+        StatusBarUtils.setWindowStatusBarColor(this,R.color.color_bar1
         );
     }
 

@@ -91,6 +91,11 @@
         <activity android:name=".ui.activity.KbActivity" />
         <activity android:name=".ui.activity.SgalActivity" />
         <activity android:name=".ui.activity.NewsDetailActivity" />
+        <activity android:name=".ui.activity.BrandEsActivity" />
+        <activity android:name=".ui.activity.BrandKbActivity" />
+        <activity android:name=".ui.activity.BrandSgalActivity" />
+        <activity android:name=".ui.activity.BrandZdcpActivity" />
+        <activity android:name=".ui.activity.BrandQyjjActivity" />
     </application>
 
 </manifest>

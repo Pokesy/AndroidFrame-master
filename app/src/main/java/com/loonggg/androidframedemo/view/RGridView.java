@@ -4,16 +4,17 @@ import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+
+import com.jtech.view.JRecyclerView;
 
 /**
  * 简单封装的RecyclerView
  * <p>
  * Created by dajiao on 16-03-01-001.
  */
-public class RGridView extends RecyclerView {
+public class RGridView extends JRecyclerView {
     private int spanCount = 1;
 
     public RGridView(Context context) {

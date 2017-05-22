@@ -15,7 +15,7 @@ import com.jtech.view.JRecyclerView;
 import com.jtech.view.RecyclerHolder;
 import com.jtech.view.RefreshLayout;
 import com.loonggg.androidframedemo.R;
-import com.loonggg.androidframedemo.adapter.DgnsjAdapter;
+import com.loonggg.androidframedemo.adapter.SgalAdapter;
 import com.loonggg.androidframedemo.ui.basic.BasicTitleBarActivity;
 
 import java.util.ArrayList;
@@ -26,21 +26,21 @@ import butterknife.ButterKnife;
 
 /**
  * Created by Pokesy_dajiao on 2017/5/8.
- * 多功能属具列表
+ * 二手市场详列表
  */
 
-public class DgnsjActivity extends BasicTitleBarActivity implements OnItemClickListener, OnItemLongClickListener, RefreshLayout.OnRefreshListener, OnLoadListener, OnItemViewSwipeListener, OnItemViewMoveListener {
+public class BrandSgalActivity extends BasicTitleBarActivity implements OnItemClickListener, OnItemLongClickListener, RefreshLayout.OnRefreshListener, OnLoadListener, OnItemViewSwipeListener, OnItemViewMoveListener {
     String[] name = {"艾迪精密", "贝力特", "顺天", "信人", "博运重工", "铭德", "世工", "佰泰", "百财", "铭润"};
     int[] img = {R.mipmap.ad, R.mipmap.blt, R.mipmap.st, R.mipmap.xr, R.mipmap.byzg, R.mipmap.md, R.mipmap.sg, R.mipmap.bt, R.mipmap.bc, R.mipmap.mr};
     @Bind(R.id.jrecyclerview)
     JRecyclerView jrecyclerview;
     @Bind(R.id.activity_main)
     LinearLayout activityMain;
-    DgnsjAdapter testAdapter;
+    SgalAdapter testAdapter;
 
     @Override
     public int getLayoutId() {
-        return R.layout.activity_dgnsj;
+        return R.layout.activity_brand_sgal;
     }
 
     @Override
@@ -51,7 +51,27 @@ public class DgnsjActivity extends BasicTitleBarActivity implements OnItemClickL
         initData();
     }
 
+    @Override
+    public boolean initializeTitleBar() {
+        setLeftTitleButton(R.mipmap.back, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        setMiddleTitle("施工案例");
+        setTitleBarTextColor(R.color.color_xxl);
+        setRightImgButton(R.mipmap.fb, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+      return true;
+    }
+
     private void initData() {
+
         List<String> list = new ArrayList<String>();
         for (int i = 0; i < 20; i++) {
             list.add(i + "行");
@@ -59,7 +79,7 @@ public class DgnsjActivity extends BasicTitleBarActivity implements OnItemClickL
         //设置layoutmanager
         jrecyclerview.setLayoutManager(new LinearLayoutManager(this));
         //设置适配器
-        testAdapter = new DgnsjAdapter(this, list);
+        testAdapter = new SgalAdapter(this, list);
         jrecyclerview.setAdapter(testAdapter);
         //开启滑动到底部加载更多功能
         jrecyclerview.setLoadMore(true);

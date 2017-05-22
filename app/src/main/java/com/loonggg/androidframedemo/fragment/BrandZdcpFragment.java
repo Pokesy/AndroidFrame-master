@@ -1,8 +1,6 @@
 package com.loonggg.androidframedemo.fragment;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
@@ -16,24 +14,15 @@ import com.jtech.listener.OnItemLongClickListener;
 import com.jtech.listener.OnItemViewMoveListener;
 import com.jtech.listener.OnItemViewSwipeListener;
 import com.jtech.listener.OnLoadListener;
-import com.jtech.view.JRecyclerView;
 import com.jtech.view.RecyclerHolder;
 import com.jtech.view.RefreshLayout;
 import com.loonggg.androidframedemo.R;
-import com.loonggg.androidframedemo.adapter.MyTestAdapter;
-import com.loonggg.androidframedemo.app.CustomApp;
-import com.loonggg.androidframedemo.injection.GlobalModule;
-import com.loonggg.androidframedemo.model.HomeNewsModel;
-import com.loonggg.androidframedemo.net.rpc.UiRpcSubscriber;
-import com.loonggg.androidframedemo.net.rpc.service.AppService;
+import com.loonggg.androidframedemo.adapter.ZdcpAdapter;
 import com.loonggg.androidframedemo.ui.basic.BasicFragment;
-import com.loonggg.androidframedemo.ui.serviceinjection.DaggerServiceComponent;
-import com.loonggg.androidframedemo.ui.serviceinjection.ServiceModule;
+import com.loonggg.androidframedemo.view.RGridView;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -43,41 +32,30 @@ import butterknife.ButterKnife;
  * Created by Pokesy_dajiao on 2017/4/20.
  */
 
-public class NewsFragment extends BasicFragment implements OnItemClickListener, OnItemLongClickListener, RefreshLayout.OnRefreshListener, OnLoadListener, OnItemViewSwipeListener, OnItemViewMoveListener {
+public class BrandZdcpFragment extends BasicFragment implements OnItemClickListener, OnItemLongClickListener, RefreshLayout.OnRefreshListener, OnLoadListener, OnItemViewSwipeListener, OnItemViewMoveListener {
     @Bind(R.id.jrecyclerview)
-    JRecyclerView jRecyclerView;
-    //    @Bind(R.id.refreshlayout)
-//    RefreshLayout refreshlayout;
+    RGridView jRecyclerView;
     @Bind(R.id.activity_main)
     RelativeLayout activityMain;
-    private MyTestAdapter testAdapter;
-    @Inject
-    AppService mInfo;
-    List<HomeNewsModel.DataBean.Data1Bean> list;
+    private ZdcpAdapter testAdapter;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_news, null);
+        View view = inflater.inflate(R.layout.fragment_zdcp, null);
         ButterKnife.bind(this, view);
-        inject();
         initData();
         return view;
     }
 
-    private void inject() {
-        DaggerServiceComponent.builder()
-                .globalModule(new GlobalModule((CustomApp) getActivity().getApplication()))
-                .serviceModule(new ServiceModule())
-                .build()
-                .inject(this);
-    }
-
     private void initData() {
+        List<String> list = new ArrayList<String>();
+        for (int i = 0; i < 20; i++) {
+            list.add(i + "行");
+        }
         //设置layoutmanager
-        jRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         //设置适配器
-        testAdapter = new MyTestAdapter(getActivity());
+        testAdapter = new ZdcpAdapter(getActivity(), list);
         jRecyclerView.setAdapter(testAdapter);
         //开启滑动到底部加载更多功能
         jRecyclerView.setLoadMore(true);
@@ -101,24 +79,20 @@ public class NewsFragment extends BasicFragment implements OnItemClickListener, 
      * @param loadMore 是否为加载更多的标记
      */
     private void loadData(final boolean loadMore) {
-
-        manageRpcCall(mInfo.getNewsList("PH", 12, "UP_PH_PC_NEWS_L", 30, 12, 0), new UiRpcSubscriber<HomeNewsModel>(getActivity()) {
-            @Override
-            protected void onSuccess(HomeNewsModel homeNewsModel) {
-                list = homeNewsModel.getData().getData1();
-                //设置数据
-                testAdapter.setDatas(list, loadMore);
-                //标记为请求完成
-                jRecyclerView.setLoadCompleteState();
-            }
-
-            @Override
-            protected void onEnd() {
-                Toast.makeText(getActivity(),"请求失败",Toast.LENGTH_LONG);
-                jRecyclerView.setLoadCompleteState();
-            }
-        });
-
+        List<String> list = new ArrayList<String>();
+        for (int i = 0; i < 20; i++) {
+            list.add(i + "");
+        }
+//        try {
+////            Thread.sleep(1300);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+        //设置数据
+        testAdapter.setDatas(list, loadMore);
+        //标记为请求完成
+//        refreshlayout.refreshingComplete();
+        jRecyclerView.setLoadCompleteState();
     }
 
     @Override

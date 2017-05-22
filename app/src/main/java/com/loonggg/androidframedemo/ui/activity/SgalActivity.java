@@ -53,6 +53,7 @@ public class SgalActivity extends BasicTitleBarActivity implements OnItemClickLi
     }
 
     private void initData() {
+
         List<String> list = new ArrayList<String>();
         for (int i = 0; i < 20; i++) {
             list.add(i + "行");
