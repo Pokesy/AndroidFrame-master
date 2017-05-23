@@ -1,6 +1,5 @@
 package com.loonggg.androidframedemo.fragment;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -30,7 +29,6 @@ import com.loonggg.androidframedemo.ui.basic.BasicFragment;
 import com.loonggg.androidframedemo.ui.serviceinjection.DaggerServiceComponent;
 import com.loonggg.androidframedemo.ui.serviceinjection.ServiceModule;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -46,14 +44,15 @@ import butterknife.ButterKnife;
 public class NewsFragment extends BasicFragment implements OnItemClickListener, OnItemLongClickListener, RefreshLayout.OnRefreshListener, OnLoadListener, OnItemViewSwipeListener, OnItemViewMoveListener {
     @Bind(R.id.jrecyclerview)
     JRecyclerView jRecyclerView;
-    //    @Bind(R.id.refreshlayout)
-//    RefreshLayout refreshlayout;
+        @Bind(R.id.refreshLayout)
+    RefreshLayout refreshlayout;
     @Bind(R.id.activity_main)
     RelativeLayout activityMain;
     private MyTestAdapter testAdapter;
     @Inject
     AppService mInfo;
-    List<HomeNewsModel.DataBean.Data1Bean> list;
+    List<HomeNewsModel.Data1Bean> list;
+    private boolean loadmore;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -61,6 +60,7 @@ public class NewsFragment extends BasicFragment implements OnItemClickListener, 
         View view = inflater.inflate(R.layout.fragment_news, null);
         ButterKnife.bind(this, view);
         inject();
+        loadData(true);
         initData();
         return view;
     }
@@ -77,7 +77,7 @@ public class NewsFragment extends BasicFragment implements OnItemClickListener, 
         //设置layoutmanager
         jRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         //设置适配器
-        testAdapter = new MyTestAdapter(getActivity());
+        testAdapter = new MyTestAdapter(getActivity(), list);
         jRecyclerView.setAdapter(testAdapter);
         //开启滑动到底部加载更多功能
         jRecyclerView.setLoadMore(true);
@@ -87,12 +87,11 @@ public class NewsFragment extends BasicFragment implements OnItemClickListener, 
 //        jRecyclerView.setMoveFree(true, this);
         //设置事件
         jRecyclerView.setOnLoadListener(this);
-//        refreshlayout.setOnRefreshListener(this);
+        refreshlayout.setOnRefreshListener(this);
         jRecyclerView.setOnItemClickListener(this);
 //        jRecyclerView.setOnItemLongClickListener(this);
         //主动发起下拉刷新
-//        refreshlayout.startRefreshing();
-        loadData(true);
+        refreshlayout.startRefreshing();
     }
 
     /**
@@ -105,16 +104,23 @@ public class NewsFragment extends BasicFragment implements OnItemClickListener, 
         manageRpcCall(mInfo.getNewsList("PH", 12, "UP_PH_PC_NEWS_L", 30, 12, 0), new UiRpcSubscriber<HomeNewsModel>(getActivity()) {
             @Override
             protected void onSuccess(HomeNewsModel homeNewsModel) {
-                list = homeNewsModel.getData().getData1();
-                //设置数据
-                testAdapter.setDatas(list, loadMore);
-                //标记为请求完成
-                jRecyclerView.setLoadCompleteState();
+                list = homeNewsModel.getData1();
+                if (null == testAdapter) {
+
+                } else {
+                    //设置数据
+                    testAdapter.setDatas(list, loadMore);
+                    //标记为请求完成
+                    refreshlayout.refreshingComplete();
+                    jRecyclerView.setLoadCompleteState();
+                }
+
             }
 
             @Override
             protected void onEnd() {
-                Toast.makeText(getActivity(),"请求失败",Toast.LENGTH_LONG);
+                Toast.makeText(getActivity(), "请求失败", Toast.LENGTH_LONG);
+                refreshlayout.refreshingComplete();
                 jRecyclerView.setLoadCompleteState();
             }
         });
@@ -181,6 +187,16 @@ public class NewsFragment extends BasicFragment implements OnItemClickListener, 
         } else if (direction == ItemTouchHelper.END) {
             Toast.makeText(getActivity(), "Android!", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
     }
 
     /**

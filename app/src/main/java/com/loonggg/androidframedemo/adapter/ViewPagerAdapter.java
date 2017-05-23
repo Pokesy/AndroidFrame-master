@@ -36,10 +36,10 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         else if (position == 2)
             return new VedioFragment();
         else if(position==3) {
-            return new NewsFragment();
+            return new PeopleFragment();
         }
         else if(position==4) {
-            return new NewsFragment();
+            return new PeopleFragment();
         }
         else if(position==5) {
             return new PeopleFragment();

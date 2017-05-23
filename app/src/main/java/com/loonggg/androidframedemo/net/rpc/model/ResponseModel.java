@@ -10,6 +10,4 @@ public class ResponseModel<T> extends BaseModel {
   public void setData(T data) {
     this.data = data;
   }
-
-
 }

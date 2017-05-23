@@ -2,6 +2,7 @@ package com.loonggg.androidframedemo.adapter;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,18 +24,24 @@ import butterknife.Bind;
  * 测试适配器
  * Created by dajiao on 16/5/9.
  */
-public class MyTestAdapter extends MyBaseAdapter<HomeNewsModel.DataBean.Data1Bean> {
+public class MyTestAdapter extends BaseJAdapter<RecyclerHolder, HomeNewsModel.Data1Bean> {
     // 数据集
-    private List<HomeNewsModel.DataBean.Data1Bean> mDataset;
+    private List<HomeNewsModel.Data1Bean> mDataset;
     Context context;
     protected LayoutInflater mLayoutInflater;
 
-    public MyTestAdapter(Context context) {
+    public MyTestAdapter(Context context, List<HomeNewsModel.Data1Bean> mDataset) {
         super(context);
         this.context = context;
+        this.mDataset = mDataset;
         this.mLayoutInflater = LayoutInflater.from(context);
     }
 
+
+    @Override
+    public void onBindViewHolder(RecyclerHolder holder, int position) {
+
+    }
 
     @Override
     public int getItemViewType(int position) {
@@ -50,19 +57,19 @@ public class MyTestAdapter extends MyBaseAdapter<HomeNewsModel.DataBean.Data1Bea
     public RecyclerHolder createHolder(LayoutInflater layoutInflater, ViewGroup viewGroup, int viewType) {
         if (viewType == 1) {
 //
-            return new CityHolder(layoutInflater.inflate(R.layout.view_image, viewGroup, false));
+            return new RecyclerHolder(layoutInflater.inflate(R.layout.view_image, viewGroup, false));
         } else {
-            return new NewsHolder(layoutInflater.inflate(R.layout.fragment_today_recommend_news_item, viewGroup, false));
+            return new RecyclerHolder(layoutInflater.inflate(R.layout.fragment_today_recommend_news_item, viewGroup, false));
         }
     }
 
     @Override
-    protected void convert(RecyclerHolder recyclerHolder, HomeNewsModel.DataBean.Data1Bean data1Bean, int position) {
-        if (recyclerHolder instanceof CityHolder) {
+    public void convert(RecyclerHolder recyclerHolder, int viewType, int position) {
+        if (viewType == 1) {
 
-        } else if (recyclerHolder instanceof NewsHolder) {
-            recyclerHolder.setText(R.id.tv_content,   data1Bean.getNEWS_TITLE());
-            recyclerHolder.setText(R.id.news_count,   data1Bean.getBROWSE_QTY()+"");
+        } else {
+            recyclerHolder.setText(R.id.tv_content, mDataset.get(position).getNEWS_TITLE());
+            recyclerHolder.setText(R.id.news_count, mDataset.get(position).getBROWSE_QTY() + "");
 
         }
     }

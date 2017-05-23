@@ -6,10 +6,14 @@
     android:layout_height="match_parent"
     tools:context="com.loonggg.androidframedemo.MainActivity">
 
+    <com.jtech.view.RefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <com.jtech.view.JRecyclerView
             android:id="@+id/jrecyclerview"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
-
+    </com.jtech.view.RefreshLayout>
 </RelativeLayout>

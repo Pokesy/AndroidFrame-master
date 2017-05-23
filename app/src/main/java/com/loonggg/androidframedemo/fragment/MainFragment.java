@@ -94,7 +94,6 @@ public class MainFragment extends BasicFragment implements View.OnClickListener 
         message = (TextView) view.findViewById(R.id.message);
         companyName = (TextView) view.findViewById(R.id.locationMessage);
         profile = (ImageView) view.findViewById(R.id.profile);
-
         message.setOnClickListener(this);
         profile.setOnClickListener(this);
 
@@ -107,9 +106,8 @@ public class MainFragment extends BasicFragment implements View.OnClickListener 
      */
     public void init() {
         adapter = new ViewPagerAdapter(getChildFragmentManager(), getActivity());
+        pager.setOffscreenPageLimit(Integer.MAX_VALUE);
         pager.setAdapter(adapter);
-
-
         tab.getTabAt(0).setIcon(R.drawable.tab_selector);
         pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener
                 (tab));

@@ -5,10 +5,10 @@ package com.loonggg.androidframedemo.net.constant;
  *
  */
 public class NetConstant {
-  public static final String URL_DOWNLOAD_APP = "http://192.168.1.212:8001/";
+  public static final String URL_DOWNLOAD_APP = "http://192.168.1.114:8001/";
 
   //public static final String BASE_URL_LOCATION = "http://139.129.133.223/";
-  public static final String BASE_URL_LOCATION = "http://192.168.1.212:8001/";
+  public static final String BASE_URL_LOCATION = "http://192.168.1.114:8001/";
   //public static final String BASE_URL_LOCATION = "http://192.168.15.216:8080/carheadline/";
   public static final String BASE_URL_SERVICE_SUFFIX = "comm/procWS.action?businessNo=PH";
   public static final String BASE_URL = BASE_URL_LOCATION ;//+ BASE_URL_SERVICE_SUFFIX;
