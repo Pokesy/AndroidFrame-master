@@ -32,6 +32,7 @@ import butterknife.ButterKnife;
 
 /**
  * Created by Pokesy_dajiao on 2017/4/20.
+ * 人物列表
  */
 
 public class PeopleFragment extends BasicFragment implements OnItemClickListener, OnItemLongClickListener, RefreshLayout.OnRefreshListener, OnLoadListener, OnItemViewSwipeListener, OnItemViewMoveListener {

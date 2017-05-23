@@ -13,6 +13,7 @@ import butterknife.ButterKnife;
 
 /**
  * Created by Pokesy_dajiao on 2017/5/20.
+ * 品牌  企业简介
  */
 
 public class BrandQyjjActivity extends BasicTitleBarActivity {

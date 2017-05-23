@@ -28,6 +28,7 @@ import butterknife.ButterKnife;
 
 /**
  * Created by Pokesy_dajiao on 2017/4/20.
+ * 品牌主机界面
  */
 
 public class HostFragment extends BasicFragment {

@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 import android.widget.GridView;
 
 /**
- * 作者：loonggg on 2016/9/1 16:29
+ *
  */
 
 public class ScrollGridView extends GridView {

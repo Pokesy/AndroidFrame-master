@@ -11,15 +11,14 @@ import android.view.ViewGroup;
 
 import com.loonggg.androidframedemo.app.CustomApp;
 import com.loonggg.androidframedemo.net.rpc.service.AppService;
-import com.loonggg.androidframedemo.ui.activity.BaseActivity;
 import com.loonggg.androidframedemo.ui.basic.BasicTitleBarActivity;
 import com.loonggg.androidframedemo.utils.ToastUtil;
 
 
 /**
- * 作者:王浩 邮件:bingoogolapple@gmail.com
- * 创建时间:15/7/3 上午1:28
- * 描述:
+ *
+ *
+ *
  */
 public abstract class BaseFragment extends Fragment {
     protected String TAG;
@@ -27,7 +26,6 @@ public abstract class BaseFragment extends Fragment {
     protected View mContentView;
     protected AppService mEngine;
     protected BasicTitleBarActivity mActivity;
-
     protected boolean mIsLoadedData = false;
 
     @Override

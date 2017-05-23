@@ -28,7 +28,7 @@ import butterknife.ButterKnife;
 
 /**
  * Created by Pokesy_dajiao on 2017/5/8.
- * 二手市场详列表
+ * 供求列表
  */
 
 public class GqActivity extends BasicTitleBarActivity implements OnItemClickListener, OnItemLongClickListener, RefreshLayout.OnRefreshListener, OnLoadListener, OnItemViewSwipeListener, OnItemViewMoveListener {

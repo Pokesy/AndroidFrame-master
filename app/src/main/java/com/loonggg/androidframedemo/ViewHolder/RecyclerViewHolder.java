@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Created by gengguanglong on 2016/4/20.
+ *
  */
 public class RecyclerViewHolder extends RecyclerView.ViewHolder {
     private SparseArray<View> mViews;//集合类，layout里包含的View,以view的id作为key，value是view对象

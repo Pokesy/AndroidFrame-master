@@ -32,6 +32,7 @@ import butterknife.ButterKnife;
 
 /**
  * Created by Pokesy_dajiao on 2017/4/20.
+ * 首页
  */
 
 public class HomeFragment extends BasicFragment implements OnItemClickListener, OnItemLongClickListener, RefreshLayout.OnRefreshListener, OnLoadListener, OnItemViewSwipeListener, OnItemViewMoveListener {

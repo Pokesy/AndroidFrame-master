@@ -1,7 +1,7 @@
 package com.loonggg.androidframedemo.net.rpc.service.params;
 
 /**
- * Created by loonggg on 16/9/16.
+ *
  */
 
 public class TestParam {

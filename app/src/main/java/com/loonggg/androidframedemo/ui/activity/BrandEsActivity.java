@@ -26,7 +26,7 @@ import butterknife.ButterKnife;
 
 /**
  * Created by Pokesy_dajiao on 2017/5/8.
- * 二手市场详列表
+ * 品牌 二手市场详列表
  */
 
 public class BrandEsActivity extends BasicTitleBarActivity implements OnItemClickListener, OnItemLongClickListener, RefreshLayout.OnRefreshListener, OnLoadListener, OnItemViewSwipeListener, OnItemViewMoveListener {

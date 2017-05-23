@@ -26,13 +26,8 @@ public interface AuthService {
                                                                 @Path("code") String code);
 
 
-
-
-
     @GET("member/{userId}/{token}")
     Observable<Response<ResponseModel<UserInfo>>> getUserInfo(@Path("userId") int userId, @Path("token") String token);
-
-
 
 
 }

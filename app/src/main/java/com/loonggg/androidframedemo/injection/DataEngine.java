@@ -16,9 +16,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 /**
- * 作者:王浩 邮件:bingoogolapple@gmail.com
- * 创建时间:15/5/26 上午1:03
- * 描述:
+ *
+ *
+ *
  */
 public class DataEngine {
 

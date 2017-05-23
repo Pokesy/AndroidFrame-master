@@ -7,9 +7,8 @@ import com.loonggg.androidframedemo.app.CustomApp;
 
 
 /**
- * 作者:王浩 邮件:bingoogolapple@gmail.com
- * 创建时间:15/7/2 10:17
- * 描述:
+ *
+ *
  */
 public class ToastUtil {
 

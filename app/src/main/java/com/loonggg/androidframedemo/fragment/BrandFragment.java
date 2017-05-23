@@ -22,6 +22,7 @@ import java.util.List;
 
 /**
  * Created by Pokesy_dajiao on 2017/4/20.
+ * 品牌界面
  */
 
 

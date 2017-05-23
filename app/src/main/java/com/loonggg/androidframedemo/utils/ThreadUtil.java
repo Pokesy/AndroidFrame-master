@@ -3,9 +3,9 @@ package com.loonggg.androidframedemo.utils;
 import android.os.Handler;
 
 /**
- * 作者:王浩 邮件:bingoogolapple@gmail.com
- * 创建时间:15/11/1 下午7:26
- * 描述:
+ *
+ *
+ *
  */
 public class ThreadUtil {
     private static Handler sHandler = new Handler();

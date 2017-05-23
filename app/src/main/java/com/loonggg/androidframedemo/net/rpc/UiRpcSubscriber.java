@@ -56,7 +56,9 @@ public abstract class UiRpcSubscriber<T> extends Subscriber<Response<ResponseMod
             onSessionExpired();
             return;
         }
-
+        if (responseModelResponse.body().getResultType() == 0) {
+            onHttpError(new RpcHttpError(responseModelResponse.code(), responseModelResponse.message()));
+        }
         if (responseModelResponse.code() == NetConstant.HttpCodeConstant.SUCCESS
                 && responseModelResponse.body().getError_code() == 0) {
             // 存储token

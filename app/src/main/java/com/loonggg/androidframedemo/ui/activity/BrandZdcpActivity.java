@@ -25,7 +25,7 @@ import butterknife.OnClick;
 
 /**
  * Created by Pokesy_dajiao on 2017/5/8.
- * 品牌店详情
+ * 品牌店详情 主打产品
  */
 
 public class BrandZdcpActivity extends BasicTitleBarActivity {

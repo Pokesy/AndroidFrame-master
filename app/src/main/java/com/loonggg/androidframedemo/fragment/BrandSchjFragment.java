@@ -21,6 +21,7 @@ import java.util.List;
 
 /**
  * Created by Pokesy_dajiao on 2017/4/20.
+ * 品牌店详情    主打产品下的生产环境
  */
 
 

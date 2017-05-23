@@ -33,6 +33,7 @@ import butterknife.OnClick;
 
 /**
  * Created by Pokesy_dajiao on 2017/4/26.
+ * 定位
  */
 
 public class SearchLocationActivity extends BasicTitleBarActivity implements SensorEventListener {

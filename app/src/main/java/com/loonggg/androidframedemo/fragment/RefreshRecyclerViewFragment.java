@@ -36,6 +36,10 @@ import cn.bingoogolapple.refreshlayout.BGAStickinessRefreshViewHolder;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+/*
+*
+* 测试界面
+* */
 
 public class RefreshRecyclerViewFragment extends BaseFragment implements BGARefreshLayout.BGARefreshLayoutDelegate, BGAOnRVItemClickListener, BGAOnRVItemLongClickListener, BGAOnItemChildClickListener, BGAOnItemChildLongClickListener {
     private static final String TAG = RefreshRecyclerViewFragment.class.getSimpleName();

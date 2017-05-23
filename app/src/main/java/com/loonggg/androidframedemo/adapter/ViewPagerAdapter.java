@@ -6,10 +6,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.loonggg.androidframedemo.fragment.HomeFragment;
-import com.loonggg.androidframedemo.fragment.MainFragment;
 import com.loonggg.androidframedemo.fragment.NewsFragment;
 import com.loonggg.androidframedemo.fragment.PeopleFragment;
-import com.loonggg.androidframedemo.fragment.RefreshRecyclerViewFragment;
 import com.loonggg.androidframedemo.fragment.VedioFragment;
 
 import java.util.List;

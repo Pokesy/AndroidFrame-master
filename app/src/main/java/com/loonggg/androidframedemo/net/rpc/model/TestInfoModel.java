@@ -3,7 +3,7 @@ package com.loonggg.androidframedemo.net.rpc.model;
 import java.util.List;
 
 /**
- * Created by loonggg on 16/9/16.
+ *
  */
 
 public class TestInfoModel {

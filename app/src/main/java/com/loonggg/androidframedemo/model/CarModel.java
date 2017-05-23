@@ -3,7 +3,7 @@ package com.loonggg.androidframedemo.model;
 import java.util.List;
 
 /**
- * 作者：loonggg on 2016/9/1 09:45
+ * 作者：dajiao on 2016/9/1 09:45
  */
 
 public class CarModel {
