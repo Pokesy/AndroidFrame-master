@@ -93,6 +93,7 @@ public class BrandFragment extends BasicFragment implements View.OnClickListener
         list.add(new HostFragment());//新闻Fragment
         list.add(new PtjFragment());//新闻Fragment
         adapter = new BrandViewPagerAdapter(getChildFragmentManager(),list, getActivity());
+        pager.setOffscreenPageLimit(Integer.MAX_VALUE);
         pager.setAdapter(adapter);
         pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener
                 (tab));

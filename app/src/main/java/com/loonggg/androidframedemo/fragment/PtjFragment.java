@@ -69,6 +69,9 @@ public class PtjFragment extends BasicFragment {
                 return true;
             }
         });
+        mSideBarView.setFocusableInTouchMode(true);
+        mSideBarView.requestFocus();
+        mSideBarView.setVisibility(View.VISIBLE);
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
@@ -107,6 +110,8 @@ public class PtjFragment extends BasicFragment {
                     public void run() {
                         adapter = new PtjAdapter(getActivity(), list);
                         mRecyclerView.setAdapter(adapter);
+                        mSideBarView.setFocusableInTouchMode(true);
+                        mSideBarView.requestFocus();
                         mSideBarView.setVisibility(View.VISIBLE);
                     }
                 });

@@ -117,6 +117,7 @@ public class MainActivity extends BasicTitleBarActivity {
         Log.e("zhd", "initData: " + "MyselfFragment");
 //        Toast.makeText(MainActivity.this, "initData", Toast.LENGTH_SHORT).show();
         initAdapter();//定义适配器
+        pager.setOffscreenPageLimit(Integer.MAX_VALUE);
         tabLayout.setupWithViewPager(pager);//tabLayout与viewPager联动
         initUpIcons();//向tabLayout添加自定义布局
     }

@@ -105,7 +105,10 @@ public class HostFragment extends BasicFragment {
                     public void run() {
                         adapter = new CityAdapter(getActivity(), list);
                         mRecyclerView.setAdapter(adapter);
+                        mSideBarView.setFocusableInTouchMode(true);
+                        mSideBarView.requestFocus();
                         mSideBarView.setVisibility(View.VISIBLE);
+
                     }
                 });
             }
