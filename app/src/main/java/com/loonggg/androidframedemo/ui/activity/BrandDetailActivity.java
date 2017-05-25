@@ -131,10 +131,10 @@ public class BrandDetailActivity extends BasicTitleBarActivity {
                 startActivity(new Intent(this,BrandEsActivity.class));
                 break;
             case R.id.tv_sqtg:
-                startActivity(new Intent(this,BrandEsActivity.class));
+                startActivity(new Intent(this,BrandSqtgActivity.class));
                 break;
             case R.id.tv_xdj:
-                startActivity(new Intent(this,BrandKbActivity.class));
+                startActivity(new Intent(this,BrandXdjActivity.class));
                 break;
             case R.id.tv_more:
 

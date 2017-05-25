@@ -34,7 +34,7 @@ public class SellCpDetailActivity extends BasicTitleBarActivity {
     LinearLayout llItem;
     @Override
     public int getLayoutId() {
-        return R.layout.activity_test;
+        return R.layout.activity_sell_cp_detail;
     }
 
     @Override
@@ -44,7 +44,6 @@ public class SellCpDetailActivity extends BasicTitleBarActivity {
         ButterKnife.bind(this);
         init();
     }
-
     private void init() {
         MoreTextView text1 = ((MoreTextView) findViewById(R.id.more));
         text1.setText(getResources().getString(R.string.test_custom_header_title));

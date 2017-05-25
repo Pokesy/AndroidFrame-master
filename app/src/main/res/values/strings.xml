@@ -87,6 +87,28 @@
     <string name="app_brand_scl">生产量：</string>
     <string name="app_brand_scsb">生产设备：</string>
     <string name="app_brand_zjgy">质检工艺：</string>
+    <string name="app_brand_tgxx">团购信息</string>
+    <string name="app_brand_gsmc">公司名称 </string>
+    <string name="app_brand_cplx">产品类型</string>
+    <string name="app_brand_cpxh">产品型号</string>
+    <string name="app_brand_tgsl">团购数量</string>
+    <string name="app_brand_qwjg">期望价格</string>
+    <string name="app_brand_qwsj">期望到货时间</string>
+    <string name="app_brand_grxx">个人信息</string>
+    <string name="app_brand_name">姓名</string>
+    <string name="app_brand_xlfs">联系方式</string>
+    <string name="app_brand_sr_cpxh">请输入产品型号</string>
+    <string name="app_brand_sr_tgsl">请输入团购数量</string>
+    <string name="app_brand_sr_je">请输入金额</string>
+    <string name="app_brand_xz">请选择</string>
+    <string name="app_brand_sr_gsmc">请输入公司名称</string>
+    <string name="app_brand_sr_xm">请输入您的姓名</string>
+    <string name="app_brand_sr_dh">请输入您的电话</string>
+    <string name="app_brand_xxdz">详细地址</string>
+    <string name="app_brand_dq">地区</string>
+    <string name="app_brand_tjsq">提交申请</string>
+    <!--经销商产品详情-->
     <string name="app_sell_yxgg">已选规格：</string>
     <string name="app_sell_canshu">参数</string>
+    <string name="app_sell_cpxq">产品详情</string>
 </resources>

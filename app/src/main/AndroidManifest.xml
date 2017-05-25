@@ -97,6 +97,10 @@
         <activity android:name=".ui.activity.BrandZdcpActivity" />
         <activity android:name=".ui.activity.BrandQyjjActivity" />
         <activity android:name=".ui.activity.DgnsjDetailActivity" />
+        <activity android:name=".ui.activity.SellCpDetailActivity" />
+        <activity android:name=".ui.activity.BrandSqtgActivity" />
+        <activity android:name=".ui.activity.BrandDpjjActivity" />
+        <activity android:name=".ui.activity.BrandXdjActivity" />
     </application>
 
 </manifest>

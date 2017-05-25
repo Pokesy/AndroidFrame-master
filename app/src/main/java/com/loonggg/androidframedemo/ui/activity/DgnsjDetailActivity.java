@@ -32,8 +32,10 @@ public class DgnsjDetailActivity extends BasicTitleBarActivity {
     MoreTextView more;
     @Bind(R.id.ll_item)
     LinearLayout llItem;
+
     @Override
     public int getLayoutId() {
+
         return R.layout.activity_test;
     }
 

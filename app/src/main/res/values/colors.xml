@@ -74,6 +74,11 @@
     <color name="color_hot_brand">#e5193b</color>
 
     <color name="color_water_tip">#feb851</color>
+    <!--问-->
+    <color name="color_wen">#ff8737</color>
+    <!--答-->
+    <color name="color_da">#69ae4b</color>
+
 
     <color name="color_sell_1">#ffbc48</color>
     <color name="color_sell_2">#ff8737</color>
