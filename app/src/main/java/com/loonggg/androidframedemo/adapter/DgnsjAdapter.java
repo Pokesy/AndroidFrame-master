@@ -13,6 +13,7 @@ import com.jtech.adapter.BaseJAdapter;
 import com.jtech.view.JRecyclerView;
 import com.jtech.view.RecyclerHolder;
 import com.loonggg.androidframedemo.R;
+import com.loonggg.androidframedemo.ui.activity.DgnsjDetailActivity;
 import com.loonggg.androidframedemo.ui.activity.SgalActivity;
 
 import java.util.ArrayList;
@@ -76,7 +77,7 @@ public class DgnsjAdapter extends BaseJAdapter<RecyclerHolder, String> {
             recyclerHolder.getView(R.id.ll_item).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    context.startActivity(new Intent(context, SgalActivity.class));
+                    context.startActivity(new Intent(context, DgnsjDetailActivity.class));
                 }
             });
         }

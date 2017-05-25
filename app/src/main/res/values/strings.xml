@@ -87,4 +87,6 @@
     <string name="app_brand_scl">生产量：</string>
     <string name="app_brand_scsb">生产设备：</string>
     <string name="app_brand_zjgy">质检工艺：</string>
+    <string name="app_sell_yxgg">已选规格：</string>
+    <string name="app_sell_canshu">参数</string>
 </resources>

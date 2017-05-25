@@ -96,6 +96,7 @@
         <activity android:name=".ui.activity.BrandSgalActivity" />
         <activity android:name=".ui.activity.BrandZdcpActivity" />
         <activity android:name=".ui.activity.BrandQyjjActivity" />
+        <activity android:name=".ui.activity.DgnsjDetailActivity" />
     </application>
 
 </manifest>
