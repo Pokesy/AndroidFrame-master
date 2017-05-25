@@ -111,4 +111,8 @@
     <string name="app_sell_yxgg">已选规格：</string>
     <string name="app_sell_canshu">参数</string>
     <string name="app_sell_cpxq">产品详情</string>
+    <string name="app_sell_xgtj">相关推荐</string>
+    <string name="app_sell_zxpl">最新评论</string>
+    <string name="app_sell_add_gwc">加入购物车</string>
+    <string name="app_sell_buy">立即购买</string>
 </resources>

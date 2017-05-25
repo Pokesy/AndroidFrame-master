@@ -294,7 +294,6 @@
                 android:layout_marginStart="@dimen/margin_small"
                 android:layout_toEndOf="@+id/iv_head"
                 android:layout_toStartOf="@+id/tv_inter"
-
                 android:orientation="vertical">
 
                 <TextView
@@ -345,23 +344,24 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="45dp"
-                android:gravity="center"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/font_size_small"
                     android:text="全部产品"
-                    android:textColor="@color/color_a0"/>
+                    android:textColor="@color/color_a0"
+                    android:textSize="@dimen/font_size_small" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_small"
                     android:text="10"
                     android:textColor="@color/color_xxl"
-                    android:textSize="@dimen/font_size_large"/>
+                    android:textSize="@dimen/font_size_large" />
             </LinearLayout>
 
             <LinearLayout
@@ -370,24 +370,154 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/font_size_small"
                     android:text="收藏人数"
-                    android:textColor="@color/color_a0"/>
+                    android:textColor="@color/color_a0"
+                    android:textSize="@dimen/font_size_small" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_small"
                     android:text="10"
                     android:textColor="@color/color_xxl"
-                    android:textSize="@dimen/font_size_large"/>
+                    android:textSize="@dimen/font_size_large" />
             </LinearLayout>
         </LinearLayout>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="@string/app_sell_cpxq"/>
+            android:layout_marginStart="@dimen/margin_small"
+            android:drawableStart="@mipmap/cpxq"
+            android:gravity="center_vertical"
+            android:text="@string/app_sell_cpxq"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large" />
+
+        <com.loonggg.androidframedemo.view.RGridView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="@string/app_brand_cpkb"
+                android:textColor="@color/color_xxl"
+                android:textSize="@dimen/font_size_large"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/app_brand_more"
+                android:textColor="@color/color_water"
+                android:textSize="@dimen/font_size_small" />
+        </RelativeLayout>
+
+        <com.loonggg.androidframedemo.view.RGridView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:text="@string/app_sell_xgtj"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large"
+            android:textStyle="bold" />
+
+        <com.loonggg.androidframedemo.view.RGridView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:text="@string/app_sell_zxpl"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/font_size_large"
+            android:textStyle="bold" />
+
+        <com.loonggg.androidframedemo.view.RGridView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/ll_buy"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:src="@mipmap/pinglun" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:src="@drawable/shoucang_selector" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:src="@drawable/dianzan_selector" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:background="@color/color_wen"
+                    android:gravity="center"
+                    android:text="@string/app_sell_buy" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:background="@color/color_bar1"
+                    android:gravity="center"
+                    android:text="@string/app_sell_add_gwc" />
+            </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
 </com.loonggg.androidframedemo.view.MyScrollview>

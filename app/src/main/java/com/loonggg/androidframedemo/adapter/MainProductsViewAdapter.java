@@ -1,6 +1,7 @@
 package com.loonggg.androidframedemo.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.loonggg.androidframedemo.R;
+import com.loonggg.androidframedemo.ui.activity.BrandEsActivity;
+import com.loonggg.androidframedemo.ui.activity.SellCpDetailActivity;
 
 /**
  * 作者：loonggg on 2016/9/1 16:48
@@ -48,6 +51,12 @@ public class MainProductsViewAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         view = LayoutInflater.from(context).inflate(R.layout.sell_product_item, null);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               context.startActivity(new Intent(context,SellCpDetailActivity.class));
+            }
+        });
         ImageView iv = (ImageView) view.findViewById(R.id.gv_logo_iv);
 
         TextView tv = (TextView) view.findViewById(R.id.gv_name_tv);

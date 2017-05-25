@@ -5,10 +5,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.loonggg.androidframedemo.R;
 import com.loonggg.androidframedemo.ui.basic.BasicTitleBarActivity;
-import com.loonggg.androidframedemo.view.MoreTextView;
 import com.michael.easydialog.EasyDialog;
 
 import butterknife.Bind;
@@ -17,21 +17,51 @@ import butterknife.OnClick;
 
 /**
  * Created by Pokesy_dajiao on 2017/5/8.
- * 服务站详情
+ * 经销商产品详情
  */
 
 public class SellCpDetailActivity extends BasicTitleBarActivity {
+
 
     @Bind(R.id.iv_today_news)
     ImageView ivTodayNews;
     @Bind(R.id.iv_back)
     ImageView ivBack;
-    @Bind(R.id.short_text)
-    MoreTextView shortText;
-    @Bind(R.id.more)
-    MoreTextView more;
+    @Bind(R.id.gwc)
+    ImageView gwc;
     @Bind(R.id.ll_item)
     LinearLayout llItem;
+    @Bind(R.id.tv)
+    TextView tv;
+    @Bind(R.id.tv_gg)
+    TextView tvGg;
+    @Bind(R.id.cs)
+    TextView cs;
+    @Bind(R.id.tv0)
+    TextView tv0;
+    @Bind(R.id.q_title)
+    TextView qTitle;
+    @Bind(R.id.tv_num)
+    TextView tvNum;
+    @Bind(R.id.tv00)
+    TextView tv00;
+    @Bind(R.id.d_title)
+    TextView dTitle;
+    @Bind(R.id.iv_head)
+    ImageView ivHead;
+    @Bind(R.id.tv_title)
+    TextView tvTitle;
+    @Bind(R.id.tv_content)
+    TextView tvContent;
+    @Bind(R.id.ll_content)
+    LinearLayout llContent;
+    @Bind(R.id.tv_inter)
+    TextView tvInter;
+    @Bind(R.id.textView3)
+    TextView textView3;
+    @Bind(R.id.ll_buy)
+    LinearLayout llBuy;
+
     @Override
     public int getLayoutId() {
         return R.layout.activity_sell_cp_detail;
@@ -44,13 +74,9 @@ public class SellCpDetailActivity extends BasicTitleBarActivity {
         ButterKnife.bind(this);
         init();
     }
+
     private void init() {
-        MoreTextView text1 = ((MoreTextView) findViewById(R.id.more));
-        text1.setText(getResources().getString(R.string.test_custom_header_title));
-        text1.refreshText();
-        MoreTextView text2 = ((MoreTextView) findViewById(R.id.short_text));
-        text2.setText(getResources().getString(R.string.test_custom_header_desc));
-        text2.refreshText();
+
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,7 +93,7 @@ public class SellCpDetailActivity extends BasicTitleBarActivity {
                 dialog.setLayout(view)
                         .setBackgroundColor(SellCpDetailActivity.this.getResources().getColor(R.color.background_color_black))
                         // .setLocation(new location[])//point in screen
-                        .setLocationByAttachedView(more)
+                        .setLocationByAttachedView(tvGg)
                         .setGravity(EasyDialog.GRAVITY_BOTTOM)
                         .setAnimationTranslationShow(EasyDialog.DIRECTION_X, 1000, -600, 100, -50, 50, 0)
                         .setAnimationAlphaShow(1000, 0.3f, 1.0f)
