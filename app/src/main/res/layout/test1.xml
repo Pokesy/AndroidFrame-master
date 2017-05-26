@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_30"
         android:gravity="center"
-        android:text="@string/dialog_wx"
+        android:text="@string/app_near_phone"
         android:textColor="@color/color_xl"
         android:textSize="@dimen/font_size_small" />
 
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/dialog_copy"
+            android:text="@string/dialog_qd"
             android:textColor="@color/color_bar1"
             android:textSize="@dimen/font_size_xxlarge" />
     </LinearLayout>

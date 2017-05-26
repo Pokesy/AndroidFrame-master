@@ -318,6 +318,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/ll_location"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -334,6 +335,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_wx"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -346,10 +348,11 @@
                 android:drawablePadding="@dimen/margin_tag"
                 android:drawableStart="@mipmap/wxlx"
                 android:gravity="center"
-                android:text="@string/app_near_location" />
+                android:text="@string/app_near_wechat" />
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_phone"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -362,7 +365,7 @@
                 android:drawablePadding="@dimen/margin_tag"
                 android:drawableStart="@mipmap/sell_dh"
                 android:gravity="center"
-                android:text="@string/app_near_location" />
+                android:text="@string/app_near_phone" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

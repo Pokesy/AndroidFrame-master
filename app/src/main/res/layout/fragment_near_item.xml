@@ -9,14 +9,6 @@
     >
 
 
-    <!--&lt;!&ndash;开头分割线&ndash;&gt;-->
-    <!--<View-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="1dp"-->
-    <!--android:layout_alignParentTop="true"-->
-    <!--android:background="#d9d9d9" />-->
-
-
     <LinearLayout
         android:id="@+id/item_layout"
         android:layout_width="match_parent"
@@ -150,16 +142,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
+                android:id="@+id/tv_location"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_weight="1"
                     android:gravity="center">
 
                     <TextView
-                        android:id="@+id/textView"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:drawablePadding="3dp"
@@ -172,11 +165,13 @@
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
+                    android:id="@+id/tv_phone"
                     android:layout_weight="1"
                     android:gravity="center">
 
                     <TextView
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:drawablePadding="3dp"

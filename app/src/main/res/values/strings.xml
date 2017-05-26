@@ -115,4 +115,10 @@
     <string name="app_sell_zxpl">最新评论</string>
     <string name="app_sell_add_gwc">加入购物车</string>
     <string name="app_sell_buy">立即购买</string>
+    <!--对话框-->
+    <string name="dialog_qx">取消</string>
+    <string name="dialog_copy">复制</string>
+    <string name="dialog_wx">微信号</string>
+    <string name="dialog_qd">确定</string>
+
 </resources>

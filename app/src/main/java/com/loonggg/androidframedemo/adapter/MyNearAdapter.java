@@ -1,14 +1,20 @@
 package com.loonggg.androidframedemo.adapter;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.jtech.adapter.RecyclerSwipeAdapter;
 import com.jtech.view.RecyclerHolder;
 import com.loonggg.androidframedemo.R;
+import com.loonggg.androidframedemo.ui.activity.BrandDetailActivity;
+import com.loonggg.androidframedemo.ui.activity.SearchLocationActivity;
+import com.michael.easydialog.EasyDialog;
 
 import java.util.List;
 
@@ -19,8 +25,10 @@ import java.util.List;
 public class MyNearAdapter extends RecyclerSwipeAdapter<String> {
     // 数据集
     private List<String> mDataset;
+private Context context;
     public MyNearAdapter(Context context) {
         super(context);
+        this.context=context;
     }
 
     /**
@@ -70,8 +78,42 @@ public class MyNearAdapter extends RecyclerSwipeAdapter<String> {
     }
 
     @Override
-    protected void convert(RecyclerHolder holder, String model, int position) {
-        holder.setText(R.id.tv_distance, model);
+    protected void convert(final RecyclerHolder holder, String model, int position) {
+        holder.getView(R.id.tv_location).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.startActivity(new Intent(context,SearchLocationActivity.class));
+            }
+        });
+        holder.getView(R.id.tv_phone).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View view2 =((Activity)context).getLayoutInflater().inflate(R.layout.test1, null);
+                TextView bt1 = (TextView) view2.findViewById(R.id.tv_delete);
 
+                final EasyDialog dialog1 = new EasyDialog(context);
+//                dialog1.setLayoutResourceId(R.layout.test1)//layout resource id
+                dialog1.setLayout(view2)
+                        .setBackgroundColor(context.getResources().getColor(R.color.font_color_white))
+                        // .setLocation(new location[])//point in screen
+                        .setLocationByAttachedView(holder.getView(R.id.tv_phone))
+                        .setGravity(EasyDialog.GRAVITY_TOP)
+                        .setAnimationTranslationShow(EasyDialog.DIRECTION_X, 1000, -600, 100, -50, 50, 0)
+                        .setAnimationAlphaShow(1000, 0.3f, 1.0f)
+                        .setAnimationTranslationDismiss(EasyDialog.DIRECTION_X, 500, -50, 800)
+                        .setAnimationAlphaDismiss(500, 1.0f, 0.0f)
+                        .setTouchOutsideDismiss(true)
+                        .setMatchParent(true)
+                        .setMarginLeftAndRight(50, 50)
+                        .setOutsideColor(context.getResources().getColor(R.color.font_color_black_half))
+                        .show();
+                bt1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog1.dismiss();
+                    }
+                });
+            }
+        });
     }
 }

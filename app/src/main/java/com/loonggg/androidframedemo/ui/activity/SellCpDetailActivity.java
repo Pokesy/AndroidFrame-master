@@ -80,18 +80,13 @@ public class SellCpDetailActivity extends BasicTitleBarActivity {
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                View view = SellCpDetailActivity.this.getLayoutInflater().inflate(R.layout.test, null);
-                Button bt = (Button) view.findViewById(R.id.imageview_delete);
-                bt.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+                View view = SellCpDetailActivity.this.getLayoutInflater().inflate(R.layout.test1, null);
+                TextView bt = (TextView) view.findViewById(R.id.tv_delete);
 
-                    }
-                });
                 final EasyDialog dialog = new EasyDialog(SellCpDetailActivity.this);
 //                        .setLayoutResourceId(R.layout.test)//layout resource id
                 dialog.setLayout(view)
-                        .setBackgroundColor(SellCpDetailActivity.this.getResources().getColor(R.color.background_color_black))
+                        .setBackgroundColor(SellCpDetailActivity.this.getResources().getColor(R.color.font_color_white))
                         // .setLocation(new location[])//point in screen
                         .setLocationByAttachedView(tvGg)
                         .setGravity(EasyDialog.GRAVITY_BOTTOM)
@@ -101,6 +96,7 @@ public class SellCpDetailActivity extends BasicTitleBarActivity {
                         .setAnimationAlphaDismiss(500, 1.0f, 0.0f)
                         .setTouchOutsideDismiss(true)
                         .setMatchParent(true)
+                        .setMarginLeftAndRight(50, 50)
                         .setOutsideColor(SellCpDetailActivity.this.getResources().getColor(R.color.font_color_black_half))
                         .show();
                 bt.setOnClickListener(new View.OnClickListener() {
