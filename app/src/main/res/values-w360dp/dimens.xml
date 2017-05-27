@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<dimen name="activity_horizontal_margin">64dp</dimen>
+	<dimen name="d10sp">10sp</dimen>
+	<dimen name="d11sp">11sp</dimen>
+	<dimen name="d12sp">12sp</dimen>
+	<dimen name="d13sp">13sp</dimen>
+	<dimen name="d14sp">14sp</dimen>
+	<dimen name="d15sp">15sp</dimen>
+	<dimen name="d16sp">16sp</dimen>
+	<dimen name="d17sp">17sp</dimen>
+	<dimen name="d18sp">18sp</dimen>
+	<dimen name="d19sp">19sp</dimen>
+	<dimen name="d20sp">20sp</dimen>
+	<dimen name="d21sp">21sp</dimen>
+	<dimen name="d22sp">21sp</dimen>
+	<dimen name="d23sp">23sp</dimen>
+	<dimen name="d24sp">24sp</dimen>
+	<dimen name="d25sp">25sp</dimen>
+	<dimen name="d26sp">26sp</dimen>
+	<dimen name="d27sp">27sp</dimen>
+	<dimen name="d28sp">28sp</dimen>
+	<dimen name="d29sp">29sp</dimen>
+	<dimen name="d30sp">30sp</dimen>
+	<dimen name="d36sp">36sp</dimen>
+	<dimen name="large_text">20sp</dimen>
+	<dimen name="normal_text">15sp</dimen>
+	<dimen name="small_text">13sp</dimen>
+</resources>

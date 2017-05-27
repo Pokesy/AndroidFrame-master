@@ -13,6 +13,13 @@ public class NetConstant {
   public static final String BASE_URL_SERVICE_SUFFIX = "comm/procWS.action?businessNo=PH";
   public static final String BASE_URL = BASE_URL_LOCATION ;//+ BASE_URL_SERVICE_SUFFIX;
 
+  //修云飞--图片加载之前添加的前缀
+  public static final String URL_PICTURE = "http://47.93.117.61:8090/imageResult.create?path=";
+  //修云飞--WebView网址加载之前添加的前缀
+  public static final String URL_HTML= "http://47.93.117.61:8090/htmlResult.create?path=";
+  //修云飞--上传到服务器的视频网址的拼接路径
+  public static final String URL_VIDEO="http://47.93.117.61:8090/videoResult.create?path=";
+
   private NetConstant() {
 
   }

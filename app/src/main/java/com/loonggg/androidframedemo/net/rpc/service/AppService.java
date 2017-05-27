@@ -3,6 +3,7 @@ package com.loonggg.androidframedemo.net.rpc.service;
 
 import com.loonggg.androidframedemo.model.BannerModel;
 import com.loonggg.androidframedemo.model.HomeNewsModel;
+import com.loonggg.androidframedemo.model.NewsDetailModel;
 import com.loonggg.androidframedemo.model.RefreshModel;
 import com.loonggg.androidframedemo.model.StaggeredModel;
 import com.loonggg.androidframedemo.net.rpc.model.ResponseModel;
@@ -25,6 +26,13 @@ import retrofit2.http.Query;
 import rx.Observable;
 
 public interface AppService {
+
+    //修云飞  以下
+    //详情页的接口----
+    @GET("comm/procWS.action")
+    Observable<Response<ResponseModel<NewsDetailModel>>> getDetail(@Query("businessNo") String businessNo, @Query("resultNum") int resultNum, @Query("procName")
+            String procName, @Query("params") int newsId, @Query("params") int typeId, @Query("params") int userId);
+    //修云飞  以上
 
     @Multipart
     @POST("file/upload")

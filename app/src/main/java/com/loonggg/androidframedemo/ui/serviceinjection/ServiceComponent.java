@@ -9,6 +9,7 @@ import com.loonggg.androidframedemo.net.rpc.RpcCallManager;
 import com.loonggg.androidframedemo.net.rpc.service.AppService;
 import com.loonggg.androidframedemo.net.rpc.service.AuthService;
 import com.loonggg.androidframedemo.net.rpc.service.UserService;
+import com.loonggg.androidframedemo.ui.activity.NewsDetailActivity;
 
 import javax.inject.Singleton;
 
@@ -34,4 +35,6 @@ public interface ServiceComponent {
 
     void inject(MainActivity activity);
     void inject(NewsFragment fragment);
+    /*--修云飞   详情页的注入--*/
+    void inject(NewsDetailActivity activity);
 }

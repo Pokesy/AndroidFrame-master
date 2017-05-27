@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/font_color_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/activity_homeSearch_topRelative"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/si_default_text_color">
+
+        <ImageView
+            android:id="@+id/activity_homeSearch_topBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_tag"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="@dimen/grid_2"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:src="@mipmap/fh" />
+
+        <EditText
+            android:id="@+id/activity_homeSearch_search"
+            android:layout_width="292dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toEndOf="@+id/activity_homeSearch_topBack"
+            android:background="@drawable/shape_reply"
+            android:cursorVisible="true"
+            android:drawableEnd="@mipmap/home_searcjh"
+            android:drawablePadding="@dimen/margin_small"
+            android:hint="@string/edit_search"
+            android:imeOptions="actionSearch"
+            android:paddingEnd="@dimen/margin_15"
+            android:paddingStart="@dimen/margin_20"
+            android:singleLine="true"
+            android:textColorHint="@color/font_color_white"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/font_size_small" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/activity_homeSearch_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/font_color_white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_homeSearch_hot"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:text="热门推荐"
+                android:textColor="@color/color_gray"
+                android:textSize="@dimen/d13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/activity_homeSearch_searchOne"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/search_shape"
+                    android:gravity="center"
+                    android:text="破碎锤"
+                    android:textColor="@color/color_xxl"
+                    android:textSize="@dimen/d13sp" />
+
+                <TextView
+                    android:id="@+id/activity_homeSearch_searchTwo"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/search_shape"
+                    android:gravity="center"
+                    android:text="液压剪"
+                    android:textColor="@color/color_xxl"
+                    android:textSize="@dimen/d13sp" />
+
+                <TextView
+                    android:id="@+id/activity_homeSearch_searchThree"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/search_shape"
+                    android:gravity="center"
+                    android:text="活塞"
+                    android:textColor="@color/color_xxl"
+                    android:textSize="@dimen/d13sp" />
+
+                <TextView
+                    android:id="@+id/activity_homeSearch_searchFour"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/search_shape"
+                    android:gravity="center"
+                    android:text="蓄能器"
+                    android:textColor="@color/color_xxl"
+                    android:textSize="@dimen/d13sp" />
+
+            </LinearLayout>
+
+            <include layout="@layout/xl_line" />
+
+            <TextView
+                android:id="@+id/activity_homeSearch_history"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:drawableRight="@mipmap/trash"
+                android:gravity="center_vertical"
+                android:text="历史搜索"
+                android:textColor="@color/color_gray"
+                android:textSize="@dimen/d13sp" />
+
+            <com.loonggg.androidframedemo.view.ScrollViewWithListView
+                android:id="@+id/activity_homeSearch_searchList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:scrollbars="none"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

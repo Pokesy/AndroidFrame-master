@@ -40,7 +40,9 @@
     <color name="color_6b">#6b6b6b</color>
     <color name="color_f5">#f5f5f5</color>
 
+    <!--标题的颜色-->
     <color name="color_xxl">#313131</color>
+
     <color name="color_xl">#959595</color>
     <color name="color_l">#707070</color>
     <color name="color_home">#454545</color>
@@ -72,6 +74,25 @@
     <color name="color_near">#e5193b</color>
     <!--精选口碑-->
     <color name="color_hot_brand">#e5193b</color>
+
+    <!--修云飞  所有分割线的颜色-->
+    <color name="color_my_line">#f5f5f5</color>
+    <!--修云飞  新闻详情页的Edittext的提示字体颜色-->
+    <color name="color_edittext">#4D7BE8</color>
+    <!--修云飞  通用的灰色-->
+    <color name="color_gray">#959595</color>
+    <!--修云飞  首页搜索-热门搜索的底色-->
+    <color name="color_search">#fff3f3</color>
+    <!--修云飞  最顶部标题的颜色-->
+    <color name="color_top">#fcfcfc</color>
+    <!--修云飞  EditText中hint的颜色-->
+    <color name="color_hint">#d2d2d2</color>
+    <!--修云飞  提交订单中的底色-->
+    <color name="color_submit">#fafafa</color>
+    <!--修云飞  橘色-->
+    <color name="color_organ">#FD7F43</color>
+    <!--修云飞  红色-->
+    <color name="color_read">#F65450</color>
 
     <color name="color_water_tip">#feb851</color>
     <!--问-->

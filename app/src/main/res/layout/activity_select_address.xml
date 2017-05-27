@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.loonggg.androidframedemo.ui.activity.SelectAddressActivity">
+
+    <LinearLayout
+        android:id="@+id/activity_selectAddress_top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="@color/color_top"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/activity_selectAddress_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/back"
+            android:layout_marginLeft="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/d15sp"
+            android:textColor="@color/color_xxl"
+            android:text="选择收货地址"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/activity_selectAddress_viewOne"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_my_line"
+        android:layout_below="@id/activity_selectAddress_top"/>
+
+    <TextView
+        android:id="@+id/activity_selectAddress_addAddress"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="@dimen/d14sp"
+        android:textColor="@color/color_xxl"
+        android:text="添加新地址"
+        android:gravity="center_vertical"
+        android:drawableRight="@mipmap/goback"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:background="@color/font_color_white"
+        android:layout_below="@id/activity_selectAddress_viewOne"/>
+
+    <View
+        android:id="@+id/activity_selectAddress_viewTwo"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_xl_line"
+        android:layout_below="@id/activity_selectAddress_addAddress"/>
+
+    <ListView
+        android:id="@+id/activity_selectAddress_showList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_selectAddress_viewTwo"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:layout_marginBottom="48dp"
+        android:background="@color/font_color_white"/>
+
+    <LinearLayout
+        android:id="@+id/activity_selectAddress_manageAddress"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/color_read"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/d14sp"
+            android:textColor="@color/font_color_white"
+            android:text="管理地址"
+            android:drawableLeft="@mipmap/gl"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -96,6 +96,11 @@
         <activity android:name=".ui.activity.BrandSgalActivity" />
         <activity android:name=".ui.activity.BrandZdcpActivity" />
         <activity android:name=".ui.activity.BrandQyjjActivity" />
+        <activity android:name=".ui.activity.HomeSearchActivity" />
+        <activity android:name=".ui.activity.SubmitIndentActivity" />
+        <activity android:name=".ui.activity.AddAddressActivity" />
+        <activity android:name=".ui.activity.SelectAddressActivity" />
+        <activity android:name=".ui.activity.ManagerAddressActivity"></activity>
         <activity android:name=".ui.activity.DgnsjDetailActivity" />
         <activity android:name=".ui.activity.SellCpDetailActivity" />
         <activity android:name=".ui.activity.BrandSqtgActivity" />

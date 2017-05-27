@@ -1,97 +1,332 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:more="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/font_color_white"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/ll_item"
+    <!--人物详情的头部-->
+    <!--<RelativeLayout
+        android:id="@+id/activity_newsDetail_topTitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="48dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/activity_peopleDetail_backImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/back1"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"/>
 
-            <ImageView
-                android:id="@+id/iv_today_news"
-                android:layout_width="match_parent"
-                android:layout_height="190dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/home8" />
+        <ImageView
+            android:id="@+id/activity_peopleDetail_settingImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/message1"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"/>
 
-            <ImageView
-                android:id="@+id/iv_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="@dimen/margin_small"
-                android:layout_marginTop="@dimen/margin_small"
-                android:src="@mipmap/back1" />
+    </RelativeLayout>-->
+    <!--新闻详情的头部-->
+    <com.loonggg.androidframedemo.view.TopTitleView
+        android:id="@+id/activity_newsDetail_topTitle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="@dimen/margin_small"
-                android:layout_marginTop="@dimen/margin_small"
-                android:src="@mipmap/message1" />
-        </RelativeLayout>
+    <View
+        android:id="@+id/activity_newsDetail_view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/activity_newsDetail_topTitle"
+        android:background="@color/color_my_line" />
+    <!--android:layout_below="@id/activity_newsDetail_view1"-->
+    <ScrollView
+        android:id="@+id/activity_newsDetail_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_newsDetail_view1"
+        android:layout_marginBottom="55dp">
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <!--人物详情的头部-->
+            <com.loonggg.androidframedemo.view.CircleImageView
+                android:id="@+id/activity_peopleDetail_topPicture"
+                android:layout_width="match_parent"
+                android:layout_height="205dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/activity_newsDetail_contentTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/content_title"
+                android:textColor="@color/color_xxl"
+                android:textSize="@dimen/d18sp" />
+
+            <RelativeLayout
+                android:id="@+id/activity_newsDetail_contentRelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/activity_newsDetail_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="属具之家"
+                    android:textColor="@color/color_a0"
+                    android:textSize="@dimen/d11sp" />
+
+                <TextView
+                    android:id="@+id/activity_newsDetail_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/activity_newsDetail_name"
+                    android:text="原创"
+                    android:textColor="@color/color_a0"
+                    android:textSize="@dimen/d11sp" />
+
+                <TextView
+                    android:id="@+id/activity_newsDetail_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="2017.5.11"
+                    android:textColor="@color/color_a0"
+                    android:textSize="@dimen/d11sp" />
+
+                <TextView
+                    android:id="@+id/activity_newsDetail_likeCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/activity_newsDetail_time"
+                    android:text="点赞1234"
+                    android:textColor="@color/color_a0"
+                    android:textSize="@dimen/d11sp" />
+            </RelativeLayout>
+
+            <WebView
+                android:id="@+id/activity_newsDetail_html"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"></WebView>
+
+            <include layout="@layout/xl_line" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="少于自己指定的行数的textView:"
-                android:textColor="#000000"
-                android:textSize="20sp" />
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:text="相关推荐"
+                android:textColor="@color/color_xxl"
+                android:textSize="@dimen/d14sp"
+                android:textStyle="bold" />
 
-            <com.loonggg.androidframedemo.view.MoreTextView
-                android:id="@+id/short_text"
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/color_my_line" />
+
+            <com.loonggg.androidframedemo.view.ScrollViewWithListView
+                android:id="@+id/activity_newsDetail_recommendList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                more:expand="false"
-                more:maxLine="2"
-                more:mytextColor="#767676"
-                more:mytextSize="15sp" />
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+            <include layout="@layout/xl_line" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="多于自己指定的行数的textView:"
-                android:textColor="#000000"
-                android:textSize="20sp" />
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:text="最新评论"
+                android:textColor="@color/color_xxl"
+                android:textSize="@dimen/d14sp"
+                android:textStyle="bold" />
 
-            <com.loonggg.androidframedemo.view.MoreTextView
-                android:id="@+id/more"
+            <com.loonggg.androidframedemo.view.ScrollViewWithListView
+                android:id="@+id/activity_newsDetail_commentList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                more:expand="true"
-                more:maxLine="3"
-                more:mytextColor="#767676"
-                more:mytextSize="15sp"
-                more:text="@string/action_settings" />
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
 
         </LinearLayout>
 
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="49dp"
+        android:background="@color/color_my_line" />
+
+    <LinearLayout
+        android:id="@+id/activity_newsDetails_bottomLinear"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:id="@+id/activity_newsDetail_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_shape"
+            android:gravity="center_vertical"
+            android:hint="说点什么吧..."
+            android:paddingLeft="15dp"
+            android:imeOptions="actionSend"
+            android:singleLine="true"
+            android:textColorHint="@color/color_edittext"
+            android:textSize="@dimen/d12sp" />
+
+        <ImageView
+            android:id="@+id/activity_newsDetail_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/selector_collect" />
+
+        <ImageView
+            android:id="@+id/activity_newsDetail_like"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/selector_like" />
+
+        <ImageView
+            android:id="@+id/activity_newsDetail_share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/share" />
+
     </LinearLayout>
 
+</RelativeLayout>
+
+    <!--
+
     <include layout="@layout/xl_line" />
-</LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/ll_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_today_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/home8" />
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:src="@mipmap/back1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:src="@mipmap/message1" />
+            </RelativeLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="少于自己指定的行数的textView:"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <com.loonggg.androidframedemo.view.MoreTextView
+                    android:id="@+id/short_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    more:expand="false"
+                    more:maxLine="2"
+                    more:mytextColor="#767676"
+                    more:mytextSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="多于自己指定的行数的textView:"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <com.loonggg.androidframedemo.view.MoreTextView
+                    android:id="@+id/more"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    more:expand="true"
+                    more:maxLine="3"
+                    more:mytextColor="#767676"
+                    more:mytextSize="15sp"
+                    more:text="@string/action_settings" />
+
+            </LinearLayout>
+
+        </LinearLayout>-->

@@ -28,8 +28,12 @@ import com.loonggg.androidframedemo.R;
 import com.loonggg.androidframedemo.adapter.FragmentViewPagerTextAdapter;
 import com.loonggg.androidframedemo.adapter.MyViewPager;
 import com.loonggg.androidframedemo.adapter.ViewPagerAdapter;
+import com.loonggg.androidframedemo.ui.activity.HomeSearchActivity;
+import com.loonggg.androidframedemo.ui.activity.NewsDetailActivity;
+import com.loonggg.androidframedemo.ui.activity.SubmitIndentActivity;
 import com.loonggg.androidframedemo.ui.basic.BaseFragment;
 import com.loonggg.androidframedemo.ui.basic.BasicFragment;
+import com.loonggg.androidframedemo.utils.MyUtils;
 
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
@@ -81,9 +85,18 @@ public class MainFragment extends BasicFragment implements View.OnClickListener 
         initView(view);
         //填充选项卡
         init();
+        setListener();
         return view;
     }
 
+    private void setListener() {
+        message.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new MyUtils().JumpActivity(getActivity(), SubmitIndentActivity.class);
+            }
+        });
+    }
     /**
      * 对应控件
      *

@@ -121,4 +121,9 @@
     <string name="dialog_wx">微信号</string>
     <string name="dialog_qd">确定</string>
 
+
+    <!--修云飞  以下-->
+    <string name="content_title">清早起床，今天天气好，路边的野花不要采，好好学习，天天向上</string>
+    <!--修云飞  以上-->
+
 </resources>

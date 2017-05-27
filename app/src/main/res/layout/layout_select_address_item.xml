@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/font_color_white"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:id="@+id/layout_selectAddress_peopleName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:text="收货人：章撒里"
+                android:textColor="@color/color_xxl"
+                android:textSize="@dimen/d14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/layout_selectAddress_peoplePhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="15639874935"
+                android:textColor="@color/color_xxl"
+                android:textSize="@dimen/d14sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_organ"
+                android:textSize="@dimen/d13sp"
+                android:text="[默认地址]"/>-->
+
+            <TextView
+                android:id="@+id/layout_selectAddress_peopleAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/content_title"
+                android:textColor="@color/color_xxl"
+                android:textSize="@dimen/d13sp"
+                android:lineSpacingExtra="3dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/xl_line" />
+
+</LinearLayout>
