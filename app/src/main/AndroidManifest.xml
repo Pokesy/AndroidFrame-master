@@ -106,6 +106,9 @@
         <activity android:name=".ui.activity.BrandSqtgActivity" />
         <activity android:name=".ui.activity.BrandDpjjActivity" />
         <activity android:name=".ui.activity.BrandXdjActivity" />
+
+        <activity android:name=".ui.activity.RoutePlanDemo" />
+        <activity android:name=".ui.activity.SearchDetalActivity" />
     </application>
 
 </manifest>

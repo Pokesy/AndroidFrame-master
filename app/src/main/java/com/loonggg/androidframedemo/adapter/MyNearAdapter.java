@@ -13,6 +13,7 @@ import com.jtech.adapter.RecyclerSwipeAdapter;
 import com.jtech.view.RecyclerHolder;
 import com.loonggg.androidframedemo.R;
 import com.loonggg.androidframedemo.ui.activity.BrandDetailActivity;
+import com.loonggg.androidframedemo.ui.activity.RoutePlanDemo;
 import com.loonggg.androidframedemo.ui.activity.SearchLocationActivity;
 import com.michael.easydialog.EasyDialog;
 
@@ -82,7 +83,7 @@ private Context context;
         holder.getView(R.id.tv_location).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(new Intent(context,SearchLocationActivity.class));
+                context.startActivity(new Intent(context,RoutePlanDemo.class));
             }
         });
         holder.getView(R.id.tv_phone).setOnClickListener(new View.OnClickListener() {

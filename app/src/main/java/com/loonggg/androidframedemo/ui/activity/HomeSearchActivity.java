@@ -25,6 +25,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /*
 * 修云飞   首页的搜索页面
@@ -35,9 +36,18 @@ public class HomeSearchActivity extends AppCompatActivity {
     ImageView mBackImage;//返回按钮
     @Bind(R.id.activity_homeSearch_search)
     EditText mSearchEdit;//搜索EditText
+    @Bind(R.id.iv_search)
+    ImageView ivSearch;
+    @Bind(R.id.activity_homeSearch_hot)
+    TextView activityHomeSearchHot;
 
+    @Bind(R.id.activity_homeSearch_history)
+    TextView activityHomeSearchHistory;
+    @Bind(R.id.activity_homeSearch_searchList)
+    ScrollViewWithListView mSearchList;
+    @Bind(R.id.activity_homeSearch_scroll)
+    ScrollView activityHomeSearchScroll;
     private ScrollView mScroll;//显示搜索内容前的最外层布局
-
     //四个热门搜索
     @Bind(R.id.activity_homeSearch_searchOne)
     TextView mSearchOne;
@@ -48,9 +58,6 @@ public class HomeSearchActivity extends AppCompatActivity {
     @Bind(R.id.activity_homeSearch_searchFour)
     TextView mSearchFour;
 
-    //显示搜索历史
-    @Bind(R.id.activity_homeSearch_searchList)
-    ScrollViewWithListView mSearchList;
 
     private List<String> mHistoryData = new ArrayList<>();
     private HomeSearchAdapter mHistoryAdapter;
@@ -73,6 +80,12 @@ public class HomeSearchActivity extends AppCompatActivity {
     private void initView() {
         mScroll = ((ScrollView) findViewById(R.id.activity_homeSearch_scroll));
         mScroll.setVisibility(View.VISIBLE);
+        ivSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeSearchActivity.this, SearchDetalActivity.class));
+            }
+        });
     }
 
     private void setView() {
@@ -106,11 +119,11 @@ public class HomeSearchActivity extends AppCompatActivity {
                                 v.getApplicationWindowToken(), 0);
                     }
                     searchName = mSearchEdit.getText().toString();
-                    Log.e("TAG", "onEditorAction搜索内容: "+searchName );
+                    Log.e("TAG", "onEditorAction搜索内容: " + searchName);
                     if (searchName.equals("")) {
                         mScroll.setVisibility(View.VISIBLE);
                         Toast.makeText(HomeSearchActivity.this, "搜索内容不能为空！", Toast.LENGTH_SHORT).show();
-                    }else {
+                    } else {
                         mScroll.setVisibility(View.GONE);
                     }
                     //隐藏原布局，清空数据，根据搜索的内容进行网络请求
@@ -134,5 +147,9 @@ public class HomeSearchActivity extends AppCompatActivity {
                 mScroll.setVisibility(View.GONE);
             }
         });
+    }
+
+    @OnClick(R.id.iv_search)
+    public void onViewClicked() {
     }
 }

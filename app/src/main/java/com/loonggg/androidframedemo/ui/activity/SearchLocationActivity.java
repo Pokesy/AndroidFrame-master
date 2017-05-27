@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
@@ -24,6 +25,19 @@ import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.MyLocationConfiguration;
 import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.model.LatLng;
+import com.baidu.mapapi.search.core.SearchResult;
+import com.baidu.mapapi.search.route.BikingRouteResult;
+import com.baidu.mapapi.search.route.DrivingRouteResult;
+import com.baidu.mapapi.search.route.IndoorRouteResult;
+import com.baidu.mapapi.search.route.MassTransitRouteResult;
+import com.baidu.mapapi.search.route.OnGetRoutePlanResultListener;
+import com.baidu.mapapi.search.route.PlanNode;
+import com.baidu.mapapi.search.route.RoutePlanSearch;
+import com.baidu.mapapi.search.route.TransitRoutePlanOption;
+import com.baidu.mapapi.search.route.TransitRouteResult;
+import com.baidu.mapapi.search.route.WalkingRouteResult;
+import com.baidu.mapapi.utils.route.BaiduMapRoutePlan;
+import com.baidu.mapapi.utils.route.RouteParaOption;
 import com.loonggg.androidframedemo.R;
 import com.loonggg.androidframedemo.ui.basic.BasicTitleBarActivity;
 
@@ -78,7 +92,6 @@ public class SearchLocationActivity extends BasicTitleBarActivity implements Sen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         ButterKnife.bind(this);
         initdata();
     }
@@ -147,6 +160,8 @@ public class SearchLocationActivity extends BasicTitleBarActivity implements Sen
 
     }
 
+
+
     private void location() {
         // 开启定位图层
         mBaiduMap.setMyLocationEnabled(true);
@@ -156,9 +171,19 @@ public class SearchLocationActivity extends BasicTitleBarActivity implements Sen
         LocationClientOption option = new LocationClientOption();
         option.setOpenGps(true); // 打开gps
         option.setCoorType("bd09ll"); // 设置坐标类型
-        option.setScanSpan(1000);
+        option.setScanSpan(0);//可选，默认0，即仅定位一次，设置发起定位请求的间隔需要大于等于1000ms才是有效的
+        option.setIsNeedAddress(true);//可选，设置是否需要地址信息，默认不需要
+        option.setOpenGps(true);//可选，默认false,设置是否使用gps
+        option.setLocationNotify(true);//可选，默认false，设置是否当gps有效时按照1S1次频率输出GPS结果
+        option.setIsNeedLocationDescribe(true);//可选，默认false，设置是否需要位置语义化结果，可以在BDLocation.getLocationDescribe里得到，结果类似于“在北京天安门附近”
+        option.setIsNeedLocationPoiList(true);//可选，默认false，设置是否需要POI结果，可以在BDLocation.getPoiList里得到
+        option.setIgnoreKillProcess(false);//可选，默认true，定位SDK内部是一个SERVICE，并放到了独立进程，设置是否在stop的时候杀死这个进程，默认不杀死
+        option.SetIgnoreCacheException(false);//可选，默认false，设置是否收集CRASH信息，默认收集
+        option.setEnableSimulateGps(false);//可选，默认false，设置是否需要过滤gps仿真结果，默认需要
+        option.setNeedDeviceDirect(true); //返回的定位结果包含手机机头方向
         mLocClient.setLocOption(option);
         mLocClient.start();
+
     }
 
     @Override
@@ -184,12 +209,11 @@ public class SearchLocationActivity extends BasicTitleBarActivity implements Sen
 
     @OnClick(R.id.my_location)
     public void onViewClicked() {
-
 //        setMyLocationConfig();
-
-        //  设置默认缩放级别。放大我的位置周边信息
-        MapStatusUpdate statusUpdate = MapStatusUpdateFactory.zoomTo(18);
-        mBaiduMap.setMapStatus(statusUpdate);
+//
+//        //  设置默认缩放级别。放大我的位置周边信息
+//        MapStatusUpdate statusUpdate = MapStatusUpdateFactory.zoomTo(18);
+//        mBaiduMap.setMapStatus(statusUpdate);
     }
 
     private void setMyLocationConfig() {
@@ -262,6 +286,8 @@ public class SearchLocationActivity extends BasicTitleBarActivity implements Sen
         mBaiduMap.setMyLocationEnabled(false);
         mMapView.onDestroy();
         mMapView = null;
+        //结束调启功能时调用finish方法以释放相关资源
+        BaiduMapRoutePlan.finish(this);
         super.onDestroy();
     }
 

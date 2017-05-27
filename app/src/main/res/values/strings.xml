@@ -121,6 +121,16 @@
     <string name="dialog_wx">微信号</string>
     <string name="dialog_qd">确定</string>
 
+    <!--搜索-->
+    <string name="search_all">综合</string>
+    <string name="search_cp">产品</string>
+    <string name="search_gq">供求</string>
+    <string name="search_dp">店铺</string>
+    <string name="search_es">二手</string>
+    <string name="search_sp">视频</string>
+    <string name="search_wz">文章</string>
+
+
 
     <!--修云飞  以下-->
     <string name="content_title">清早起床，今天天气好，路边的野花不要采，好好学习，天天向上</string>

@@ -18,7 +18,8 @@
         android:background="#D000"
         android:minWidth="100dip"
         android:orientation="vertical"
-        android:padding="2dp">
+        android:padding="2dp"
+        android:id="@+id/linearLayout">
 
         <RadioGroup
             android:id="@+id/radioGroup"
@@ -33,11 +34,6 @@
                 android:checked="true"
                 android:text="默认图标"/>
 
-            <RadioButton
-                android:id="@+id/customicon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="自定义图标"/>
         </RadioGroup>
 
         <Button
@@ -57,4 +53,13 @@
         android:layout_alignParentTop="true"
         android:layout_marginRight="25dp"
         android:layout_marginTop="10dip" />
+
+    <RadioButton
+        android:id="@+id/customicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/linearLayout"
+        android:layout_alignTop="@+id/linearLayout"
+        android:layout_marginTop="36dp"
+        android:text="自定义图标" />
 </RelativeLayout>
