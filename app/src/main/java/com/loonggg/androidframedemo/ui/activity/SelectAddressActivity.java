@@ -129,6 +129,7 @@ public class SelectAddressActivity extends BasicTitleBarActivity implements View
                 break;
             //跳转到管理地址的页面
             case R.id.activity_selectAddress_manageAddress:
+                new MyUtils().JumpActivity(SelectAddressActivity.this,ManagerAddressActivity.class);
                 break;
         }
     }

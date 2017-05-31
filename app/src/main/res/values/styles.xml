@@ -1,5 +1,31 @@
 <resources>
 
+    <!--修云飞  以下-->
+    <!--用于   提交订单中的从底部弹出的Dialog-->
+    <style name="MyDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!--用于   以动画的方式从底部弹出的Dialog-->
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <!--修云飞   用于可以换行的RadioGroup-->
+    <declare-styleable name="FNRadioGroup">
+        <attr name="checkedButton" format="integer" />
+        <attr name="childMarginLeft" format="dimension" />
+        <attr name="childMarginRight" format="dimension" />
+        <attr name="childMarginTop" format="dimension" />
+        <attr name="childMarginBottom" format="dimension" />
+    </declare-styleable>
+    <!--修云飞  以上-->
+
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
@@ -11,10 +37,12 @@
     <style name="TabLayoutTextStyle">
         <item name="android:textSize">17sp</item>
     </style>
+
     <style name="roomRatingBar" parent="@android:style/Widget.RatingBar">
         <item name="android:progressDrawable">@mipmap/ic_launcher</item>
         <item name="android:minHeight">@dimen/margin_medium</item>
     </style>
+
     <style name="notitle">
         <item name="android:windowNoTitle">true</item>
     </style>
@@ -25,6 +53,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
     </style>
+
     <style name="main_wd">
         <item name="android:textSize">13sp</item>
         <item name="android:textColor">#707070</item>
@@ -39,6 +68,7 @@
         <item name="android:drawablePadding">8dp</item>
         <item name="android:layout_weight">1.0</item>
     </style>
+
     <style name="Widget.App.TextView.Large.Primary">
         <item name="android:textColor">@color/font_color_primary</item>
     </style>
@@ -46,9 +76,11 @@
     <style name="Widget.App.TextView.Large">
         <item name="android:textSize">@dimen/font_size_large</item>
     </style>
+
     <style name="Widget.App.TextView.Color">
         <item name="android:textColor">@drawable/home_text_color_selector</item>
     </style>
+
     <style name="Widget.App.TextView.Large.White">
         <item name="android:textColor">@color/font_color_white</item>
     </style>
@@ -62,6 +94,7 @@
         <item name="android:paddingLeft">15dp</item>
         <item name="android:background">@android:color/background_light</item>
     </style>
+
     <style name="Widget.App.TextView.Large.Primary.ProfileMenu">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -72,26 +105,26 @@
 
     <!--<style name="FullScreenDialog" parent="android:Theme.Dialog">-->
 
-        <!--&lt;!&ndash; 窗口设为无标题 &ndash;&gt;-->
-        <!--<item name="android:windowNoTitle">true</item>-->
+    <!--&lt;!&ndash; 窗口设为无标题 &ndash;&gt;-->
+    <!--<item name="android:windowNoTitle">true</item>-->
 
-        <!--&lt;!&ndash; 窗口浮现在activity之上 &ndash;&gt;-->
-        <!--<item name="android:windowIsFloating">false</item>-->
+    <!--&lt;!&ndash; 窗口浮现在activity之上 &ndash;&gt;-->
+    <!--<item name="android:windowIsFloating">false</item>-->
 
-        <!--&lt;!&ndash; 背景透明 &ndash;&gt;-->
-        <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+    <!--&lt;!&ndash; 背景透明 &ndash;&gt;-->
+    <!--<item name="android:windowBackground">@android:color/transparent</item>-->
 
-        <!--&lt;!&ndash; 背景模糊 &ndash;&gt;-->
-        <!--<item name="android:backgroundDimEnabled">false</item>-->
+    <!--&lt;!&ndash; 背景模糊 &ndash;&gt;-->
+    <!--<item name="android:backgroundDimEnabled">false</item>-->
 
-        <!--&lt;!&ndash; 半透明 &ndash;&gt;-->
-        <!--<item name="android:windowIsTranslucent">false</item>-->
+    <!--&lt;!&ndash; 半透明 &ndash;&gt;-->
+    <!--<item name="android:windowIsTranslucent">false</item>-->
 
-        <!--&lt;!&ndash; 边框 &ndash;&gt;-->
-        <!--<item name="android:windowFrame">@null</item>-->
+    <!--&lt;!&ndash; 边框 &ndash;&gt;-->
+    <!--<item name="android:windowFrame">@null</item>-->
 
-        <!--&lt;!&ndash; 全屏 &ndash;&gt;-->
-        <!--<item name="android:windowFullscreen">false</item>-->
+    <!--&lt;!&ndash; 全屏 &ndash;&gt;-->
+    <!--<item name="android:windowFullscreen">false</item>-->
     <!--</style>-->
     <style name="WrapMatch">
         <item name="android:layout_width">wrap_content</item>
@@ -210,6 +243,7 @@
         <item name="android:layout_width">1px</item>
         <item name="android:layout_height">match_parent</item>
     </style>
+
     <style name="TestBtn" parent="MatchWrap">
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">@dimen/textSize_14</item>

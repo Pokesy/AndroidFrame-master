@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -47,6 +48,12 @@ public abstract class TeachBaseAdapter<T> extends BaseAdapter {
             this.data.addAll(data);
             notifyDataSetChanged();
         }
+    }
+
+    //删除数据集合中的数据并刷新适配器
+    public void deleteData(int index){
+        this.data.remove(index);
+        notifyDataSetChanged();
     }
 
     @Override

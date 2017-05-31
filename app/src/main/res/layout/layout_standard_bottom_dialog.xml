@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/font_color_white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="35dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp">
+
+        <ImageView
+            android:id="@+id/layout_standardBottom_image"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            tools:src="@mipmap/test_picture" />
+
+        <TextView
+            android:id="@+id/layout_standardBottom_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/layout_standardBottom_image"
+            tools:text="美女，你叫什么名字啊！"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/d13sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/layout_standardBottom_image"
+            android:layout_toRightOf="@id/layout_standardBottom_image"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textColor="@color/color_read"
+                android:textSize="@dimen/d10sp" />
+
+            <TextView
+                android:id="@+id/layout_standardBottom_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="4000.00"
+                android:textColor="@color/color_read"
+                android:textSize="@dimen/d14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/layout_standardBottom_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/dialog_back" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/d14sp"
+        android:textColor="@color/color_xxl"
+        android:text="规格"
+        android:paddingLeft="15dp"
+        android:paddingBottom="20dp"/>
+
+    <com.loonggg.androidframedemo.view.FNRadioGroup
+        android:id="@+id/layout_standardBottom_radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"></com.loonggg.androidframedemo.view.FNRadioGroup>
+
+    <TextView
+        android:id="@+id/layout_standardBottom_sure"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textSize="@dimen/d14sp"
+        android:textColor="@color/font_color_white"
+        android:text="确定"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="@color/color_read"/>
+
+</LinearLayout>
