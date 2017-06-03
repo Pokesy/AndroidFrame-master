@@ -13,7 +13,9 @@
         android:layout_height="48dp"
         android:orientation="horizontal"
         android:background="@color/color_top"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
         <ImageView
             android:id="@+id/activity_submitIndent_back"
@@ -27,7 +29,7 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/d15sp"
             android:textColor="@color/color_xxl"
-            android:text="提交订单"
+            android:text="确认订单"
             android:textStyle="bold"/>
 
     </LinearLayout>
@@ -219,7 +221,7 @@
 
                 </LinearLayout>
 
-                <TextView
+                <!--<TextView
                     android:id="@+id/activity_submitIndent_productCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -227,7 +229,7 @@
                     android:textColor="@color/color_xxl"
                     android:text="X2"
                     android:layout_alignParentRight="true"
-                    android:layout_alignBottom="@id/activity_submitIndent_productImage"/>
+                    android:layout_alignBottom="@id/activity_submitIndent_productImage"/>-->
 
             </RelativeLayout>
 
@@ -307,7 +309,7 @@
                         android:id="@+id/activity_submitIndent_textTwo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2"
+                        android:text="0"
                         android:textColor="@color/color_xxl"
                         android:textSize="@dimen/d14sp"
                         android:layout_marginLeft="15dp"
@@ -425,6 +427,7 @@
                     android:layout_alignParentRight="true">
 
                     <TextView
+                        android:id="@+id/activity_submitIndent_productCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/d12sp"
@@ -447,6 +450,7 @@
                         android:text="￥"/>
 
                     <TextView
+                        android:id="@+id/activity_submitIndent_allPrice_One"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/d14sp"
@@ -502,7 +506,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/d14sp"
                     android:textColor="@color/red_btn_bg_color"
-                    android:text="55535.00"/>
+                    android:text="0.00"/>
 
             </LinearLayout>
 

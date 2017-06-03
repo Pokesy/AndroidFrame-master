@@ -17,8 +17,18 @@ import android.widget.TextView;
 import com.loonggg.androidframedemo.R;
 import com.loonggg.androidframedemo.adapter.MyViewPager;
 import com.loonggg.androidframedemo.adapter.ViewPagerAdapter;
+import com.loonggg.androidframedemo.model.AllPraiseModel;
+import com.loonggg.androidframedemo.ui.activity.AllPraiseActivity;
+import com.loonggg.androidframedemo.ui.activity.AnswerAuthorityActivity;
+import com.loonggg.androidframedemo.ui.activity.BrandSearchActivity;
+import com.loonggg.androidframedemo.ui.activity.DealerProductDetailActivity;
 import com.loonggg.androidframedemo.ui.activity.HomeSearchActivity;
+import com.loonggg.androidframedemo.ui.activity.PartsTypeActivity;
+import com.loonggg.androidframedemo.ui.activity.ProductTypeActivity;
+import com.loonggg.androidframedemo.ui.activity.QuestionAndAnswerActivity;
+import com.loonggg.androidframedemo.ui.activity.ReplyDetailActivity;
 import com.loonggg.androidframedemo.ui.activity.SubmitIndentActivity;
+import com.loonggg.androidframedemo.ui.activity.TypeDetailActivity;
 import com.loonggg.androidframedemo.ui.basic.BasicFragment;
 import com.loonggg.androidframedemo.utils.MyUtils;
 
@@ -84,10 +94,33 @@ public class MainFragment extends BasicFragment implements View.OnClickListener 
     }
 
     private void setListener() {
+        //测试  消息按钮的点击监听---购物流程
         message.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new MyUtils().JumpActivity(getActivity(), SubmitIndentActivity.class);
+            }
+        });
+
+        //测试  机器人按钮的点击监听---经销商产品详情页
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*--------以下为经销商产品详情文件夹中的-------------*/
+                //ReplyDetailActivity---回复详情
+                //QuestionAndAnswerActivity---问答详情
+                //DealerProductDetailActivity---经销商产品详情页
+                //AnswerAuthorityActivity---问大家页面
+                //AllPraiseActivity---全部口碑页面
+
+                /*--------以下为品牌分类页文件中的界面-----------*/
+                //PartsTypeActivity---配套件分类页面---有
+                //TypeDetailActivity---配套件分类页面下面的二级列表---有
+                //BrandSearchActivity---品牌的搜索页面---有
+
+                /*-------以下为品牌界面-->主机界面-->热门品牌中顶部图标点击----------*/
+                //ProductTypeActivity---申请团购中的产品类型
+                new MyUtils().JumpActivity(getActivity(), ProductTypeActivity.class);
             }
         });
     }

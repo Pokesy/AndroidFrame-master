@@ -3,6 +3,7 @@ package com.loonggg.androidframedemo.view;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -49,6 +50,9 @@ public class TopTitleView extends RelativeLayout{
     //修改顶部右边选择功能按钮的方法
     public void setTopRightSetting(int image){
         mTopSetting.setImageResource(image);
+    }
+    public void setTopSetting(int visibility){
+        mTopSetting.setVisibility(visibility);
     }
     //监听顶部左边返回按钮的方法
     public void setRightSettingListener(OnClickListener listener){

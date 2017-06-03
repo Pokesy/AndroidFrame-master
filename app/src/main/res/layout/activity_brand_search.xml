@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:background="@color/font_color_white"
+    tools:context="com.loonggg.androidframedemo.ui.activity.BrandSearchActivity">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/si_default_text_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="30dp">
+
+        <ImageView
+            android:id="@+id/activity_brandSearch_backImage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:src="@mipmap/fh" />
+
+        <EditText
+            android:id="@+id/activity_brandSearch_editSearch"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_reply"
+            android:drawableEnd="@mipmap/home_searcjh"
+            android:drawablePadding="@dimen/margin_small"
+            android:hint="@string/edit_search"
+            android:paddingEnd="@dimen/margin_15"
+            android:paddingStart="@dimen/margin_20"
+            android:textColorHint="@color/font_color_white"
+            android:imeOptions="actionSend"
+            android:singleLine="true"
+            android:textSize="@dimen/font_size_small" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_brandSearch_topLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/activity_brandSearch_allButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/d14sp"
+                android:textColor="@drawable/text_checked_color"
+                android:textStyle="bold"
+                android:text="全部"
+                android:button="@null"
+                android:gravity="center"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/activity_brandSearch_productButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/d14sp"
+                android:textColor="@drawable/text_checked_color"
+                android:textStyle="bold"
+                android:text="产品"
+                android:button="@null"
+                android:gravity="center"/>
+
+            <RadioButton
+                android:id="@+id/activity_brandSearch_storeButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/d14sp"
+                android:textColor="@drawable/text_checked_color"
+                android:textStyle="bold"
+                android:text="店铺"
+                android:button="@null"
+                android:gravity="center"/>
+
+        </RadioGroup>
+
+        <include layout="@layout/x1_my_line"/>
+
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:id="@+id/activity_brandSearch_topScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_brandSearch_countSearch"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="@dimen/d12sp"
+                android:textColor="@color/color_gray"
+                android:text="共找到123456条相关结果"
+                android:background="@color/color_tab_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"/>
+
+            <LinearLayout
+                android:id="@+id/activity_brandSearch_nameSearch_productLinear"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/d13sp"
+                    android:textColor="@color/color_l"
+                    android:text="与 "/>
+
+                <TextView
+                    android:id="@+id/activity_brandSearch_nameSearch_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/d13sp"
+                    android:textColor="@color/color_xxl"
+                    android:textStyle="bold"
+                    android:text="破碎锤"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/d13sp"
+                    android:textColor="@color/color_l"
+                    android:text=" 相关的产品"/>
+
+            </LinearLayout>
+
+            <com.loonggg.androidframedemo.view.MyGridView
+                android:id="@+id/activity_brandSearch_gridSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:numColumns="2"
+                android:scrollbars="none"></com.loonggg.androidframedemo.view.MyGridView>
+
+            <LinearLayout
+                android:id="@+id/activity_brandSearch_productLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/activity_brandSearch_productMore_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="@dimen/d12sp"
+                    android:textColor="@color/color_organ"
+                    android:text="查看更多相关产品 >"
+                    android:gravity="center"/>
+
+                <include layout="@layout/xl_line"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/d13sp"
+                        android:textColor="@color/color_l"
+                        android:text="与 "/>
+
+                    <TextView
+                        android:id="@+id/activity_brandSearch_nameSearch_store"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/d13sp"
+                        android:textColor="@color/color_xxl"
+                        android:textStyle="bold"
+                        android:text="破碎锤"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/d13sp"
+                        android:textColor="@color/color_l"
+                        android:text=" 相关的店铺"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.loonggg.androidframedemo.view.ScrollViewWithListView
+                android:id="@+id/activity_brandSearch_listSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:divider="@null"
+                android:scrollbars="none"></com.loonggg.androidframedemo.view.ScrollViewWithListView>
+
+            <TextView
+                android:id="@+id/activity_brandSearch_productMore_store"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textSize="@dimen/d12sp"
+                android:textColor="@color/color_organ"
+                android:text="查看更多相关店铺 >"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

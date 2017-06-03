@@ -15,7 +15,9 @@ import com.loonggg.androidframedemo.R;
 import com.loonggg.androidframedemo.adapter.BrandViewPagerAdapter;
 import com.loonggg.androidframedemo.adapter.MyViewPager;
 import com.loonggg.androidframedemo.adapter.ViewPagerAdapter;
+import com.loonggg.androidframedemo.ui.activity.BrandSearchActivity;
 import com.loonggg.androidframedemo.ui.basic.BasicFragment;
+import com.loonggg.androidframedemo.utils.MyUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -90,8 +92,8 @@ public class BrandFragment extends BasicFragment implements View.OnClickListener
      */
     public void init() {
         list = new ArrayList<>();
-        list.add(new HostFragment());//新闻Fragment
-        list.add(new PtjFragment());//新闻Fragment
+        list.add(new HostFragment());//主机Fragment
+        list.add(new PtjFragment());//配套件Fragment
         adapter = new BrandViewPagerAdapter(getChildFragmentManager(),list, getActivity());
         pager.setOffscreenPageLimit(Integer.MAX_VALUE);
         pager.setAdapter(adapter);
@@ -109,6 +111,11 @@ public class BrandFragment extends BasicFragment implements View.OnClickListener
 
     @Override
     public void onClick(View view) {
-
+        switch (view.getId()) {
+            //品牌页面的搜索按钮的监听
+            case R.id.profile:
+                new MyUtils().JumpActivity(getActivity(), BrandSearchActivity.class);
+                break;
+        }
     }
 }

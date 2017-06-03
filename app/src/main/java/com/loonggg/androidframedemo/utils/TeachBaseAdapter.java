@@ -8,6 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.loonggg.androidframedemo.model.ManagerAddressModel;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -54,6 +56,12 @@ public abstract class TeachBaseAdapter<T> extends BaseAdapter {
     public void deleteData(int index){
         this.data.remove(index);
         notifyDataSetChanged();
+    }
+
+    //获取数据集合中对应位置的Model类
+    public ManagerAddressModel getModel(int index){
+        ManagerAddressModel addressModel = (ManagerAddressModel) this.data.get(index);
+        return addressModel;
     }
 
     @Override

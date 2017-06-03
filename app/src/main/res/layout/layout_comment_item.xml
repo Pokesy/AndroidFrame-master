@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/font_color_white"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingRight="15dp"
+    android:paddingLeft="15dp">
 
     <RelativeLayout
         android:id="@+id/videotalk_linearlayout"
@@ -14,13 +16,13 @@
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
-        <ImageView
+        <com.loonggg.androidframedemo.view.CircleImageView
             android:id="@+id/adapter_comment_userImage"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginRight="10dp"
             android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/test_picture" />
 
         <TextView
             android:id="@+id/adapter_comment_userName"
@@ -94,8 +96,6 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
         android:background="@color/color_my_line" />
 </LinearLayout><!--<RelativeLayout
             android:layout_width="match_parent"

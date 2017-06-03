@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:background="@color/font_color_white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp">
+
+        <com.loonggg.androidframedemo.view.CircleImageView
+            android:id="@+id/layout_dealerDetail_picturePraise"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/test_picture"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/layout_dealerDetail_namePraise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/d14sp"
+            android:textColor="@color/color_xxl"
+            android:text="愤怒的小鸟"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/layout_dealerDetail_picturePraise"
+            android:layout_alignTop="@id/layout_dealerDetail_picturePraise"/>
+
+        <TextView
+            android:id="@+id/layout_dealerDetail_datePraise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/d12sp"
+            android:textColor="@color/color_gray"
+            android:text="2017.05.04"
+            android:layout_toRightOf="@id/layout_dealerDetail_picturePraise"
+            android:layout_alignBottom="@id/layout_dealerDetail_picturePraise"/>
+
+        <TextView
+            android:id="@+id/layout_dealerDetail_goodPraise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/d13sp"
+            android:textColor="@color/color_gray"
+            android:text="有用123456"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/layout_dealerDetail_namePraise"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/layout_dealerDetail_contentPraise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/d13sp"
+        android:textColor="@color/color_xxl"
+        android:text="@string/content_title"
+        android:singleLine="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <com.loonggg.androidframedemo.view.MyGridView
+        android:id="@+id/layout_dealerDetail_girdPraise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginBottom="15dp"
+        android:numColumns="4"></com.loonggg.androidframedemo.view.MyGridView>
+
+    <include layout="@layout/x1_my_line"/>
+
+</LinearLayout>

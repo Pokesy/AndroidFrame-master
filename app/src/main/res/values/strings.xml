@@ -131,11 +131,10 @@
     <string name="search_wz">文章</string>
 
 
-
     <!--修云飞  以下-->
     <string name="content_title">清早起床，今天天气好，路边的野花不要采，好好学习，天天向上</string>
-    <item type="id" name="tag_first"></item>
-    <item type="id" name="tag_two"></item>
+    <item name="tag_first" type="id"></item>
+    <item name="tag_two" type="id"></item>
     <!--修云飞  以上-->
 
 </resources>

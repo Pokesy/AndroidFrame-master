@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,6 +14,8 @@ import com.loonggg.androidframedemo.R;
 import com.loonggg.androidframedemo.app.CustomApp;
 import com.loonggg.androidframedemo.model.BannerModel;
 import com.loonggg.androidframedemo.model.City;
+import com.loonggg.androidframedemo.ui.activity.PartsTypeActivity;
+import com.loonggg.androidframedemo.utils.MyUtils;
 import com.loonggg.androidframedemo.view.ScrollGridView;
 
 import java.util.List;
@@ -25,7 +28,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class PtjAdapter extends BaseTurboAdapter<City, BaseViewHolder> {
+public class PtjAdapter extends BaseTurboAdapter<City, BaseViewHolder> implements View.OnClickListener {
     private Context context;
     String[] name = {"艾迪精密", "贝力特", "顺天", "信人","博运重工", "铭德", "世工", "佰泰","百财", "铭润"};
     int[] img = {R.mipmap.ad, R.mipmap.blt, R.mipmap.st, R.mipmap.xr,R.mipmap.byzg, R.mipmap.md, R.mipmap.sg, R.mipmap.bt, R.mipmap.bc, R.mipmap.mr};
@@ -77,6 +80,7 @@ public class PtjAdapter extends BaseTurboAdapter<City, BaseViewHolder> {
         }else if (holder instanceof GridViewHolder) {
             ((GridViewHolder) holder).gv.setAdapter(new GridViewAdapter(context, name,img));
             ((GridViewHolder) holder).zhd.setAdapter(new GridViewAdapter(context, name1,img1));
+            ((GridViewHolder) holder).toPartsRelative.setOnClickListener(this);
 
         }
     }
@@ -88,6 +92,17 @@ public class PtjAdapter extends BaseTurboAdapter<City, BaseViewHolder> {
             }
         }
         return -1;
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            //界面顶部的大锤专区的监听事件
+            case R.id.layout_ptjBrand_relative:
+                new MyUtils().JumpActivity(context, PartsTypeActivity.class);
+                break;
+        }
     }
 
     class CityHolder extends BaseViewHolder {
@@ -105,10 +120,13 @@ public class PtjAdapter extends BaseTurboAdapter<City, BaseViewHolder> {
 
         ScrollGridView gv;
         ScrollGridView zhd;
+        //大锤专区的实例化
+        RelativeLayout toPartsRelative;
         public GridViewHolder(View view) {
             super(view);
             gv = findViewById(R.id.sgv);
             zhd = findViewById(R.id.zhd);
+            toPartsRelative=findViewById(R.id.layout_ptjBrand_relative);
 
         }
     }

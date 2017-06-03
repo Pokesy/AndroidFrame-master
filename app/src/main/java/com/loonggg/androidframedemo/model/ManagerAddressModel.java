@@ -8,4 +8,8 @@ import java.io.Serializable;
  */
 
 public class ManagerAddressModel implements Serializable{
+
+    public String name;
+    public String phone;
+    public String content;
 }

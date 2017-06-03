@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="@color/font_color_white"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:paddingLeft="20dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/layout_productParams_paramsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/d12sp"
+        android:textColor="@color/color_xxl"
+        android:text="参数名称"
+        android:layout_marginRight="35dp"/>
+
+    <TextView
+        android:id="@+id/layout_productParams_paramsContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/d12sp"
+        android:textColor="@color/color_gray"
+        android:text="123kg"/>
+
+</LinearLayout>

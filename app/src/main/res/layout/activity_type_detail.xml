@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/font_color_white"
+    tools:context="com.loonggg.androidframedemo.ui.activity.TypeDetailActivity">
+
+    <com.loonggg.androidframedemo.view.TopTitleView
+        android:id="@+id/activity_typeDetail_topTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"></com.loonggg.androidframedemo.view.TopTitleView>
+
+    <TextView
+        android:id="@+id/activity_typeDetail_deatialContent"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="共有234个与“换向阀”相关的品牌店"
+        android:textColor="@color/color_gray"
+        android:textSize="@dimen/d12sp"
+        android:background="@color/color_tab_bg"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"/>
+
+    <ListView
+        android:id="@+id/activity_typeDetail_showList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:scrollbars="none"></ListView>
+
+</LinearLayout>

@@ -4,11 +4,9 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.StateListDrawable;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -16,14 +14,15 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.loonggg.androidframedemo.R;
 import com.loonggg.androidframedemo.model.SelectAddressModel;
 import com.loonggg.androidframedemo.net.constant.BottomDialogInterface;
 import com.loonggg.androidframedemo.ui.basic.BasicTitleBarActivity;
+import com.loonggg.androidframedemo.utils.DensityUtil;
 import com.loonggg.androidframedemo.utils.MyUtils;
 import com.loonggg.androidframedemo.view.FNRadioGroup;
-import com.loonggg.androidframedemo.view.FlowLayout;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -56,8 +55,6 @@ public class SubmitIndentActivity extends BasicTitleBarActivity implements View.
     TextView mProductName;
     @Bind(R.id.activity_submitIndent_productPrice)
     TextView mProductPrice;
-    @Bind(R.id.activity_submitIndent_productCount)
-    TextView mProductCount_One;
 
     //产品支付有关的信息
     @Bind(R.id.activity_submitIndent_standaraRelative)
@@ -86,6 +83,13 @@ public class SubmitIndentActivity extends BasicTitleBarActivity implements View.
     @Bind(R.id.activity_submitIndent_submitProduct)
     TextView mSubmitProduct;
 
+    //可滑动页面底部的产品数量统计
+    @Bind(R.id.activity_submitIndent_productCount)
+    TextView mProductCount;
+    //滑动页面底部产品总价格的统计
+    @Bind(R.id.activity_submitIndent_allPrice_One)
+    TextView mAllPriceOne;
+
 
     private TextView mHindAddress;
     //
@@ -94,12 +98,15 @@ public class SubmitIndentActivity extends BasicTitleBarActivity implements View.
     private LinearLayout mHindAddressLinear;
 
     //定义一个变量，判断选择支付的方式
-    private boolean mIsPayment=true;
+    private boolean mIsPayment = true;
 
     //定义规格数量的数组
     private RadioButton[] radioButtons;
     //选中规格的名字
-    private String mStandardName;
+    private String mStandardName="";
+    private double onlyPrice;
+    private Integer productCount;
+    private String allPrice;
 
     @Override
     public int getLayoutId() {
@@ -124,6 +131,18 @@ public class SubmitIndentActivity extends BasicTitleBarActivity implements View.
         mHindAddress = ((TextView) findViewById(R.id.activity_submitIndent_addressHint));
         //显示地址信息的外层布局的实例化
         mShowAddress = ((LinearLayout) findViewById(R.id.activity_submitIndent_addressShow));
+
+        //获取产品的单价--double   double d = Double.parseDouble("1.0");
+        onlyPrice = Double.parseDouble(mProductPrice.getText().toString());
+        //获取产品的数量
+        productCount = Integer.valueOf(mPtotuctCount_Two.getText().toString());
+        //获取产品的总价格--double
+        allPrice = String.format("%.2f", onlyPrice * productCount);
+        //获取所有产品的总价格
+        mAllPrice.setText(allPrice + "");
+
+        mAllPriceOne.setText(allPrice + "");
+        mProductCount.setText("共计"+0+ "件商品");
     }
 
     private void setView() {
@@ -137,12 +156,26 @@ public class SubmitIndentActivity extends BasicTitleBarActivity implements View.
     private void setListener() {
         //返回图标的监听
         mBackImage.setOnClickListener(this);
-        //选择地址的监听
+
+        //选择收货地址的监听
         mHindAddress.setOnClickListener(this);
+
         //选择产品规格
         mStandarsRelative.setOnClickListener(this);
+
         //选择支付方式的监听
         mPaymentRelative.setOnClickListener(this);
+
+        //减少产品数量
+        mCutCount.setOnClickListener(this);
+        //增加产品数量
+        mAddCount.setOnClickListener(this);
+
+        //提交订单
+        mSubmitProduct.setOnClickListener(this);
+
+        //重新选择地址
+        mShowAddress.setOnClickListener(this);
     }
 
     @Override
@@ -152,10 +185,54 @@ public class SubmitIndentActivity extends BasicTitleBarActivity implements View.
             case R.id.activity_submitIndent_back:
                 finish();
                 break;
-            //添加地址的监听--跳转到选择地址页面
+            //重新选择收货地址
+            case R.id.activity_submitIndent_addressShow:
+                Intent intent1 = new Intent(SubmitIndentActivity.this, SelectAddressActivity.class);
+                startActivityForResult(intent1, REQUEST_CODE);
+                break;
+            //添加收货地址的监听--跳转到选择地址页面
             case R.id.activity_submitIndent_addressHint:
                 Intent intent = new Intent(SubmitIndentActivity.this, SelectAddressActivity.class);
                 startActivityForResult(intent, REQUEST_CODE);
+                break;
+            //提交订单按钮的监听
+            case R.id.activity_submitIndent_submitProduct:
+                Intent intent2 = new Intent(SubmitIndentActivity.this,PayOrderActivity.class);
+                intent2.putExtra("allPrice",allPrice+"");
+                startActivity(intent2);
+                break;
+            //减少货物数量
+            case R.id.activity_submitIndent_cutCount:
+                //获取货物的数量
+                Integer productCount1 = Integer.valueOf(mPtotuctCount_Two.getText().toString());
+                productCount1--;
+                if (productCount1 < 0) {
+                    productCount1 = 0;
+                }
+                mPtotuctCount_Two.setText(productCount1 + "");
+
+                //获取产品的总价格--double
+                allPrice = String.format("%.2f", onlyPrice * productCount1);
+                //获取所有产品的总价格  String.format("%.2f", allPrice)
+                mAllPrice.setText(allPrice + "");
+
+                mAllPriceOne.setText(allPrice + "");
+                mProductCount.setText("共计"+productCount1 + "件商品");
+
+                break;
+            //增加货物数量
+            case R.id.activity_submitIndent_addCount:
+                Integer productCount2 = Integer.valueOf(mPtotuctCount_Two.getText().toString());
+                productCount2++;
+                mPtotuctCount_Two.setText(productCount2 + "");
+
+                //获取产品的总价格--double
+                allPrice = String.format("%.2f",onlyPrice * productCount2);
+                //获取所有产品的总价格
+                mAllPrice.setText(allPrice + "");
+
+                mAllPriceOne.setText(allPrice + "");
+                mProductCount.setText("共计"+productCount2 + "件商品");
                 break;
             //选择支付方式
             case R.id.activity_submitIndent_paymentRelative:
@@ -164,7 +241,7 @@ public class SubmitIndentActivity extends BasicTitleBarActivity implements View.
                     public void getLayout(View view, final Dialog dialog) {
                         //定金支付的金额
                         final TextView downPayment = (TextView) view.findViewById(R.id.layout_submitBottomDialog_downMoney);
-                        downPayment.setText("￥"+100000.00);
+                        downPayment.setText("￥" + 100000.00);
 
                         //是否定金支付
                         final ImageView isDownPayment = (ImageView) view.findViewById(R.id.layout_submitBottomDialog_downOk);
@@ -177,7 +254,7 @@ public class SubmitIndentActivity extends BasicTitleBarActivity implements View.
                         downRelative.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                mIsPayment=false;
+                                mIsPayment = false;
                                 isDownPayment.setVisibility(View.VISIBLE);//定金
                                 isTotalPayment.setVisibility(View.GONE);//全款
                             }
@@ -188,7 +265,7 @@ public class SubmitIndentActivity extends BasicTitleBarActivity implements View.
                         totalRelative.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                mIsPayment=true;
+                                mIsPayment = true;
                                 isDownPayment.setVisibility(View.GONE);//定金
                                 isTotalPayment.setVisibility(View.VISIBLE);//全款
                             }
@@ -210,8 +287,8 @@ public class SubmitIndentActivity extends BasicTitleBarActivity implements View.
                             public void onClick(View v) {
                                 if (mIsPayment) {
                                     mPaymentStyle.setText("全款支付");
-                                }else {
-                                    mPaymentStyle.setText("定金支付 "+downPayment.getText().toString());
+                                } else {
+                                    mPaymentStyle.setText("定金支付 " + downPayment.getText().toString());
                                 }
 
                                 dialog.dismiss();
@@ -227,7 +304,7 @@ public class SubmitIndentActivity extends BasicTitleBarActivity implements View.
                     public void getLayout(View view, final Dialog dialog) {
                         //产品的图片
                         ImageView productImage = (ImageView) view.findViewById(R.id.layout_standardBottom_image);
-                        new MyUtils().ShowPicture(SubmitIndentActivity.this,"",productImage);
+                        new MyUtils().ShowPicture(SubmitIndentActivity.this, "", productImage);
 
                         //产品的名字
                         TextView productName = (TextView) view.findViewById(R.id.layout_standardBottom_name);
@@ -237,14 +314,16 @@ public class SubmitIndentActivity extends BasicTitleBarActivity implements View.
                         TextView productPrice = (TextView) view.findViewById(R.id.layout_standardBottom_price);
                         productPrice.setText("10万");
 
-                        int w = View.MeasureSpec.makeMeasureSpec(0,View.MeasureSpec.UNSPECIFIED);
-                        int h = View.MeasureSpec.makeMeasureSpec(0,View.MeasureSpec.UNSPECIFIED);
+                        int w = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
+                        int h = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
                         //展现产品规格
                         final FNRadioGroup radioGroup = (FNRadioGroup) view.findViewById(R.id.layout_standardBottom_radioGroup);
                         //设置子控件的边距
-                        radioGroup.setChildMargin(0,0,20,20);
+                        //将dp转成px
+                        int marginSpace = DensityUtil.dp2px(SubmitIndentActivity.this, 10);
+                        radioGroup.setChildMargin(0, 0, marginSpace, marginSpace);
 
-                        radioButtons=new RadioButton[4];
+                        radioButtons = new RadioButton[4];
                         for (int i = 0; i < 4; i++) {
                             //规格类型
                             radioButtons[i] = new RadioButton(SubmitIndentActivity.this);
@@ -253,8 +332,8 @@ public class SubmitIndentActivity extends BasicTitleBarActivity implements View.
                             textView.setText("钢钎直径20mm");
                             //获取文本的高度和宽度
                             textView.measure(w, h);
-                            int height =textView.getMeasuredHeight();
-                            int width =textView.getMeasuredWidth();
+                            int height = textView.getMeasuredHeight();
+                            int width = textView.getMeasuredWidth();
 
                             radioButtons[i].setText("钢钎直径20mm");
 //                            radioButtons[i].setTextSize(R.dimen.d12sp);
@@ -267,8 +346,10 @@ public class SubmitIndentActivity extends BasicTitleBarActivity implements View.
                             radioButtons[i].setBackgroundResource(R.drawable.radiobutton_hint_shape);
                             radioButtons[i].setGravity(Gravity.CENTER);
                             RadioGroup.LayoutParams params = new RadioGroup.LayoutParams(RadioGroup.LayoutParams.WRAP_CONTENT, RadioGroup.LayoutParams.WRAP_CONTENT);
-                            params.height=height+55;
-                            params.width=width+55;
+                            //将dp转成px
+                            int space = DensityUtil.dp2px(SubmitIndentActivity.this, 13);
+                            params.height = height + space;
+                            params.width = width + space;
                             //设置边距
 //                            params.setMargins(0, 0, 20, 0);
                             radioButtons[i].setLayoutParams(params);

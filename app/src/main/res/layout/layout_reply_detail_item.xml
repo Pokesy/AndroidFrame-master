@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/font_color_white"
+    android:orientation="vertical"
+    android:paddingLeft="40dp"
+    android:paddingRight="15dp">
+
+    <RelativeLayout
+        android:id="@+id/replyDetail_linearlayout_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.loonggg.androidframedemo.view.CircleImageView
+            android:id="@+id/layout_replyDetail_imageItem"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/test_picture" />
+
+        <TextView
+            android:id="@+id/layout_replyDetail_nameItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/layout_replyDetail_imageItem"
+            android:text="张三"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/d13sp" />
+
+        <TextView
+            android:id="@+id/layout_replyDetail_dateItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/layout_replyDetail_imageItem"
+            android:layout_marginBottom="3dp"
+            android:layout_toRightOf="@id/layout_replyDetail_imageItem"
+            android:text="2017.5.5"
+            android:textColor="@color/color_gray"
+            android:textSize="@dimen/d11sp" />
+
+        <TextView
+            android:id="@+id/layout_replyDetail_timeItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/layout_replyDetail_dateItem"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/layout_replyDetail_dateItem"
+            android:text="20.12.45"
+            android:textColor="@color/color_gray"
+            android:textSize="@dimen/d11sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="50dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/layout_replyDetail_contentItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/content_title"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/d14sp" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_my_line" />
+</LinearLayout>

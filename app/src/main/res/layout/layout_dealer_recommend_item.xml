@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/font_color_white">
+
+    <ImageView
+        android:id="@+id/layout_dealerDetail_pictureRecommend"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/girle_picture"/>
+
+    <TextView
+        android:id="@+id/layout_dealerDetail_nameRecommend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/d13sp"
+        android:textColor="@color/color_xxl"
+        android:text="EDT12000静音型破碎锤"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:id="@+id/layout_dealerDetail_textRecommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/d10sp"
+            android:textColor="@color/color_read"
+            android:text="￥"
+            android:layout_alignBottom="@+id/layout_dealerDetail_priceRecommend"/>
+
+        <TextView
+            android:id="@+id/layout_dealerDetail_priceRecommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/d13sp"
+            android:textColor="@color/color_read"
+            android:text="5723.00"
+            android:gravity="bottom"
+            android:layout_toRightOf="@id/layout_dealerDetail_textRecommend"/>
+
+        <TextView
+            android:id="@+id/layout_dealerDetail_sellRecommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/d12sp"
+            android:textColor="@color/color_gray"
+            android:text="已售1234"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

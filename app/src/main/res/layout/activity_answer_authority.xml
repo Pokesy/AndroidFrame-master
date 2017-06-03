@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/font_color_white"
+    tools:context="com.loonggg.androidframedemo.ui.activity.AnswerAuthorityActivity">
+
+    <LinearLayout
+        android:id="@+id/activity_answerAuthority_top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="@color/color_top"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/activity_submitIndent_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/back"
+            android:layout_marginLeft="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/d15sp"
+            android:textColor="@color/color_xxl"
+            android:text="问大家"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_answerAuthority_questionLinear"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/color_f5"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:layout_below="@id/activity_answerAuthority_top">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/d14sp"
+            android:text="关于"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/activity_answerAuthority_questionContent"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/d14sp"
+            android:textColor="@color/color_xxl"
+            android:text="@string/content_title"
+            android:singleLine="true"/>
+
+        <TextView
+            android:id="@+id/activity_answerAuthority_questionCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/d14sp"
+            android:text="的12个问题"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/activity_answerAuthority_showList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:divider="@null"
+        android:layout_marginBottom="48dp"
+        android:layout_below="@id/activity_answerAuthority_questionLinear"></ListView>
+
+    <TextView
+        android:id="@+id/activity_answerAuthority_goQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textSize="@dimen/d14sp"
+        android:textColor="@color/font_color_white"
+        android:text="我要提问"
+        android:background="@color/color_read"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

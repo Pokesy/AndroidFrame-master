@@ -24,6 +24,12 @@
         <attr name="childMarginTop" format="dimension" />
         <attr name="childMarginBottom" format="dimension" />
     </declare-styleable>
+
+    <!--用于PopupWindow出现，消失时的动画-->
+    <style name="myPopupWindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popshow_anim</item>
+        <item name="android:windowExitAnimation">@anim/pophidden_anim</item>
+    </style>
     <!--修云飞  以上-->
 
     <!-- Base application theme. -->

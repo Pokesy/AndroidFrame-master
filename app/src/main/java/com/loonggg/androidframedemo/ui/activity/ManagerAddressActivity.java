@@ -69,6 +69,9 @@ public class ManagerAddressActivity extends BasicTitleBarActivity implements Vie
     private void initData() {
         for (int i = 0; i < 3; i++) {
             ManagerAddressModel addressModel = new ManagerAddressModel();
+            addressModel.name="弗利沙-"+i;
+            addressModel.phone="12345678"+i;
+            addressModel.content="床前明月光，疑是地上霜，举头望明月，低头思故乡"+i;
             mAddressData.add(addressModel);
         }
         mAddressAdapter.notifyDataSetChanged();

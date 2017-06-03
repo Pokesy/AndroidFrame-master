@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/font_color_white"
+    tools:context="com.loonggg.androidframedemo.ui.activity.ProductTypeActivity">
+
+    <RelativeLayout
+        android:id="@+id/activity_productType_top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="@color/color_top">
+
+        <ImageView
+            android:id="@+id/activity_productType_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/back"
+            android:layout_marginLeft="4dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/d15sp"
+            android:textColor="@color/color_xxl"
+            android:text="产品类型"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/activity_productType_back"/>
+
+        <TextView
+            android:id="@+id/activity_productType_sure"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@color/color_read"
+            android:textColor="@color/font_color_white"
+            android:textSize="@dimen/d14sp"
+            android:text="确定"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/activity_productType_typeName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="@dimen/d14sp"
+        android:textColor="@color/color_home"
+        android:text="全部"
+        android:drawableRight="@drawable/select_up_or_down"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:background="@color/color_f5"/>
+
+    <RadioGroup
+        android:id="@+id/activity_productType_radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/activity_productType_allButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="@dimen/d14sp"
+            android:textColor="@drawable/text_checked_color"
+            android:text="全部"
+            android:button="@null"
+            android:checked="true"
+            android:paddingLeft="15dp"/>
+
+        <RadioButton
+            android:id="@+id/activity_productType_mainButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="@dimen/d14sp"
+            android:textColor="@drawable/text_checked_color"
+            android:text="主机"
+            android:button="@null"
+            android:paddingLeft="15dp"/>
+
+        <RadioButton
+            android:id="@+id/activity_productType_partsButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="@dimen/d14sp"
+            android:textColor="@drawable/text_checked_color"
+            android:text="配套件"
+            android:button="@null"
+            android:paddingLeft="15dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/gray_gradual_shap"/>
+
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/activity_productType_showList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"></ListView>
+
+</LinearLayout>

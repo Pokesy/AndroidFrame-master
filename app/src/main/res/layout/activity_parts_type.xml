@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/font_color_white"
+    tools:context="com.loonggg.androidframedemo.ui.activity.PartsTypeActivity">
+
+    <com.loonggg.androidframedemo.view.TopTitleView
+        android:id="@+id/activity_partsType_topTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"></com.loonggg.androidframedemo.view.TopTitleView>
+
+    <include layout="@layout/x1_my_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ListView
+            android:id="@+id/activity_partsType_showList"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:scrollbars="none"
+            android:background="@color/color_tab_bg"></ListView>
+
+        <GridView
+            android:id="@+id/activity_partsType_showGrid"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:numColumns="3"
+            android:scrollbars="none"
+            android:layout_margin="10dp"></GridView>
+
+    </LinearLayout>
+
+</LinearLayout>

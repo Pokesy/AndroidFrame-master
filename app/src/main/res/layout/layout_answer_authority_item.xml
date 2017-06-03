@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/font_color_white"
+    android:paddingTop="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/layout_answerAuthority_wen"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:textSize="@dimen/d12sp"
+            android:textColor="@color/font_color_white"
+            android:text="问"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:background="@drawable/question_shape"/>
+
+        <TextView
+            android:id="@+id/layout_answerAuthority_quwstionContent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/d13sp"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:text="请问这款锤质量好不好，打击力度怎么样?"/>
+
+        <com.loonggg.androidframedemo.view.CircleImageView
+            android:id="@+id/layout_answerAuthority_questionImage"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/test_picture"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:textSize="@dimen/d12sp"
+            android:textColor="@color/font_color_white"
+            android:text="答"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:background="@drawable/answer_shape"/>
+
+        <TextView
+            android:id="@+id/layout_answerAuthority_answerContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/d13sp"
+            android:singleLine="true"
+            android:text="@string/content_title"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="43dp"
+        android:paddingRight="15dp"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:id="@+id/layout_answerAuthority_lookAnswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查看3个回答"
+            android:textColor="@color/color_edittext"
+            android:textSize="@dimen/d11sp" />
+
+        <TextView
+            android:id="@+id/layout_answerAuthority_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/d11sp"
+            android:textColor="@color/color_gray"
+            android:text="2017.5.12"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/xl_line"/>
+
+</LinearLayout>

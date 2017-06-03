@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/font_color_white"
+    tools:context="com.loonggg.androidframedemo.ui.activity.QuestionAndAnswerActivity">
+
+    <RelativeLayout
+        android:id="@+id/activity_questionAndAnswer_top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="@color/color_top">
+
+        <ImageView
+            android:id="@+id/activity_questionAndAnswer_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/back"
+            android:layout_marginLeft="4dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/d15sp"
+            android:textColor="@color/color_xxl"
+            android:text="问答详情"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/activity_questionAndAnswer_back"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/activity_questionAndAnswer_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/setting"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="48dp"
+        android:layout_below="@id/activity_questionAndAnswer_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/activity_questionAndAnswer_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_xl_line">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/activity_questionAndAnswer_productImage"
+                        android:layout_width="60dp"
+                        android:layout_height="45dp"
+                        android:src="@mipmap/test_picture"
+                        android:scaleType="centerCrop"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="10dp"/>
+
+                    <TextView
+                        android:id="@+id/activity_questionAndAnswer_productName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/d13sp"
+                        android:textColor="@color/color_xxl"
+                        android:text="大风起兮云飞扬，威加海内兮归故乡"
+                        android:singleLine="true"
+                        android:layout_toRightOf="@id/activity_questionAndAnswer_productImage"
+                        android:layout_alignTop="@id/activity_questionAndAnswer_productImage"/>
+
+                    <TextView
+                        android:id="@+id/activity_questionAndAnswer_productStandard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/d13sp"
+                        android:textColor="@color/color_xxl"
+                        android:text="直径20mm"
+                        android:layout_toRightOf="@id/activity_questionAndAnswer_productImage"
+                        android:layout_alignBottom="@id/activity_questionAndAnswer_productImage"/>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/goback"
+                    android:layout_marginRight="15dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:textSize="@dimen/d12sp"
+                    android:textColor="@color/font_color_white"
+                    android:text="问"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:background="@drawable/question_shape"/>
+
+                <TextView
+                    android:id="@+id/activity_questionAndAnswer_quwstionContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_xxl"
+                    android:textSize="@dimen/d13sp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:text="请问这款锤质量好不好，打击力度怎么样?"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/xl_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:textSize="@dimen/d12sp"
+                    android:textColor="@color/font_color_white"
+                    android:text="答"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:background="@drawable/answer_shape"/>
+
+                <TextView
+                    android:id="@+id/activity_questionAndAnswer_answerCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_xxl"
+                    android:textSize="@dimen/d13sp"
+                    android:singleLine="true"
+                    android:text="共3条回答"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_xl_line"/>
+
+            <com.loonggg.androidframedemo.view.ScrollViewWithListView
+                android:id="@+id/activity_questionAndAnswer_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"></com.loonggg.androidframedemo.view.ScrollViewWithListView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textSize="@dimen/d14sp"
+        android:textColor="@color/font_color_white"
+        android:text="我来回答"
+        android:gravity="center"
+        android:background="@color/color_read"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

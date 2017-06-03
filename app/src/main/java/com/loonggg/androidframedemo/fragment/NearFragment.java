@@ -90,8 +90,8 @@ public class NearFragment extends BasicFragment implements View.OnClickListener 
      */
     public void init() {
         list = new ArrayList<>();
-        list.add(new NearSellFragment());//新闻Fragment
-        list.add(new NearWaterFragment());//新闻Fragment
+        list.add(new NearSellFragment());//经销商Fragment
+        list.add(new NearWaterFragment());//服务站Fragment
         adapter = new NearViewPagerAdapter(getChildFragmentManager(),list, getActivity());
         pager.setAdapter(adapter);
         pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener

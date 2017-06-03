@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/font_color_white"
+    android:orientation="vertical"
+    tools:context="com.loonggg.androidframedemo.ui.activity.PayOverActivity">
+
+    <LinearLayout
+        android:id="@+id/activity_payOver_top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/color_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/activity_payOver_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付完成"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/d15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:src="@mipmap/pay_over" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付完成"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/d14sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_xl_line"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="支付金额"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/d13sp" />
+
+        <TextView
+            android:id="@+id/activity_payOver_payPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="￥00.00"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/d13sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_xl_line"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="收款方"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/d13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="属具之家第三方担保平台"
+            android:textColor="@color/color_xxl"
+            android:textSize="@dimen/d13sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/activity_payOver_lookOrder"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:textColor="@color/color_organ"
+            android:textSize="@dimen/d12sp"
+            android:text="查看订单"
+            android:gravity="center"
+            android:background="@drawable/pay_over_shape"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="90dp"/>
+
+        <TextView
+            android:id="@+id/activity_payOver_shopHome"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:textColor="@color/color_organ"
+            android:textSize="@dimen/d12sp"
+            android:text="店铺首页"
+            android:gravity="center"
+            android:background="@drawable/pay_over_shape"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>
