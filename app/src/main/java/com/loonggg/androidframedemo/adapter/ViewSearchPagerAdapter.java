@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import com.loonggg.androidframedemo.fragment.HomeFragment;
 import com.loonggg.androidframedemo.fragment.NewsFragment;
 import com.loonggg.androidframedemo.fragment.PeopleFragment;
+import com.loonggg.androidframedemo.fragment.SearchVideoFragment;
 import com.loonggg.androidframedemo.fragment.VedioFragment;
 
 import java.util.List;
@@ -32,7 +33,7 @@ public class ViewSearchPagerAdapter extends FragmentPagerAdapter {
         else if (position == 1)
             return new NewsFragment();
         else if (position == 2)
-            return new VedioFragment();
+            return new SearchVideoFragment();
         else if (position == 3) {
             return new PeopleFragment();
         } else if (position == 4) {
