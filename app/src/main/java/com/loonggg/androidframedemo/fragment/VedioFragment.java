@@ -49,6 +49,7 @@ public class VedioFragment extends BasicFragment implements OnItemClickListener,
         View view = inflater.inflate(R.layout.fragment_news, null);
         ButterKnife.bind(this, view);
         initData();
+
         return view;
     }
 

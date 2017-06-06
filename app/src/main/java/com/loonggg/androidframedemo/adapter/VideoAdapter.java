@@ -25,6 +25,7 @@ public class VideoAdapter extends RecyclerSwipeAdapter<String> {
     protected LayoutInflater mLayoutInflater;
 
     public VideoAdapter(Context context, List<String> s) {
+
         super(context);
         this.context = context;
         this.mDataset = s;
