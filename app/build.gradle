@@ -99,5 +99,5 @@ dependencies {
     compile 'cn.bingoogolapple:bga-indicator:1.0.1@aar'
     compile 'com.githang:status-bar-compat:0.3'
     compile 'com.github.michaelye.easydialog:easydialog:1.4'
-
+    compile files('libs/Volley.jar')
 }

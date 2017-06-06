@@ -5,21 +5,11 @@
     android:layout_margin="@dimen/margin_small"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_today_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:lines="1"
-        android:text="@string/app_item_content"
-        android:textColor="@color/color_xxl"
-        android:textSize="@dimen/font_size_large" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="190dp"
-        android:layout_marginTop="@dimen/margin_15">
-
+>
 
         <ImageView
             android:id="@+id/iv_today_news"
@@ -51,6 +41,15 @@
             android:textSize="@dimen/font_size_small" />
     </RelativeLayout>
 
+    <TextView
+        android:id="@+id/tv_today_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:lines="1"
+        android:text="@string/app_item_content"
+        android:textColor="@color/color_xxl"
+        android:textSize="@dimen/font_size_large" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -59,7 +58,6 @@
         android:layout_marginTop="@dimen/margin_15">
 
         <TextView
-
             android:id="@+id/news_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

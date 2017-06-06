@@ -99,6 +99,7 @@ public class MainFragment extends BasicFragment implements View.OnClickListener 
             @Override
             public void onClick(View v) {
                 new MyUtils().JumpActivity(getActivity(), SubmitIndentActivity.class);
+
             }
         });
 

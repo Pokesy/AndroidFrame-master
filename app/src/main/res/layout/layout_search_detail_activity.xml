@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/sdl_background_dark">>
+    android:background="@color/font_color_white">
 
     <RelativeLayout
         android:id="@+id/top"
@@ -12,7 +12,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@color/si_default_text_color"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/margin_small">
 
         <ImageView
             android:id="@+id/profile"
@@ -23,7 +24,6 @@
             android:layout_marginEnd="@dimen/margin_tag"
             android:layout_marginStart="@dimen/grid_2"
             android:src="@mipmap/fh" />
-
 
         <EditText
             android:id="@+id/locationMessage"
@@ -67,12 +67,10 @@
                 android:layout_toStartOf="@+id/iv_enter"
                 android:background="@color/font_color_white"
                 android:fillViewport="true"
-
                 app:layout_scrollFlags="scroll"
                 app:tabIndicatorColor="@color/color_bar1"
                 app:tabIndicatorHeight="1.0dp"
                 app:tabMode="scrollable"
-
                 app:tabSelectedTextColor="@color/color_bar1"
                 app:tabTextAppearance="@style/Widget.App.TextView.Large"
                 app:tabTextColor="@color/color_l">
